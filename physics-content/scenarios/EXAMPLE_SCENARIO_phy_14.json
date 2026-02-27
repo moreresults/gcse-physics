@@ -1,0 +1,248 @@
+{
+  "id": "phy_14",
+  "title": "Investigating Sound",
+  "icon": "🔊",
+  "subject": "physics",
+  "context": "A student uses a microphone connected to an oscilloscope to investigate different sound waves. The oscilloscope displays displacement-time traces for two sounds: Sound A is a quiet, low-pitched note from a tuning fork, and Sound B is a louder, higher-pitched note from a different tuning fork. The student also performs an echo experiment by clapping near a large wall and measuring the time for the echo to return. The speed of sound in air is 340 m/s.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+
+  "graphs": {
+    "oscilloscope": {
+      "xAxis": { "label": "Time (ms)", "min": 0, "max": 20, "step": 2 },
+      "yAxis": { "label": "Displacement (arbitrary units)", "min": -6, "max": 6, "step": 1 },
+      "lines": [
+        {
+          "id": "soundA",
+          "color": "#007AFF",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 1.25, "y": 2 },
+            { "x": 2.5, "y": 0 },
+            { "x": 3.75, "y": -2 },
+            { "x": 5, "y": 0 },
+            { "x": 6.25, "y": 2 },
+            { "x": 7.5, "y": 0 },
+            { "x": 8.75, "y": -2 },
+            { "x": 10, "y": 0 },
+            { "x": 11.25, "y": 2 },
+            { "x": 12.5, "y": 0 },
+            { "x": 13.75, "y": -2 },
+            { "x": 15, "y": 0 },
+            { "x": 16.25, "y": 2 },
+            { "x": 17.5, "y": 0 },
+            { "x": 18.75, "y": -2 },
+            { "x": 20, "y": 0 }
+          ]
+        },
+        {
+          "id": "soundB",
+          "color": "#FF3B30",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 0.5, "y": 4 },
+            { "x": 1, "y": 0 },
+            { "x": 1.5, "y": -4 },
+            { "x": 2, "y": 0 },
+            { "x": 2.5, "y": 4 },
+            { "x": 3, "y": 0 },
+            { "x": 3.5, "y": -4 },
+            { "x": 4, "y": 0 },
+            { "x": 4.5, "y": 4 },
+            { "x": 5, "y": 0 },
+            { "x": 5.5, "y": -4 },
+            { "x": 6, "y": 0 },
+            { "x": 6.5, "y": 4 },
+            { "x": 7, "y": 0 },
+            { "x": 7.5, "y": -4 },
+            { "x": 8, "y": 0 },
+            { "x": 8.5, "y": 4 },
+            { "x": 9, "y": 0 },
+            { "x": 9.5, "y": -4 },
+            { "x": 10, "y": 0 },
+            { "x": 10.5, "y": 4 },
+            { "x": 11, "y": 0 },
+            { "x": 11.5, "y": -4 },
+            { "x": 12, "y": 0 },
+            { "x": 12.5, "y": 4 },
+            { "x": 13, "y": 0 },
+            { "x": 13.5, "y": -4 },
+            { "x": 14, "y": 0 },
+            { "x": 14.5, "y": 4 },
+            { "x": 15, "y": 0 },
+            { "x": 15.5, "y": -4 },
+            { "x": 16, "y": 0 },
+            { "x": 16.5, "y": 4 },
+            { "x": 17, "y": 0 },
+            { "x": 17.5, "y": -4 },
+            { "x": 18, "y": 0 },
+            { "x": 18.5, "y": 4 },
+            { "x": 19, "y": 0 },
+            { "x": 19.5, "y": -4 },
+            { "x": 20, "y": 0 }
+          ]
+        }
+      ],
+      "interactiveMode": "read"
+    }
+  },
+
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_14_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following correctly describes a sound wave?",
+      "options": [
+        { "id": "opt_a", "text": "A transverse wave where particles vibrate perpendicular to the direction of travel" },
+        { "id": "opt_b", "text": "A longitudinal wave where particles vibrate parallel to the direction of travel" },
+        { "id": "opt_c", "text": "An electromagnetic wave that can travel through a vacuum" },
+        { "id": "opt_d", "text": "A transverse wave that requires a medium to travel through" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — sound is a longitudinal wave. The particles of the medium (e.g. air molecules) vibrate back and forth parallel to the direction the sound wave travels, creating compressions and rarefactions." },
+        { "text": "Sound requires a medium (solid, liquid, or gas) to travel through — it cannot travel through a vacuum because there are no particles to vibrate." },
+        { "text": "A common mistake is confusing transverse and longitudinal waves. Sound is longitudinal (parallel vibrations), while light and other EM waves are transverse (perpendicular vibrations). Another common error is thinking sound can travel through a vacuum — it cannot." }
+      ],
+      "topicTags": ["phy.waves.sound.longitudinal-wave"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-transverse-longitudinal", "thinks-sound-travels-in-vacuum"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_14_b",
+      "partLabel": "b",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "A student stands 170 m from a wall and claps. The echo returns after 1 s. Using the speed of sound in air (340 m/s), verify the distance to the wall using the equation: distance = speed × time ÷ 2.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 170,
+        "tolerance": 3.4,
+        "unitOptions": ["m", "m/s", "s", "Hz"],
+        "correctUnit": "m"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution: d = 340 × 1 ÷ 2, showing division by 2 for the return journey", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "The sound travels to the wall and back again, so the total distance covered by the sound is twice the distance to the wall." },
+        { "text": "distance to wall = speed × time ÷ 2", "formula": true },
+        { "text": "d = 340 m/s × 1 s ÷ 2", "formula": true },
+        { "text": "d = 340 ÷ 2 = 170 m", "formula": true },
+        { "text": "A common mistake is forgetting to divide by 2. The echo time measures the round trip (to the wall and back), so you must halve the total distance to find the one-way distance to the reflecting surface. This principle is also used in ultrasound imaging and sonar." }
+      ],
+      "topicTags": ["phy.waves.sound.echo-calculations"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-ultrasound-applications"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_14_c",
+      "partLabel": "c",
+      "type": "graph_reading",
+      "marks": 2,
+      "question": "Using the oscilloscope trace for Sound B (red line): (i) What is the amplitude of Sound B? (ii) What is the period of Sound B in milliseconds?",
+      "diagramRef": null,
+      "graphRef": "oscilloscope",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "graph_reading",
+        "readings": [
+          { "id": "reading_1", "correct": 4, "tolerance": 0.08, "unit": "arbitrary units", "prompt": "Amplitude of Sound B" },
+          { "id": "reading_2", "correct": 2, "tolerance": 0.04, "unit": "ms", "prompt": "Period of Sound B" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) The amplitude is the maximum displacement from the rest position. Sound B peaks at +4 units and troughs at −4 units. Amplitude = 4 arbitrary units." },
+        { "text": "(ii) One complete cycle of Sound B runs from 0 ms to 2 ms (zero → peak → zero → trough → zero). Period = 2 ms." },
+        { "text": "Sound B has a higher frequency than Sound A because it has a shorter period (2 ms vs 5 ms). The frequency of Sound B = 1/T = 1/0.002 = 500 Hz.", "formula": true },
+        { "text": "A common mistake is confusing pitch and loudness. Pitch depends on frequency (higher frequency = higher pitch). Loudness depends on amplitude (larger amplitude = louder sound). Sound B is both louder (amplitude 4 vs 2) and higher-pitched (period 2 ms vs 5 ms) than Sound A." }
+      ],
+      "topicTags": ["phy.waves.sound.pitch-loudness", "phy.waves.sound.oscilloscope"],
+      "skillTags": ["interpret-graph"],
+      "misconceptionTags": ["confuses-pitch-loudness"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_14_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following changes would increase the pitch of a sound wave?",
+      "options": [
+        { "id": "opt_a", "text": "Increasing the amplitude" },
+        { "id": "opt_b", "text": "Increasing the frequency" },
+        { "id": "opt_c", "text": "Increasing the wavelength" },
+        { "id": "opt_d", "text": "Increasing the speed" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — increasing the frequency increases the pitch. Pitch is the perceived 'highness' or 'lowness' of a sound, and it depends on the frequency of the wave." },
+        { "text": "A higher frequency means more vibrations per second, which our ears perceive as a higher-pitched sound. For example, a whistle has a higher frequency (and pitch) than a drum." },
+        { "text": "A common mistake is confusing pitch and loudness. Amplitude determines loudness (how loud or quiet), not pitch. Increasing the amplitude makes a sound louder, not higher-pitched." }
+      ],
+      "topicTags": ["phy.waves.sound.pitch-loudness"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-pitch-loudness"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_14_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why sound travels faster in solids than in gases. In your answer, refer to the arrangement and spacing of particles in each state of matter. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Sound travels as vibrations passed from particle to particle. In a solid, the particles are very close together and held in fixed positions by strong forces. This means vibrations can be transferred very quickly from one particle to the next — the particles do not need to travel far to bump into their neighbours. In a gas, the particles are far apart and move randomly. Vibrations take longer to pass between particles because they are widely spaced and less likely to collide quickly. Therefore, sound travels fastest in solids (e.g. ~5000 m/s in steel), slower in liquids (~1500 m/s in water), and slowest in gases (~340 m/s in air).",
+        "markSchemePoints": [
+          { "id": "p1", "text": "In solids, particles are close together and tightly packed — vibrations transfer quickly between neighbouring particles" },
+          { "id": "p2", "text": "In gases, particles are far apart — vibrations take longer to transfer because particles must travel further to interact" },
+          { "id": "p3", "text": "Sound is a mechanical wave that requires a medium — it cannot travel in a vacuum (no particles to vibrate)" },
+          { "id": "p4", "text": "Correct order: fastest in solids, then liquids, then gases" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Sound is a longitudinal wave — it travels by particles vibrating and passing energy to their neighbours through compressions and rarefactions." },
+        { "text": "In a solid, particles are tightly packed in a regular arrangement with strong intermolecular forces. When one particle vibrates, it quickly pushes its neighbour because they are so close together. This allows the sound wave to travel very fast (e.g. ~5000 m/s in steel)." },
+        { "text": "In a gas, particles are far apart and move randomly. A vibrating particle must travel a relatively large distance before it collides with the next particle and passes on the vibration. This makes sound travel much more slowly (e.g. ~340 m/s in air)." },
+        { "text": "A common mistake is thinking sound can travel through a vacuum. Sound requires a medium — it is a mechanical wave. In a vacuum there are no particles, so there is nothing to vibrate and no sound can be transmitted. This is why there is no sound in space." }
+      ],
+      "topicTags": ["phy.waves.sound.speed-in-media", "phy.waves.sound.longitudinal-wave"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["thinks-sound-travels-in-vacuum"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

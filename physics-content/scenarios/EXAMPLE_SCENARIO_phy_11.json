@@ -1,0 +1,220 @@
+{
+  "id": "phy_11",
+  "title": "Waves at the Seaside",
+  "icon": "🌊",
+  "subject": "physics",
+  "context": "A student investigates wave properties using a ripple tank and an oscilloscope. They generate transverse waves on the surface of water and record their shape using a diagram. They also connect a microphone to an oscilloscope to display a sound wave as a displacement-time graph. The student measures the amplitude, wavelength, period, and frequency of different waves.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "transverseWave": {
+      "imageSrc": "./src/assets/diagrams/phy_11_transverse_wave.svg",
+      "imageAlt": "A transverse wave diagram showing three complete wavelengths. The amplitude is labelled A and the wavelength is labelled B. The rest position (equilibrium line) is shown as a dashed horizontal line.",
+      "title": "Transverse wave with labelled features",
+      "width": 600,
+      "aspectRatio": "16:9",
+      "hotspots": [
+        { "id": "label_a", "x": 18, "y": 20, "correct": "amplitude" },
+        { "id": "label_b", "x": 55, "y": 85, "correct": "wavelength" }
+      ],
+      "termBank": [
+        { "id": "amplitude", "text": "Amplitude" },
+        { "id": "wavelength", "text": "Wavelength" },
+        { "id": "frequency", "text": "Frequency" },
+        { "id": "period", "text": "Period" },
+        { "id": "crest", "text": "Crest" }
+      ],
+      "description": "A horizontal dashed line runs across the centre of the diagram representing the rest (equilibrium) position. A smooth sinusoidal wave (solid blue line, #007AFF) oscillates above and below the rest position, completing three full wavelengths across the diagram. A vertical double-headed arrow from the rest position to the first peak is labelled A — this represents the amplitude. A horizontal double-headed arrow spanning from one peak to the next adjacent peak is labelled B — this represents the wavelength. The wave oscillates symmetrically: peaks are equally above and troughs equally below the rest position. Blue leader lines point from outside the diagram to labels A and B."
+    }
+  },
+
+  "graphs": {
+    "displacementTime": {
+      "xAxis": { "label": "Time (s)", "min": 0, "max": 0.5, "step": 0.05 },
+      "yAxis": { "label": "Displacement (cm)", "min": -4, "max": 4, "step": 1 },
+      "lines": [
+        {
+          "id": "wave",
+          "color": "#007AFF",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 0.025, "y": 2 },
+            { "x": 0.05, "y": 0 },
+            { "x": 0.075, "y": -2 },
+            { "x": 0.1, "y": 0 },
+            { "x": 0.125, "y": 2 },
+            { "x": 0.15, "y": 0 },
+            { "x": 0.175, "y": -2 },
+            { "x": 0.2, "y": 0 },
+            { "x": 0.225, "y": 2 },
+            { "x": 0.25, "y": 0 },
+            { "x": 0.275, "y": -2 },
+            { "x": 0.3, "y": 0 },
+            { "x": 0.325, "y": 2 },
+            { "x": 0.35, "y": 0 },
+            { "x": 0.375, "y": -2 },
+            { "x": 0.4, "y": 0 },
+            { "x": 0.425, "y": 2 },
+            { "x": 0.45, "y": 0 },
+            { "x": 0.475, "y": -2 },
+            { "x": 0.5, "y": 0 }
+          ]
+        }
+      ],
+      "interactiveMode": "read"
+    }
+  },
+
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_11_a",
+      "partLabel": "a",
+      "type": "diagram_label",
+      "marks": 2,
+      "question": "Label features A and B on the transverse wave diagram.",
+      "diagramRef": "transverseWave",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b"],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Amplitude — the maximum displacement of a point on the wave from its rest (equilibrium) position. It is measured from the centre line to the peak (or trough), not from peak to trough." },
+        { "text": "B = Wavelength — the distance between two successive identical points on the wave, such as from one peak to the next peak, or one trough to the next trough." },
+        { "text": "A common mistake is confusing amplitude and wavelength. Amplitude is a vertical measurement (how far the wave moves up or down from rest), while wavelength is a horizontal measurement (the length of one complete wave cycle)." }
+      ],
+      "topicTags": ["phy.waves.properties.amplitude", "phy.waves.properties.wavelength"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-amplitude-wavelength"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_11_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following is a longitudinal wave?",
+      "options": [
+        { "id": "opt_a", "text": "Light" },
+        { "id": "opt_b", "text": "Sound" },
+        { "id": "opt_c", "text": "Water waves" },
+        { "id": "opt_d", "text": "Radio waves" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — sound is a longitudinal wave. In a longitudinal wave, the oscillations (vibrations) are parallel to the direction of energy transfer. Sound travels as compressions and rarefactions of air particles." },
+        { "text": "Light, water waves, and radio waves are all transverse waves — their oscillations are perpendicular (at right angles) to the direction of energy transfer." },
+        { "text": "A common mistake is confusing transverse and longitudinal waves. Remember: in transverse waves, particles move up and down while the wave travels horizontally. In longitudinal waves, particles move back and forth in the same direction the wave travels." }
+      ],
+      "topicTags": ["phy.waves.properties.transverse-longitudinal"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-transverse-longitudinal"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_11_c",
+      "partLabel": "c",
+      "type": "graph_reading",
+      "marks": 2,
+      "question": "Using the displacement-time graph: (i) What is the amplitude of the wave? (ii) What is the period of the wave?",
+      "diagramRef": null,
+      "graphRef": "displacementTime",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "graph_reading",
+        "readings": [
+          { "id": "reading_1", "correct": 2, "tolerance": 0.04, "unit": "cm", "prompt": "Amplitude of the wave" },
+          { "id": "reading_2", "correct": 0.1, "tolerance": 0.002, "unit": "s", "prompt": "Period of the wave" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) The amplitude is the maximum displacement from the rest position. From the graph, the wave peaks at +2 cm and troughs at −2 cm. Amplitude = 2 cm." },
+        { "text": "(ii) The period is the time for one complete cycle. One complete cycle runs from 0 s to 0.1 s (zero → peak → zero → trough → zero). Period = 0.1 s." },
+        { "text": "The frequency can be calculated from the period: f = 1/T = 1/0.1 = 10 Hz. This means the wave completes 10 cycles every second.", "formula": true },
+        { "text": "A common mistake is confusing period and frequency. The period (T) is measured in seconds — it is the time for one cycle. The frequency (f) is measured in hertz (Hz) — it is the number of cycles per second. They are related by f = 1/T." }
+      ],
+      "topicTags": ["phy.waves.properties.amplitude", "phy.waves.properties.period-frequency"],
+      "skillTags": ["interpret-graph"],
+      "misconceptionTags": ["confuses-period-frequency", "confuses-amplitude-wavelength"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_11_d",
+      "partLabel": "d",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "A wave has a frequency of 5 Hz and a wavelength of 4 m. Use the wave speed equation from the formula sheet (v = fλ) to calculate the speed of the wave.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 20,
+        "tolerance": 0.4,
+        "unitOptions": ["m/s", "Hz", "m", "s"],
+        "correctUnit": "m/s"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into v = fλ: v = 5 × 4", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet:", "formula": false },
+        { "text": "v = fλ", "formula": true },
+        { "text": "v = 5 Hz × 4 m", "formula": true },
+        { "text": "v = 20 m/s", "formula": true },
+        { "text": "A common mistake is thinking that increasing the frequency increases the wave speed. In a given medium, the wave speed is constant. If frequency increases, the wavelength must decrease (and vice versa) so that v = fλ remains the same." }
+      ],
+      "topicTags": ["phy.waves.properties.wave-speed-equation"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-frequency-speed"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_11_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Compare and contrast transverse and longitudinal waves. In your answer, describe how the oscillations differ, give one example of each type, and explain how you could identify which type a wave is from its description. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "In a transverse wave, the oscillations are perpendicular (at right angles) to the direction of energy transfer — for example, light waves and water ripples. The wave has peaks and troughs. In a longitudinal wave, the oscillations are parallel to the direction of energy transfer — for example, sound waves. The wave has compressions (where particles are close together) and rarefactions (where particles are spread apart). To identify the wave type, check the direction of particle movement relative to wave travel: if particles vibrate up and down while the wave moves horizontally, it is transverse; if particles vibrate back and forth in the same direction the wave travels, it is longitudinal.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Transverse: oscillations perpendicular to direction of energy transfer, with examples (e.g. light, water waves)" },
+          { "id": "p2", "text": "Longitudinal: oscillations parallel to direction of energy transfer, with examples (e.g. sound)" },
+          { "id": "p3", "text": "Key difference: transverse has peaks/troughs; longitudinal has compressions/rarefactions" },
+          { "id": "p4", "text": "Identification method: compare direction of particle vibration to direction of wave travel" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Transverse waves have oscillations perpendicular to the direction of energy transfer. Examples include light, water waves, and all electromagnetic waves. They show peaks (crests) and troughs." },
+        { "text": "Longitudinal waves have oscillations parallel to the direction of energy transfer. The main example is sound. They show compressions (particles bunched together) and rarefactions (particles spread apart)." },
+        { "text": "Both types transfer energy without transferring matter — the particles vibrate about their rest position but do not travel with the wave." },
+        { "text": "A common mistake is confusing transverse and longitudinal waves. A useful memory aid: 'Transverse = T-shape' — the vibrations cross the wave direction at right angles, like the top of a letter T." }
+      ],
+      "topicTags": ["phy.waves.properties.transverse-longitudinal"],
+      "skillTags": ["describe-trend", "explain-mechanism"],
+      "misconceptionTags": ["confuses-transverse-longitudinal"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

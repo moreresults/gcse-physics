@@ -1,0 +1,150 @@
+{
+  "id": "phy_12",
+  "title": "The Electromagnetic Spectrum",
+  "icon": "📡",
+  "subject": "physics",
+  "context": "A student is revising the electromagnetic (EM) spectrum. All EM waves travel at the same speed in a vacuum — the speed of light (3 × 10⁸ m/s). The student needs to recall the order of the spectrum, match each region to its uses and hazards, and explain why some EM waves are more dangerous than others.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_12_a",
+      "partLabel": "a",
+      "type": "process_sequence",
+      "marks": 3,
+      "question": "Place the following regions of the electromagnetic spectrum in order from lowest frequency to highest frequency.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "process_sequence",
+        "items": [
+          { "id": "em_radio", "text": "Radio waves" },
+          { "id": "em_micro", "text": "Microwaves" },
+          { "id": "em_infra", "text": "Infrared" },
+          { "id": "em_visible", "text": "Visible light" },
+          { "id": "em_uv", "text": "Ultraviolet" },
+          { "id": "em_xray", "text": "X-rays" },
+          { "id": "em_gamma", "text": "Gamma rays" }
+        ],
+        "correctOrder": ["em_radio", "em_micro", "em_infra", "em_visible", "em_uv", "em_xray", "em_gamma"],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The electromagnetic spectrum in order from lowest to highest frequency is: radio waves → microwaves → infrared → visible light → ultraviolet → X-rays → gamma rays." },
+        { "text": "As frequency increases, wavelength decreases (since all EM waves travel at the same speed: v = fλ). Radio waves have the longest wavelength and lowest frequency; gamma rays have the shortest wavelength and highest frequency." },
+        { "text": "A common mistake is getting the order wrong — particularly placing microwaves after infrared, or confusing the position of ultraviolet and X-rays. A useful mnemonic is: 'Running Men In Very Unusual eXpensive Garments' (Radio, Microwave, Infrared, Visible, UV, X-ray, Gamma)." }
+      ],
+      "topicTags": ["phy.waves.em-spectrum.order"],
+      "skillTags": ["recall-fact", "sequence"],
+      "misconceptionTags": ["confuses-em-spectrum-order"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_12_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which type of electromagnetic wave is used for mobile phone communication?",
+      "options": [
+        { "id": "opt_a", "text": "Infrared" },
+        { "id": "opt_b", "text": "Microwaves" },
+        { "id": "opt_c", "text": "Ultraviolet" },
+        { "id": "opt_d", "text": "Gamma rays" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — microwaves are used for mobile phone communication. Mobile phones transmit and receive microwave signals to and from nearby phone masts (base stations)." },
+        { "text": "Microwaves are also used for satellite communication, Wi-Fi, and cooking food in microwave ovens. Different frequencies within the microwave band are allocated to different uses." },
+        { "text": "A common mistake is thinking EM waves need a medium (like air particles) to travel. All EM waves — including microwaves — are transverse waves that can travel through a vacuum. They transfer energy as oscillating electric and magnetic fields." }
+      ],
+      "topicTags": ["phy.waves.em-spectrum.uses"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-em-waves-need-medium"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_12_c",
+      "partLabel": "c",
+      "type": "keyword_match",
+      "marks": 2,
+      "question": "Match each electromagnetic wave to its correct use or hazard.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "keyword_match",
+        "terms": [
+          { "id": "term_1", "text": "Infrared" },
+          { "id": "term_2", "text": "X-rays" }
+        ],
+        "definitions": [
+          { "id": "def_1", "text": "Used in TV remote controls and thermal imaging cameras" },
+          { "id": "def_2", "text": "Used to produce images of bones inside the body" },
+          { "id": "def_3", "text": "Used to sterilise medical equipment" },
+          { "id": "def_4", "text": "Used to transmit signals to satellites" }
+        ],
+        "pairs": [
+          { "termId": "term_1", "definitionId": "def_1" },
+          { "termId": "term_2", "definitionId": "def_2" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Infrared → Used in TV remote controls and thermal imaging cameras. Infrared radiation is emitted by all warm objects and can be detected by sensors. TV remotes use infrared pulses to send signals." },
+        { "text": "X-rays → Used to produce images of bones inside the body. X-rays pass through soft tissue but are absorbed by dense materials like bone, producing shadow images on a detector." },
+        { "text": "A common mistake is confusing the order of the EM spectrum and therefore mixing up which waves have which uses. For example, gamma rays (not X-rays) are used to sterilise equipment, and microwaves (not infrared) are used for satellite communication." }
+      ],
+      "topicTags": ["phy.waves.em-spectrum.uses", "phy.waves.em-spectrum.hazards"],
+      "skillTags": ["recall-fact", "match"],
+      "misconceptionTags": ["confuses-em-spectrum-order"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_12_d",
+      "partLabel": "d",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why ultraviolet (UV) radiation is more dangerous to humans than radio waves. In your answer, link your explanation to frequency, energy, and the ability to cause ionisation. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Ultraviolet radiation has a much higher frequency than radio waves. Higher frequency EM waves carry more energy per photon. UV radiation carries enough energy to ionise atoms and molecules — it can knock electrons out of atoms in living cells. This ionisation can damage DNA, leading to mutations and increasing the risk of skin cancer. Radio waves have very low frequency and very low energy per photon — they do not carry enough energy to ionise atoms, so they cannot cause this kind of cellular damage.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "UV has a higher frequency (and shorter wavelength) than radio waves" },
+          { "id": "p2", "text": "Higher frequency means more energy per photon" },
+          { "id": "p3", "text": "UV can ionise atoms/molecules — can damage DNA and cause mutations/cancer" },
+          { "id": "p4", "text": "Radio waves have too little energy to ionise — they are not harmful in the same way" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "UV radiation has a much higher frequency than radio waves. In the EM spectrum, UV is near the high-frequency end, while radio waves are at the low-frequency end." },
+        { "text": "The energy carried by an EM wave is directly related to its frequency — higher frequency means more energy per photon. UV photons carry significantly more energy than radio wave photons." },
+        { "text": "UV radiation carries enough energy to ionise atoms — it can remove electrons from atoms in biological molecules such as DNA. This ionisation can damage the structure of DNA, leading to mutations and increasing the risk of skin cancer." },
+        { "text": "A common mistake is thinking that increasing frequency increases the speed of EM waves. All EM waves travel at the same speed (3 × 10⁸ m/s) in a vacuum. Higher frequency does not mean faster — it means more energy per photon and shorter wavelength." }
+      ],
+      "topicTags": ["phy.waves.em-spectrum.hazards", "phy.waves.em-spectrum.energy-frequency"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-frequency-speed", "thinks-em-waves-need-medium"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}
