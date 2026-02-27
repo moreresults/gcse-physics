@@ -1,0 +1,218 @@
+{
+  "id": "phy_07",
+  "title": "I-V Characteristics and Resistance",
+  "icon": "💡",
+  "subject": "physics",
+  "context": "A student investigates the electrical properties of different components by plotting their current-voltage (I-V) characteristics. The graph below shows the I-V curves for two components: Component X (an ohmic resistor) and Component Y (a filament lamp). The student also identifies circuit symbols for special components used in sensing circuits.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "circuitSymbols": {
+      "imageSrc": "./src/assets/diagrams/phy_07_circuit_symbols.svg",
+      "imageAlt": "Two circuit component symbols labelled A and B. Symbol A is a thermistor (rectangle with a diagonal line and tick). Symbol B is an LDR (rectangle inside a circle with two inward arrows).",
+      "title": "Circuit component symbols",
+      "width": 400,
+      "aspectRatio": "4:3",
+      "hotspots": [
+        { "id": "label_a", "x": 25, "y": 50, "correct": "thermistor" },
+        { "id": "label_b", "x": 75, "y": 50, "correct": "ldr" }
+      ],
+      "termBank": [
+        { "id": "thermistor", "text": "Thermistor" },
+        { "id": "ldr", "text": "LDR" },
+        { "id": "diode", "text": "Diode" },
+        { "id": "led", "text": "LED" },
+        { "id": "fuse", "text": "Fuse" },
+        { "id": "variable_resistor", "text": "Variable resistor" }
+      ],
+      "description": "Two circuit symbols are displayed side by side on a white background, separated by a vertical dashed line. Symbol A (left): a standard thermistor symbol consisting of a rectangular resistor box (black outline, white fill) with a diagonal line running from the bottom-left corner to the top-right corner of the box, and a small perpendicular tick at the upper end of the diagonal. A blue (#007AFF) leader line points from outside the diagram to the centre of the symbol, labelled 'A'. Symbol B (right): a standard LDR (light-dependent resistor) symbol consisting of a rectangular resistor box (black outline, white fill) enclosed within a circle, with two downward-pointing arrows approaching from the upper-left (representing incident light). A blue (#007AFF) leader line points from outside the diagram to the centre of the symbol, labelled 'B'."
+    }
+  },
+
+  "graphs": {
+    "ivCharacteristic": {
+      "xAxis": { "label": "Voltage (V)", "min": 0, "max": 6, "step": 1 },
+      "yAxis": { "label": "Current (A)", "min": 0, "max": 1.2, "step": 0.2 },
+      "lines": [
+        {
+          "id": "resistor",
+          "color": "#007AFF",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 2, "y": 0.4 },
+            { "x": 4, "y": 0.8 },
+            { "x": 6, "y": 1.2 }
+          ]
+        },
+        {
+          "id": "lamp",
+          "color": "#FF3B30",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 1, "y": 0.3 },
+            { "x": 2, "y": 0.5 },
+            { "x": 3, "y": 0.6 },
+            { "x": 4, "y": 0.65 },
+            { "x": 5, "y": 0.68 },
+            { "x": 6, "y": 0.7 }
+          ]
+        }
+      ],
+      "interactiveMode": "read"
+    }
+  },
+
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_07_a",
+      "partLabel": "a",
+      "type": "graph_reading",
+      "marks": 2,
+      "question": "Using the I-V characteristic graph: (i) What is the current through the ohmic resistor (Component X) when the voltage is 4 V? (ii) What is the current through the filament lamp (Component Y) when the voltage is 2 V?",
+      "diagramRef": null,
+      "graphRef": "ivCharacteristic",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "graph_reading",
+        "readings": [
+          { "id": "reading_1", "correct": 0.8, "tolerance": 0.016, "unit": "A", "prompt": "Current through resistor at 4 V" },
+          { "id": "reading_2", "correct": 0.5, "tolerance": 0.01, "unit": "A", "prompt": "Current through lamp at 2 V" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) Read up from 4 V on the x-axis to the straight line (Component X), then across to the y-axis: current = 0.8 A." },
+        { "text": "(ii) Read up from 2 V on the x-axis to the curved line (Component Y), then across to the y-axis: current = 0.5 A." },
+        { "text": "The gradient of the I-V graph relates to the conductance (1/R) of the component. For the ohmic resistor, the gradient is constant, showing constant resistance." },
+        { "text": "A common mistake is misreading the gradient of an I-V graph. The gradient gives current per volt (I/V = 1/R), not resistance directly. A steeper gradient means lower resistance, not higher. Students often confuse this and think a steeper line means more resistance." }
+      ],
+      "topicTags": ["phy.electricity.components.iv-characteristics"],
+      "skillTags": ["interpret-graph", "read-data"],
+      "misconceptionTags": ["confuses-iv-graph-gradient"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_07_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following correctly describes the I-V characteristic of an ohmic resistor at constant temperature?",
+      "options": [
+        { "id": "opt_a", "text": "A straight line passing through the origin" },
+        { "id": "opt_b", "text": "A curve that becomes less steep at higher voltages" },
+        { "id": "opt_c", "text": "No current flows until a threshold voltage is reached" },
+        { "id": "opt_d", "text": "The current stays the same at all voltages" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_a"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is A — an ohmic resistor has a constant resistance at constant temperature, so current is directly proportional to voltage (V = IR). This produces a straight line through the origin." },
+        { "text": "Option B describes a filament lamp (resistance increases with temperature). Option C describes a diode (needs ~0.7 V to conduct). Option D is incorrect because current increases with voltage." },
+        { "text": "A common mistake is confusing I-V graph shapes. The gradient of a straight I-V line gives constant conductance (1/R), confirming Ohm's law. If the line curves, the resistance is changing — the component is non-ohmic." }
+      ],
+      "topicTags": ["phy.electricity.components.iv-characteristics", "phy.electricity.components.ohmic-resistor"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-iv-graph-gradient"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_07_c",
+      "partLabel": "c",
+      "type": "diagram_label",
+      "marks": 2,
+      "question": "The diagram shows two circuit symbols used in sensing circuits. Label components A and B.",
+      "diagramRef": "circuitSymbols",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b"],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Thermistor — a component whose resistance decreases as temperature increases. The symbol has a diagonal line through the resistor box to indicate temperature dependence." },
+        { "text": "B = LDR (light-dependent resistor) — a component whose resistance decreases as light intensity increases. The symbol has arrows pointing inward to represent incoming light." },
+        { "text": "Both thermistors and LDRs are used in sensing circuits: thermistors in temperature-sensing circuits (e.g. thermostats) and LDRs in light-sensing circuits (e.g. automatic streetlights)." },
+        { "text": "A common mistake is swapping thermistor and LDR responses. Remember: Thermistor = Temperature (both start with T), LDR = Light. Both have resistance that decreases when their stimulus increases." }
+      ],
+      "topicTags": ["phy.electricity.components.thermistor", "phy.electricity.components.ldr"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-thermistor-ldr-response"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_07_d",
+      "partLabel": "d",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "Using the I-V graph, calculate the resistance of the ohmic resistor (Component X) when the voltage across it is 6 V. Use R = V / I.",
+      "diagramRef": null,
+      "graphRef": "ivCharacteristic",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 5,
+        "tolerance": 0.1,
+        "unitOptions": ["\u03a9", "A", "V", "W"],
+        "correctUnit": "\u03a9"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correctly reads current from graph at V = 6 V (I = 1.2 A) and applies R = V/I", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the graph: at V = 6 V, the current through Component X (resistor) is I = 1.2 A." },
+        { "text": "Using R = V ÷ I (rearranged from V = IR on the formula sheet):", "formula": true },
+        { "text": "R = 6 V ÷ 1.2 A = 5 Ω", "formula": true },
+        { "text": "The resistance is constant at 5 Ω at all points on the line, confirming it is ohmic." },
+        { "text": "A common mistake is thinking resistance increases when voltage increases. For an ohmic resistor at constant temperature, resistance stays the same — it is current that increases proportionally with voltage. The idea that 'more voltage means more resistance' confuses cause and effect in Ohm's law." }
+      ],
+      "topicTags": ["phy.electricity.components.resistance-calculation", "phy.electricity.components.ohmic-resistor"],
+      "skillTags": ["apply-equation", "interpret-graph"],
+      "misconceptionTags": ["thinks-resistance-proportional-to-voltage"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_07_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why the I-V curve for the filament lamp (Component Y) is not a straight line. In your answer, link the shape of the curve to changes in temperature and resistance. [3 marks]",
+      "diagramRef": null,
+      "graphRef": "ivCharacteristic",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "As the voltage across the filament lamp increases, more current flows and the filament heats up. When the metal filament gets hotter, its atoms vibrate more vigorously, making it harder for electrons (charge carriers) to pass through. This means the resistance of the filament increases with temperature. Because resistance is increasing as voltage increases, each additional volt produces a smaller increase in current than the last. This is why the I-V curve gets less steep (flattens) at higher voltages — the lamp is non-ohmic because its resistance changes with temperature.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "As current increases, the filament heats up (higher temperature)" },
+          { "id": "p2", "text": "Higher temperature causes increased resistance (atoms vibrate more, impeding electron flow)" },
+          { "id": "p3", "text": "Increasing resistance means the curve becomes less steep at higher voltages — not a straight line" },
+          { "id": "p4", "text": "Non-ohmic because resistance is not constant (depends on temperature)" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "As the voltage increases, more current flows through the filament. The electrical energy transferred to the filament heats it up — that is why it glows." },
+        { "text": "As the temperature of the metal filament rises, its atoms vibrate more. This makes it harder for the conduction electrons to flow through, so the resistance of the filament increases." },
+        { "text": "Because resistance increases with temperature, each extra volt across the lamp produces a smaller increase in current than the previous volt. The I-V curve therefore gets less steep (flattens) at higher voltages." },
+        { "text": "A common mistake is thinking that resistance increases because of higher voltage directly. The voltage does not cause the resistance to increase — the heating effect of the current does. If the filament were kept at constant temperature (hypothetically), it would behave ohmically. This is the misconception that resistance is proportional to voltage." }
+      ],
+      "topicTags": ["phy.electricity.components.iv-characteristics", "phy.electricity.components.filament-lamp"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["thinks-resistance-proportional-to-voltage"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

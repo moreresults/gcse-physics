@@ -1,0 +1,188 @@
+{
+  "id": "phy_09",
+  "title": "Magnetism, Electromagnets and the Motor Effect",
+  "icon": "🧲",
+  "subject": "physics",
+  "context": "A student studies magnetism and electromagnetism. The diagram below shows the magnetic field pattern around a bar magnet. The student then investigates the motor effect by placing a straight wire carrying a current of 4 A in a uniform magnetic field of strength 0.5 T. The wire has a length of 0.5 m inside the field.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "barMagnetField": {
+      "imageSrc": "./src/assets/diagrams/phy_09_bar_magnet_field.svg",
+      "imageAlt": "A bar magnet with magnetic field lines shown curving from the north pole to the south pole. Three features are labelled A, B, and C: A is the left end of the magnet (N pole), B is the right end (S pole), and C is an arrow on a field line above the magnet showing the direction of the field.",
+      "title": "Magnetic field pattern around a bar magnet",
+      "width": 600,
+      "aspectRatio": "16:9",
+      "hotspots": [
+        { "id": "label_a", "x": 15, "y": 50, "correct": "north_pole" },
+        { "id": "label_b", "x": 85, "y": 50, "correct": "south_pole" },
+        { "id": "label_c", "x": 50, "y": 15, "correct": "field_direction" }
+      ],
+      "termBank": [
+        { "id": "north_pole", "text": "North (N) pole" },
+        { "id": "south_pole", "text": "South (S) pole" },
+        { "id": "field_direction", "text": "Field line direction (N to S)" },
+        { "id": "electric_field_line", "text": "Electric field line" },
+        { "id": "current_direction", "text": "Current direction" },
+        { "id": "electron_flow", "text": "Electron flow direction" }
+      ],
+      "description": "A horizontal bar magnet is centred in the diagram. The left end is coloured red and the right end is coloured blue. Multiple curved field lines emerge from the left end, arc outward above and below the magnet, and curve back into the right end, forming closed loops. The field lines are closest together near the poles (strongest field) and spread out further away. An arrowhead on each field line shows the direction of the field: pointing away from the left end (outward) and into the right end (inward). Feature A is labelled at the left end of the magnet with a blue (#007AFF) leader line. Feature B is labelled at the right end with a blue leader line. Feature C is labelled at an arrowhead on a field line above the magnet, pointing from left to right, with a blue leader line. The background is white with a thin grey border."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_09_a",
+      "partLabel": "a",
+      "type": "diagram_label",
+      "marks": 3,
+      "question": "The diagram shows the magnetic field pattern around a bar magnet. Label features A, B, and C.",
+      "diagramRef": "barMagnetField",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b", "label_c"],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = North (N) pole — the end of the magnet where field lines emerge (point outward). By convention, magnetic field lines go from north to south outside the magnet." },
+        { "text": "B = South (S) pole — the end of the magnet where field lines enter (point inward). Field lines always form closed loops, running from N to S outside and from S to N inside the magnet." },
+        { "text": "C = Field line direction (N to S) — the arrowhead on the field line above the magnet points from left to right, which is from the north pole towards the south pole." },
+        { "text": "A common mistake is confusing magnetic field lines with electric field lines. Magnetic field lines always form closed loops (no start or end point), while electric field lines start on positive charges and end on negative charges. The patterns look similar near poles/charges but behave differently." }
+      ],
+      "topicTags": ["phy.electricity.magnetism.field-patterns", "phy.electricity.magnetism.bar-magnet"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-magnetic-electric-fields"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_09_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following changes would increase the strength of an electromagnet?",
+      "options": [
+        { "id": "opt_a", "text": "Increase the current flowing through the coil" },
+        { "id": "opt_b", "text": "Replace the iron core with a copper core" },
+        { "id": "opt_c", "text": "Switch the power supply from DC to AC" },
+        { "id": "opt_d", "text": "Remove the iron core from inside the coil" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_a"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is A — increasing the current through the coil increases the strength of the magnetic field produced by the electromagnet." },
+        { "text": "Other ways to increase electromagnet strength include: adding more turns of wire, and using a soft iron core (not copper — option B would weaken it). The soft iron core is easily magnetised and concentrates the field." },
+        { "text": "A common mistake is thinking electromagnets are permanent magnets that cannot be controlled. A key advantage of electromagnets is that they can be switched on and off by controlling the current. When the current is turned off, the soft iron core loses its magnetism immediately (unlike a permanent magnet)." }
+      ],
+      "topicTags": ["phy.electricity.magnetism.electromagnets"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-electromagnets-are-permanent"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_09_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "A straight wire of length 0.5 m carries a current of 4 A in a uniform magnetic field of strength 0.5 T. The wire is at right angles to the field. Calculate the force on the wire. Use the equation from the formula sheet: F = BIL.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 1,
+        "tolerance": 0.02,
+        "unitOptions": ["N", "T", "A", "m"],
+        "correctUnit": "N"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into F = BIL: F = 0.5 \u00d7 4 \u00d7 0.5", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: F = BIL", "formula": true },
+        { "text": "F = 0.5 T \u00d7 4 A \u00d7 0.5 m", "formula": true },
+        { "text": "F = 1 N", "formula": true },
+        { "text": "The force acts perpendicular to both the current direction and the magnetic field direction. This is the motor effect." },
+        { "text": "A common mistake is confusing the motor effect direction with the field direction. The force is not along the current or the field — it is at right angles to both. Fleming's left-hand rule gives the force direction: First finger = Field, seCond finger = Current, thuMb = Motion (force)." }
+      ],
+      "topicTags": ["phy.electricity.magnetism.motor-effect", "phy.electricity.magnetism.f-equals-bil"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-motor-effect-direction"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_09_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "A horizontal wire carries a current flowing to the right in a magnetic field directed vertically downward. Using Fleming's left-hand rule, in which direction does the force act on the wire?",
+      "options": [
+        { "id": "opt_a", "text": "Upward" },
+        { "id": "opt_b", "text": "Downward" },
+        { "id": "opt_c", "text": "Away from the observer" },
+        { "id": "opt_d", "text": "Towards the observer" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Using Fleming's left-hand rule: First finger (Field) points downward, seCond finger (Current) points to the right. The thuMb (Motion/force) then points away from the observer." },
+        { "text": "To apply the rule: hold your left hand so the first finger points in the field direction and the second finger (at right angles to the first) points in the current direction. Your thumb, at right angles to both, gives the force direction." },
+        { "text": "A common mistake is getting the motor effect direction wrong by confusing which finger represents which quantity. Remember: FBI — First finger = Field (B), seCond finger = Current (I), thuMb = Motion (F for force). Also, some students use the right hand — it must be the LEFT hand for the motor effect." }
+      ],
+      "topicTags": ["phy.electricity.magnetism.motor-effect", "phy.electricity.magnetism.flemings-lhr"],
+      "skillTags": ["apply-rule"],
+      "misconceptionTags": ["confuses-motor-effect-direction"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_09_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain how a simple DC motor works. In your answer, describe the role of the motor effect, the commutator, and why the coil rotates continuously. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "A simple DC motor consists of a rectangular coil of wire placed between two permanent magnets (N and S poles). When current flows through the coil, each side of the coil experiences a force due to the motor effect (F = BIL). The forces on opposite sides of the coil act in opposite directions (one up, one down) because the current flows in opposite directions on each side. This pair of forces creates a turning effect (moment) that makes the coil rotate. The commutator is a split-ring connector that reverses the direction of current in the coil every half turn. Without the commutator, the coil would stop at the vertical position because the forces would balance. The commutator ensures the forces always act in the same rotational direction, so the coil spins continuously.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Motor effect: current-carrying coil in a magnetic field experiences a force (F = BIL) on each side" },
+          { "id": "p2", "text": "Forces on opposite sides act in opposite directions, creating a turning effect" },
+          { "id": "p3", "text": "Commutator reverses current direction every half turn to maintain continuous rotation" },
+          { "id": "p4", "text": "Without commutator, coil would stop when forces balance at vertical position" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The motor effect: when a current-carrying wire is in a magnetic field, it experiences a force (F = BIL). In a motor, each side of the coil carries current in opposite directions, so the forces on opposite sides act in opposite directions — one upward, one downward. This creates a turning effect (torque)." },
+        { "text": "The commutator is a split ring that connects the coil to the external circuit. Every half turn, the commutator swaps the connections so that the current direction in the coil reverses. This ensures the forces always push the coil in the same rotational direction." },
+        { "text": "Without the commutator, the coil would rotate to the vertical position and stop because the forces would then pull it back. The commutator reverses the current at exactly the right moment to keep the coil spinning continuously." },
+        { "text": "A common mistake is confusing the motor effect with electromagnetic induction. The motor effect is about a current-carrying conductor experiencing a force in a magnetic field (motor: electrical energy to kinetic energy). Electromagnetic induction is the reverse — moving a conductor through a magnetic field induces a voltage (generator: kinetic energy to electrical energy). Students sometimes confuse the direction rules: Fleming's LEFT-hand rule is for the motor effect, while the RIGHT-hand rule (or Lenz's law) is used for induction." }
+      ],
+      "topicTags": ["phy.electricity.magnetism.motor-effect", "phy.electricity.magnetism.dc-motor", "phy.electricity.magnetism.induction"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-induction-direction"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

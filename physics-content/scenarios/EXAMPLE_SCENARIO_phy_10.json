@@ -1,0 +1,170 @@
+{
+  "id": "phy_10",
+  "title": "Transformers and the National Grid",
+  "icon": "🏗️",
+  "subject": "physics",
+  "context": "A student learns about transformers and the National Grid. A step-up transformer has 100 turns on the primary coil and 500 turns on the secondary coil. The primary voltage is 12 V and the primary current is 10 A. Assume the transformer is 100% efficient.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_10_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following correctly describes a step-up transformer?",
+      "options": [
+        { "id": "opt_a", "text": "It has more turns on the secondary coil than the primary coil, and increases the voltage" },
+        { "id": "opt_b", "text": "It has more turns on the primary coil than the secondary coil, and increases the voltage" },
+        { "id": "opt_c", "text": "It has more turns on the secondary coil than the primary coil, and increases the current" },
+        { "id": "opt_d", "text": "It has equal turns on both coils and does not change the voltage" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_a"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is A — a step-up transformer has more turns on the secondary coil than the primary coil. This increases the voltage output (Vs > Vp)." },
+        { "text": "The transformer equation is Vp/Vs = Np/Ns. If Ns > Np, then Vs > Vp — the voltage is stepped up. However, if voltage goes up, current goes down (to conserve power)." },
+        { "text": "A common mistake is confusing step-up and step-down transformers. Step-UP = more turns on secondary = higher voltage. Step-DOWN = fewer turns on secondary = lower voltage. Option C is wrong because a step-up transformer increases voltage but decreases current (not increases current)." }
+      ],
+      "topicTags": ["phy.electricity.transformers.step-up-step-down"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-step-up-step-down"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_10_b",
+      "partLabel": "b",
+      "type": "calculation",
+      "marks": 2,
+      "question": "The step-up transformer has 100 turns on the primary coil and 500 turns on the secondary coil. The primary voltage is 12 V. Calculate the secondary voltage. Use the equation from the formula sheet: Vp/Vs = Np/Ns.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "calculation",
+        "correct": 60,
+        "tolerance": 1.2,
+        "unitOptions": ["V", "A", "W", "turns"],
+        "correctUnit": "V"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution and rearrangement: 12/Vs = 100/500, so Vs = 12 \u00d7 500/100", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: Vp/Vs = Np/Ns", "formula": true },
+        { "text": "12/Vs = 100/500", "formula": true },
+        { "text": "Rearrange: Vs = 12 \u00d7 500 \u00f7 100 = 12 \u00d7 5 = 60 V", "formula": true },
+        { "text": "The secondary voltage is 60 V — five times the primary voltage, because there are five times as many turns on the secondary coil." },
+        { "text": "A common mistake is confusing which coil is primary and which is secondary, leading to the inverse answer (2.4 V instead of 60 V). Remember: the step-up transformer increases voltage, so Vs must be larger than Vp." }
+      ],
+      "topicTags": ["phy.electricity.transformers.transformer-equation"],
+      "skillTags": ["apply-equation", "rearrange-equation"],
+      "misconceptionTags": ["confuses-step-up-step-down"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_10_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The primary current is 10 A. Assuming the transformer is 100% efficient, calculate the current in the secondary coil. Use the relationship VpIp = VsIs from the formula sheet (P = IV).",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 2,
+        "tolerance": 0.04,
+        "unitOptions": ["A", "V", "W", "turns"],
+        "correctUnit": "A"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Applies VpIp = VsIs and substitutes: 12 \u00d7 10 = 60 \u00d7 Is", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "For a 100% efficient transformer, power in = power out. From the formula sheet: P = IV, so VpIp = VsIs.", "formula": true },
+        { "text": "12 \u00d7 10 = 60 \u00d7 Is", "formula": true },
+        { "text": "120 = 60 \u00d7 Is, so Is = 120 \u00f7 60 = 2 A", "formula": true },
+        { "text": "The secondary current (2 A) is smaller than the primary current (10 A). When a step-up transformer increases voltage by a factor of 5, it decreases current by the same factor." },
+        { "text": "A common mistake is thinking a step-up transformer creates extra energy or power. The power input (12 V \u00d7 10 A = 120 W) equals the power output (60 V \u00d7 2 A = 120 W). The transformer only changes the ratio of voltage to current — it cannot create energy. Energy is always conserved." }
+      ],
+      "topicTags": ["phy.electricity.transformers.power-conservation"],
+      "skillTags": ["apply-equation", "rearrange-equation"],
+      "misconceptionTags": ["thinks-transformers-create-energy"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_10_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Why does the National Grid transmit electricity at very high voltages (e.g. 400 000 V)?",
+      "options": [
+        { "id": "opt_a", "text": "To reduce the current and therefore reduce energy lost as heat in the cables" },
+        { "id": "opt_b", "text": "To make the electricity travel faster through the cables" },
+        { "id": "opt_c", "text": "To increase the total power generated at the power station" },
+        { "id": "opt_d", "text": "To make the electricity safer for consumers to use" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_a"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is A — transmitting at high voltage means the current can be much lower (since P = IV, if V goes up and P stays the same, I must go down). Lower current means less energy wasted as heat in the cables (P_lost = I\u00b2R)." },
+        { "text": "The power station generates a fixed amount of power. A step-up transformer increases the voltage for transmission, which reduces the current. At the consumer end, a step-down transformer reduces the voltage back to a safe level (230 V in the UK)." },
+        { "text": "A common mistake is confusing power and energy in this context. The National Grid does not increase the total power — it transmits the same power more efficiently. Power (watts) is the rate of energy transfer. By reducing current, the rate of energy wasted in cables (P = I\u00b2R) is dramatically reduced." }
+      ],
+      "topicTags": ["phy.electricity.transformers.national-grid"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-power-energy-electricity"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_10_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why transmitting electricity at high voltage through the National Grid reduces energy losses. In your answer, use the equations P = IV and P = I\u00b2R to explain the link between voltage, current, and heating in the cables. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "The power station generates a fixed amount of electrical power (P). Using P = IV, if the voltage (V) is increased by a step-up transformer, the current (I) must decrease to keep the power the same. The cables have resistance (R), and the power lost as heat in the cables is given by P_lost = I\u00b2R. Because the current is squared, even a small reduction in current causes a large reduction in energy lost as heat. For example, if the current is halved, the power loss is reduced to one quarter (because \u00bd\u00b2 = \u00bc). By transmitting at 400 000 V instead of 230 V, the current is reduced by a factor of about 1700, so the power loss in the cables is reduced by a factor of about 3 million. This makes the transmission much more efficient — more of the generated energy reaches consumers.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "P = IV: increasing voltage reduces current for the same power transmitted" },
+          { "id": "p2", "text": "P_lost = I\u00b2R: power lost in cables depends on current squared" },
+          { "id": "p3", "text": "Lower current means much less energy wasted as heat in cables" },
+          { "id": "p4", "text": "Step-up transformer increases voltage for efficient transmission; step-down transformer reduces it for safe use" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "From the formula sheet: P = IV. The power station produces a fixed power output. A step-up transformer increases the transmission voltage, which means the current must decrease (I = P/V). Higher voltage = lower current for the same power." },
+        { "text": "The cables have resistance R. From the formula sheet: the power wasted as heat in the cables is P_lost = I\u00b2R. Because current is squared, reducing the current has a dramatic effect on heat losses.", "formula": true },
+        { "text": "For example, if voltage is increased by a factor of 10, current decreases by a factor of 10, and power loss decreases by a factor of 10\u00b2 = 100. This is why the National Grid uses 400 000 V for long-distance transmission." },
+        { "text": "A common mistake is thinking the step-up transformer creates extra energy or power. It does not — it only changes the voltage-to-current ratio. The total power remains the same (conservation of energy). Students sometimes confuse power (rate of energy transfer, measured in watts) with energy (total amount transferred, measured in joules). The transformer conserves power; the saving comes from reduced I\u00b2R losses in the cables." }
+      ],
+      "topicTags": ["phy.electricity.transformers.national-grid", "phy.electricity.transformers.power-conservation"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["thinks-transformers-create-energy", "confuses-power-energy-electricity"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

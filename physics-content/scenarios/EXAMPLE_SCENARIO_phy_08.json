@@ -1,0 +1,169 @@
+{
+  "id": "phy_08",
+  "title": "Household Electricity and Energy Costs",
+  "icon": "🔌",
+  "subject": "physics",
+  "context": "A student investigates the electrical energy usage and costs of household appliances. A 2000 W electric heater is plugged into the UK mains supply. A second component — a 4 \u03a9 heating element — is tested separately with a current of 3 A flowing through it. The electricity tariff is 15 p per kWh.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_08_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which equation correctly links electrical power, current, and voltage?",
+      "options": [
+        { "id": "opt_a", "text": "P = IV" },
+        { "id": "opt_b", "text": "P = I\u00b2R" },
+        { "id": "opt_c", "text": "P = QV" },
+        { "id": "opt_d", "text": "P = V\u00b2/R" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_a"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is A — P = IV directly links power (P, in watts), current (I, in amps), and voltage (V, in volts). This is the fundamental electrical power equation." },
+        { "text": "Options B (P = I\u00b2R) and D (P = V\u00b2/R) also calculate power, but they link power to current and resistance, or voltage and resistance — not directly to both current and voltage together." },
+        { "text": "A common mistake is confusing power and energy. Power (watts) is the rate of energy transfer — how quickly energy is used per second. Energy (joules) is the total amount transferred. P = IV tells us the power; to find energy, we need E = Pt." }
+      ],
+      "topicTags": ["phy.electricity.power.p-equals-iv"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-power-energy-electricity"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_08_b",
+      "partLabel": "b",
+      "type": "calculation",
+      "marks": 2,
+      "question": "A current of 3 A flows through a 4 \u03a9 heating element. Calculate the power dissipated by the heating element. Use the equation from the formula sheet: P = I\u00b2R.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "calculation",
+        "correct": 36,
+        "tolerance": 0.72,
+        "unitOptions": ["W", "J", "A", "V"],
+        "correctUnit": "W"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into P = I\u00b2R: P = 3\u00b2 \u00d7 4 = 9 \u00d7 4", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: P = I\u00b2R", "formula": true },
+        { "text": "P = 3\u00b2 \u00d7 4 = 9 \u00d7 4", "formula": true },
+        { "text": "P = 36 W", "formula": true },
+        { "text": "Power is measured in watts (W). One watt means one joule of energy is transferred per second." },
+        { "text": "A common mistake is confusing power (W) and energy (J). This answer tells us the heating element transfers 36 joules of energy every second — not 36 joules in total. To find the total energy, you would multiply by time: E = Pt." }
+      ],
+      "topicTags": ["phy.electricity.power.p-equals-i-squared-r"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-power-energy-electricity"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_08_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The 2000 W heater is used for 3 hours. The cost of electricity is 15 p per kWh. Calculate the cost of running the heater. Give your answer in pence.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 90,
+        "tolerance": 1.8,
+        "unitOptions": ["p", "\u00a3", "kWh", "J"],
+        "correctUnit": "p"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Converts 2000 W to 2 kW and calculates energy in kWh: E = 2 \u00d7 3 = 6 kWh", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "Step 1: Convert power from watts to kilowatts: 2000 W \u00f7 1000 = 2 kW", "formula": true },
+        { "text": "Step 2: From the formula sheet, energy = power \u00d7 time: E = 2 kW \u00d7 3 h = 6 kWh", "formula": true },
+        { "text": "Step 3: Cost = energy \u00d7 price per unit: Cost = 6 kWh \u00d7 15 p/kWh = 90 p", "formula": true },
+        { "text": "A common mistake is forgetting to convert watts to kilowatts before calculating energy in kWh. If a student uses 2000 instead of 2, they get E = 2000 \u00d7 3 = 6000, which gives a cost of 90 000 p — clearly unreasonable. Always check: is the power in kW before using the kWh formula?" }
+      ],
+      "topicTags": ["phy.electricity.power.energy-cost", "phy.electricity.power.e-equals-pt"],
+      "skillTags": ["apply-equation", "convert-units"],
+      "misconceptionTags": ["forgets-to-convert-units"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_08_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which statement correctly describes the difference between alternating current (AC) and direct current (DC)?",
+      "options": [
+        { "id": "opt_a", "text": "AC flows in one direction only; DC changes direction repeatedly" },
+        { "id": "opt_b", "text": "AC changes direction repeatedly; DC flows in one direction only" },
+        { "id": "opt_c", "text": "AC is used only in batteries; DC is used in the mains supply" },
+        { "id": "opt_d", "text": "AC has a higher voltage than DC" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — alternating current (AC) repeatedly reverses direction, flowing back and forth. Direct current (DC) flows in one direction only." },
+        { "text": "The UK mains supply is AC at 230 V and 50 Hz (changes direction 50 times per second). Batteries provide DC." },
+        { "text": "A common mistake is swapping AC and DC. Remember: AC = Alternating = Changes direction. DC = Direct = one Direction only. The mains uses AC because it can be easily transformed to different voltages using transformers." }
+      ],
+      "topicTags": ["phy.electricity.power.ac-dc"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-ac-dc"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_08_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why high-power appliances such as electric cookers and showers use cables with a thicker copper core than low-power appliances. In your answer, use the equation P = I\u00b2R to explain the link between current and heating. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "High-power appliances draw a larger current from the mains supply (since P = IV, and mains voltage is fixed, a higher power means a higher current). When current flows through the copper cable, some energy is dissipated as heat due to the cable's resistance. The power lost as heat in the cable is given by P = I\u00b2R. Because current is squared, even a small increase in current causes a much larger increase in the heating effect. If a thin cable (high resistance) carries a large current, the I\u00b2R heating can be so great that the cable overheats, melting the insulation and causing a fire. A thicker cable has a lower resistance (more cross-sectional area for electrons to flow through), so I\u00b2R losses are reduced, and the cable stays cool enough to be safe.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "High-power appliances draw larger currents (P = IV, V is fixed)" },
+          { "id": "p2", "text": "P = I\u00b2R: power lost as heat in cable depends on current squared" },
+          { "id": "p3", "text": "Thicker cable has lower resistance, reducing I\u00b2R heating" },
+          { "id": "p4", "text": "Prevents overheating / melting insulation / fire risk" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "From the formula sheet: P = IV. Since the mains voltage is fixed at 230 V, a higher-power appliance must draw a larger current. For example, a 2000 W heater draws about 8.7 A, while a 60 W lamp draws only 0.26 A." },
+        { "text": "From the formula sheet: P = I\u00b2R. The power dissipated as heat in the cable depends on the square of the current. Doubling the current quadruples the heating effect in the cable." },
+        { "text": "A thicker copper core has a lower resistance because there is a larger cross-sectional area for electrons to flow through. Lower resistance means less I\u00b2R power loss and less heating of the cable." },
+        { "text": "A common mistake is confusing power transferred to the appliance with power wasted in the cable. The appliance uses P = IV usefully (e.g. to heat water). The cable wastes energy as unwanted heat due to P = I\u00b2R. These are different: power is the rate of energy transfer, while energy is the total amount transferred over time." }
+      ],
+      "topicTags": ["phy.electricity.power.p-equals-i-squared-r", "phy.electricity.power.cable-safety"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-power-energy-electricity"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}
