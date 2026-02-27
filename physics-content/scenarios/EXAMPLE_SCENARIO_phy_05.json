@@ -1,0 +1,171 @@
+{
+  "id": "phy_05",
+  "title": "Energy Transfers on a Ramp",
+  "icon": "⚡",
+  "subject": "physics",
+  "context": "A student investigates energy transfers by releasing a 5 kg ball from rest at the top of a smooth ramp. The top of the ramp is 10 m above the ground. The ball rolls to the bottom of the ramp without friction. Use g = 9.8 N/kg.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_05_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which equation correctly gives the kinetic energy of a moving object?",
+      "options": [
+        { "id": "opt_a", "text": "Ek = mgh" },
+        { "id": "opt_b", "text": "Ek = ½mv²" },
+        { "id": "opt_c", "text": "Ek = Fd" },
+        { "id": "opt_d", "text": "Ek = Pt" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — kinetic energy is given by Ek = ½mv², where m is mass in kg and v is speed in m/s." },
+        { "text": "Option A (mgh) gives gravitational potential energy, not kinetic energy. Option C (Fd) gives work done, and option D (Pt) calculates energy from power and time." },
+        { "text": "A common mistake is confusing kinetic energy (energy of motion, depends on speed²) with gravitational potential energy (energy of position, depends on height). Remember: KE uses v², GPE uses h." }
+      ],
+      "topicTags": ["phy.forces.energy.kinetic"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-kinetic-potential-energy"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_05_b",
+      "partLabel": "b",
+      "type": "calculation",
+      "marks": 2,
+      "question": "Calculate the gravitational potential energy (GPE) of the ball at the top of the ramp. Use the equation Ep = mgh.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "calculation",
+        "correct": 490,
+        "tolerance": 9.8,
+        "unitOptions": ["J", "N", "W", "kg"],
+        "correctUnit": "J"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into Ep = mgh: Ep = 5 × 9.8 × 10", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: Ep = mgh", "formula": true },
+        { "text": "Ep = 5 kg × 9.8 N/kg × 10 m", "formula": true },
+        { "text": "Ep = 490 J", "formula": true },
+        { "text": "GPE is measured in joules (J), which is the same unit as all forms of energy and work done. A common mistake is confusing work done with force alone — work done (W = Fd) requires both a force AND a distance moved in the direction of that force. Just applying a force without movement does no work." }
+      ],
+      "topicTags": ["phy.forces.energy.gravitational-potential"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-work-force"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_05_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The ball rolls down the smooth ramp to the ground. Assuming no energy is lost to friction, calculate the kinetic energy of the ball at the bottom of the ramp.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 490,
+        "tolerance": 9.8,
+        "unitOptions": ["J", "N", "W", "m/s"],
+        "correctUnit": "J"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "States that KE at bottom = GPE at top by conservation of energy", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "By the principle of conservation of energy: energy cannot be created or destroyed, only transferred from one store to another." },
+        { "text": "At the top of the ramp: all energy is stored as gravitational potential energy (Ep = 490 J). The ball is at rest, so KE = 0.", "formula": false },
+        { "text": "At the bottom of the ramp: height = 0, so GPE = 0. All energy has been transferred to kinetic energy.", "formula": false },
+        { "text": "Since no energy is lost (smooth ramp): KE at bottom = GPE at top = 490 J", "formula": true },
+        { "text": "A common mistake is thinking the ball has both KE and GPE at the bottom. At ground level (h = 0), GPE = 0 — all the energy is now kinetic. The total energy remains 490 J throughout the journey, just in different forms." }
+      ],
+      "topicTags": ["phy.forces.energy.conservation", "phy.forces.energy.kinetic"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-kinetic-potential-energy"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_05_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "In reality, the ball's kinetic energy at the bottom of the ramp would be less than 490 J. Where has the 'missing' energy gone?",
+      "options": [
+        { "id": "opt_a", "text": "The energy has been destroyed" },
+        { "id": "opt_b", "text": "The energy has been transferred to thermal energy in the ramp and surroundings" },
+        { "id": "opt_c", "text": "The energy has been converted into extra gravitational potential energy" },
+        { "id": "opt_d", "text": "The energy has increased the ball's power" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — friction between the ball and the ramp converts some kinetic energy into thermal (heat) energy, warming the ramp and surroundings. Sound energy is also produced." },
+        { "text": "Energy is never destroyed (conservation of energy). The total energy in the system is still 490 J, but some is now in less useful forms (thermal energy dissipated to surroundings)." },
+        { "text": "A common mistake is confusing power and energy. Option D is incorrect because power (W) is the rate of energy transfer (P = E/t), not a store of energy. Energy is measured in joules (J); power is measured in watts (W). They are related but different quantities." }
+      ],
+      "topicTags": ["phy.forces.energy.conservation", "phy.forces.energy.dissipation"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-power-energy"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_05_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "A motor is used to lift the 5 kg ball back to the top of the ramp. The motor uses 600 J of electrical energy to raise the ball 10 m. Calculate the efficiency of the motor and explain why the efficiency is less than 100%. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Efficiency = (useful energy output ÷ total energy input) × 100%. The useful energy output is the gravitational potential energy gained by the ball = mgh = 5 × 9.8 × 10 = 490 J. The total energy input is 600 J (electrical energy). Efficiency = (490 ÷ 600) × 100% = 81.7%. The efficiency is less than 100% because not all the electrical energy is converted to useful GPE. Some energy is wasted as thermal energy due to friction in the motor's moving parts and electrical resistance in the wires. By conservation of energy, the total energy output (useful + wasted) always equals the total energy input, so efficiency can never exceed 100%.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Correct efficiency calculation: (490 ÷ 600) × 100% = 81.7%" },
+          { "id": "p2", "text": "Some input energy is wasted as thermal energy due to friction or electrical resistance" },
+          { "id": "p3", "text": "Efficiency is always less than 100% because some energy is always dissipated to surroundings in less useful forms" },
+          { "id": "p4", "text": "Correct use of efficiency formula: useful output ÷ total input × 100%" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "From the formula sheet: efficiency = (useful energy output ÷ total energy input) × 100%", "formula": true },
+        { "text": "Useful energy output = GPE gained = mgh = 5 × 9.8 × 10 = 490 J", "formula": true },
+        { "text": "Total energy input = 600 J (electrical energy supplied to the motor)", "formula": false },
+        { "text": "Efficiency = (490 ÷ 600) × 100% = 81.7%", "formula": true },
+        { "text": "The motor is not 100% efficient because friction in its moving parts generates thermal energy, and electrical resistance in the wires also produces heat. These energy transfers are unavoidable in any real machine." },
+        { "text": "A common mistake is thinking efficiency can exceed 100%. This would violate the principle of conservation of energy — the useful energy output can never be greater than the total energy input. All real machines have efficiency below 100%." }
+      ],
+      "topicTags": ["phy.forces.energy.efficiency", "phy.forces.energy.conservation"],
+      "skillTags": ["apply-equation", "explain-mechanism"],
+      "misconceptionTags": ["thinks-efficiency-exceeds-100"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

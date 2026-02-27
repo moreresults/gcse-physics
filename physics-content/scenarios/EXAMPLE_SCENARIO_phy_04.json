@@ -1,0 +1,170 @@
+{
+  "id": "phy_04",
+  "title": "Trolley Collision on a Track",
+  "icon": "💥",
+  "subject": "physics",
+  "context": "A student investigates collisions using two trolleys on a frictionless air track. Trolley A has a mass of 2 kg and is moving at 3 m/s towards the right. Trolley B has a mass of 1 kg and is stationary. Trolley A collides with Trolley B and they stick together after the collision.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_04_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which equation correctly defines momentum?",
+      "options": [
+        { "id": "opt_a", "text": "momentum = mass × acceleration" },
+        { "id": "opt_b", "text": "momentum = mass × velocity" },
+        { "id": "opt_c", "text": "momentum = force × time" },
+        { "id": "opt_d", "text": "momentum = mass × gravitational field strength" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — momentum is defined as mass × velocity (p = mv). Its SI unit is kg m/s." },
+        { "text": "Momentum is a vector quantity — it has both magnitude and direction. The direction of momentum is the same as the direction of velocity." },
+        { "text": "A common mistake is confusing momentum with velocity alone. A slow, heavy object can have the same momentum as a fast, light object. For example, a 10 kg trolley at 1 m/s has the same momentum (10 kg m/s) as a 1 kg trolley at 10 m/s." }
+      ],
+      "topicTags": ["phy.forces.momentum.definition"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-momentum-is-velocity"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_04_b",
+      "partLabel": "b",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "Calculate the momentum of Trolley A before the collision. Use the equation from the formula sheet: p = mv.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 6,
+        "tolerance": 0.12,
+        "unitOptions": ["kg m/s", "m/s", "N", "kg"],
+        "correctUnit": "kg m/s"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into p = mv: p = 2 × 3", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: p = mv", "formula": true },
+        { "text": "p = 2 kg × 3 m/s", "formula": true },
+        { "text": "p = 6 kg m/s", "formula": true },
+        { "text": "A common mistake is thinking momentum equals velocity. Trolley A has a velocity of 3 m/s but a momentum of 6 kg m/s — the mass doubles the numerical value. Two objects with the same velocity can have very different momenta if their masses differ." }
+      ],
+      "topicTags": ["phy.forces.momentum.calculation"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["thinks-momentum-is-velocity"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_04_c",
+      "partLabel": "c",
+      "type": "calculation",
+      "marks": 2,
+      "question": "After the collision, the two trolleys stick together and move as one object. Use the principle of conservation of momentum to calculate the velocity of the combined trolleys after the collision.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "calculation",
+        "correct": 2,
+        "tolerance": 0.04,
+        "unitOptions": ["m/s", "kg m/s", "N", "m/s²"],
+        "correctUnit": "m/s"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Applies conservation of momentum: total momentum before = total momentum after", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "By the principle of conservation of momentum: total momentum before collision = total momentum after collision." },
+        { "text": "Before: p_total = (2 × 3) + (1 × 0) = 6 + 0 = 6 kg m/s", "formula": true },
+        { "text": "After: the trolleys stick together, so combined mass = 2 + 1 = 3 kg.", "formula": false },
+        { "text": "p_total = (2 + 1) × v → 6 = 3v → v = 6 ÷ 3 = 2 m/s", "formula": true },
+        { "text": "A common mistake is thinking momentum is not conserved in collisions. Total momentum is always conserved in all collisions (both elastic and inelastic), provided no external forces act. It is kinetic energy that may or may not be conserved." }
+      ],
+      "topicTags": ["phy.forces.momentum.conservation"],
+      "skillTags": ["apply-equation", "rearrange-equation"],
+      "misconceptionTags": ["thinks-momentum-not-conserved"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_04_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "The trolleys stick together after the collision. What type of collision is this?",
+      "options": [
+        { "id": "opt_a", "text": "Elastic — kinetic energy is conserved" },
+        { "id": "opt_b", "text": "Inelastic — kinetic energy is not conserved" },
+        { "id": "opt_c", "text": "Elastic — momentum is conserved" },
+        { "id": "opt_d", "text": "Inelastic — momentum is not conserved" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — when objects stick together after a collision, kinetic energy is not conserved. Some kinetic energy is converted to thermal energy and sound. This makes it an inelastic collision." },
+        { "text": "Both C and D are traps. In option C, although momentum IS conserved, the collision is not elastic because KE is lost. In option D, momentum IS conserved (so the reasoning is wrong), even though the collision is correctly identified as inelastic." },
+        { "text": "A common mistake is thinking momentum is not conserved in inelastic collisions (option D). Momentum is ALWAYS conserved in all collisions. The distinction between elastic and inelastic is about kinetic energy, not momentum." }
+      ],
+      "topicTags": ["phy.forces.momentum.elastic-inelastic"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-momentum-not-conserved"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_04_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Modern cars have crumple zones that deform during a collision. Explain how crumple zones reduce the risk of injury to passengers. In your answer, use the relationship between force, change in momentum, and time. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "In a collision, the car's momentum changes rapidly from a large value to zero. The crumple zone is designed to deform and crumple on impact, which increases the time over which the car's momentum changes. Using the impulse equation F = Δp ÷ Δt, if the time (Δt) increases while the change in momentum (Δp) remains the same, then the force (F) acting on the passengers is reduced. A smaller force means less risk of injury. Without a crumple zone, the car would stop almost instantly, resulting in a very large force on the occupants.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Crumple zones increase the time over which the momentum changes (collision time)" },
+          { "id": "p2", "text": "F = Δp/Δt — if time increases, force decreases (for the same change in momentum)" },
+          { "id": "p3", "text": "Smaller force on passengers reduces the risk of injury" },
+          { "id": "p4", "text": "The change in momentum (impulse) is the same with or without the crumple zone — the car must still stop" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "When a car crashes, it decelerates from its travelling speed to zero. The change in momentum (Δp = mv − 0 = mv) is fixed regardless of how the car stops." },
+        { "text": "From the formula sheet: F = Δp ÷ Δt. This means force equals the rate of change of momentum.", "formula": true },
+        { "text": "The crumple zone crumples and deforms during the collision, which increases the time (Δt) over which the car stops. Since Δp is the same but Δt is larger, the force F = Δp/Δt is smaller." },
+        { "text": "A smaller force on the passengers means less risk of serious injury. Seatbelts and airbags work on the same principle — they all increase the deceleration time." },
+        { "text": "A common mistake is confusing impulse and momentum. Impulse (FΔt) equals the change in momentum (Δp) — they are the same quantity expressed differently. The crumple zone does not change the total impulse; it changes how the impulse is spread over time, reducing the peak force." }
+      ],
+      "topicTags": ["phy.forces.momentum.impulse", "phy.forces.momentum.safety"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-impulse-momentum"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

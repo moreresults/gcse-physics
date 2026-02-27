@@ -1,0 +1,188 @@
+{
+  "id": "phy_03",
+  "title": "Forces on a Moving Box",
+  "icon": "⚖️",
+  "subject": "physics",
+  "context": "A student investigates forces by pushing a 5 kg wooden box at a constant speed along a rough, flat bench. The free body diagram below shows the forces acting on the box while it is moving. Use g = 9.8 N/kg.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "freeBodyDiagram": {
+      "imageSrc": "./src/assets/diagrams/phy_03_free_body.svg",
+      "imageAlt": "A free body diagram showing a box on a flat surface with three labelled force arrows: A (downward), B (upward), and C (horizontal, opposing the direction of motion).",
+      "title": "Free body diagram of forces on a moving box",
+      "width": 500,
+      "aspectRatio": "4:3",
+      "hotspots": [
+        { "id": "label_a", "x": 50, "y": 85, "correct": "weight" },
+        { "id": "label_b", "x": 50, "y": 15, "correct": "normal_contact" },
+        { "id": "label_c", "x": 15, "y": 50, "correct": "friction" }
+      ],
+      "termBank": [
+        { "id": "weight", "text": "Weight" },
+        { "id": "normal_contact", "text": "Normal contact force" },
+        { "id": "friction", "text": "Friction" },
+        { "id": "air_resistance", "text": "Air resistance" },
+        { "id": "tension", "text": "Tension" },
+        { "id": "thrust", "text": "Thrust" },
+        { "id": "upthrust", "text": "Upthrust" }
+      ],
+      "description": "A rectangular box (light blue fill, black outline) sits on a flat grey surface in the centre of the diagram. Three force arrows originate from the centre of the box: Arrow A points straight down (representing weight, medium length). Arrow B points straight up (representing normal contact force, same length as A to show balanced vertical forces). Arrow C points to the left (representing friction, shorter than A and B, opposing the rightward direction of motion). A small rightward arrow above the box indicates the direction of motion with the label 'direction of push'. Each force arrow is labelled A, B, or C with blue (#007AFF) leader lines pointing from outside the diagram to the midpoint of each arrow. The surface is drawn as a grey horizontal line with diagonal hatching below to indicate a rough surface."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_03_a",
+      "partLabel": "a",
+      "type": "diagram_label",
+      "marks": 3,
+      "question": "Label forces A, B, and C on the free body diagram.",
+      "diagramRef": "freeBodyDiagram",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b", "label_c"],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Weight — the gravitational force pulling the box downwards. Weight always acts vertically downward from the centre of mass." },
+        { "text": "B = Normal contact force — the support force from the bench surface pushing upward on the box. It acts perpendicular (at right angles) to the surface." },
+        { "text": "C = Friction — the force that opposes the motion of the box along the rough surface. It acts horizontally in the opposite direction to movement." },
+        { "text": "A common mistake is confusing the direction of the resultant force or misidentifying which force is which. To determine the resultant, add up all forces in each direction. If the box moves at constant speed, the forces must be balanced — the resultant force is zero." }
+      ],
+      "topicTags": ["phy.forces.types.free-body-diagram", "phy.forces.types.weight", "phy.forces.types.friction"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-resultant-force-direction"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_03_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "The box is moving at a constant speed along the bench. What can be said about the resultant force acting on the box?",
+      "options": [
+        { "id": "opt_a", "text": "The resultant force is in the direction of motion" },
+        { "id": "opt_b", "text": "The resultant force is zero" },
+        { "id": "opt_c", "text": "The resultant force is increasing" },
+        { "id": "opt_d", "text": "There are no forces acting on the box" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — Newton's first law states that an object moving at constant velocity will continue to do so unless acted on by a resultant (unbalanced) force." },
+        { "text": "Since the box moves at a constant speed in a straight line, the forces are balanced — the resultant force is zero. The push force equals friction, and the weight equals the normal contact force." },
+        { "text": "A common mistake is thinking that a moving object must have a net force acting on it in the direction of motion. This contradicts Newton's first law — a force is needed to change motion, not to maintain constant velocity." }
+      ],
+      "topicTags": ["phy.forces.newtons-laws.first-law"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-motion-requires-force"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_03_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The box has a mass of 5 kg. Calculate the weight of the box. Use the equation W = mg.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 49,
+        "tolerance": 0.98,
+        "unitOptions": ["N", "kg", "m/s²", "J"],
+        "correctUnit": "N"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into W = mg: W = 5 × 9.8", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: W = mg", "formula": true },
+        { "text": "W = 5 kg × 9.8 N/kg", "formula": true },
+        { "text": "W = 49 N", "formula": true },
+        { "text": "A common mistake is confusing mass and weight. Mass (kg) is a measure of how much matter an object contains and stays the same everywhere. Weight (N) is a gravitational force that changes depending on gravitational field strength. Weight is always measured in newtons, not kilograms." }
+      ],
+      "topicTags": ["phy.forces.types.weight", "phy.forces.types.mass-weight"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-mass-weight"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_03_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What is the correct SI unit for weight?",
+      "options": [
+        { "id": "opt_a", "text": "Kilograms (kg)" },
+        { "id": "opt_b", "text": "Newtons (N)" },
+        { "id": "opt_c", "text": "Joules (J)" },
+        { "id": "opt_d", "text": "Watts (W)" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — weight is a force, and the SI unit of force is the newton (N)." },
+        { "text": "Weight = mass × gravitational field strength (W = mg). Since mass is in kg and g is in N/kg, weight is in newtons." },
+        { "text": "A common mistake is choosing kilograms (kg). Kilograms measure mass, not weight. In everyday language people say 'I weigh 70 kg', but scientifically this describes mass. The correct weight would be approximately 686 N on Earth." }
+      ],
+      "topicTags": ["phy.forces.types.mass-weight"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-mass-weight"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_03_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "A skydiver jumps from an aeroplane. Explain why the skydiver accelerates at first but eventually reaches a constant speed called terminal velocity. In your answer, refer to the forces acting on the skydiver. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "When the skydiver first jumps, the only significant force is their weight pulling them downward. Air resistance is very small because their speed is low, so there is a large resultant downward force and the skydiver accelerates. As the skydiver's speed increases, air resistance increases because they are moving faster through the air. Eventually, air resistance becomes equal to the skydiver's weight. At this point the forces are balanced, the resultant force is zero, and by Newton's first law the skydiver no longer accelerates — they fall at a constant speed called terminal velocity.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Initially weight is much greater than air resistance, giving a resultant downward force that causes acceleration" },
+          { "id": "p2", "text": "As speed increases, air resistance increases" },
+          { "id": "p3", "text": "At terminal velocity, air resistance equals weight — forces are balanced and resultant force is zero" },
+          { "id": "p4", "text": "Constant speed because there is no resultant force (links to Newton's first law)" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "When the skydiver first jumps, their weight (W = mg) acts downward. At this instant, speed is zero so air resistance is negligible. The resultant force is large and downward, so the skydiver accelerates (Newton's second law: F = ma)." },
+        { "text": "As the skydiver falls faster, air resistance (drag) increases because they collide with more air molecules per second. The upward air resistance force grows while weight remains constant." },
+        { "text": "Eventually, air resistance equals the skydiver's weight. The resultant force becomes zero. By Newton's first law, with no resultant force the skydiver continues at a constant speed — this is terminal velocity." },
+        { "text": "A common mistake is thinking terminal velocity means the skydiver stops moving. Terminal velocity is the maximum constant speed reached when forces are balanced — the skydiver is still falling, just no longer accelerating." }
+      ],
+      "topicTags": ["phy.forces.newtons-laws.terminal-velocity", "phy.forces.types.air-resistance"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["thinks-terminal-velocity-means-stopping", "thinks-motion-requires-force"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}
