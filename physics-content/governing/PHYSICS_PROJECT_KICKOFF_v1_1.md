@@ -109,7 +109,7 @@ Flag any group where an AO category exceeds 45% with a justification note or reb
 
 **Constraints on the brief:**
 - Every misconception tag used in a contract MUST exist in the master list (TAG1–TAG2)
-- Every part's interaction type MUST be from the approved list in SC1 (mcq, numeric, calculation, graph_reading, diagram_label, process_sequence, keyword_match, self_assessed, data_table)
+- Every part's interaction type MUST be from the approved list in SC1 (mcq, numeric_with_unit, calculation, graph_reading, diagram_label, process_sequence, keyword_match, self_assessed, data_table)
 - Parts must sum to mark target for every contract
 - AO marks must sum to mark target for every contract
 - Mark targets across all 22 contracts must sum to 208–212 (hard range)
@@ -119,7 +119,7 @@ Flag any group where an AO category exceeds 45% with a justification note or reb
 **Physics-specific rules to enforce in contracts:**
 - PHY1: Every graph_reading part must specify the graph type (d-t, v-t, I-V, decay, force-extension, heating/cooling, wave displacement)
 - PHY2: Any scenario involving equations of motion must note "formula sheet provided" in the contract notes
-- Numeric tolerance: ±1% calculation, ±2% graph reading (note in contracts where graph reading applies)
+- Tolerance policy: ±2% for all auto-marked types (numeric_with_unit, graph_reading, calculation). This is enforced uniformly — the validator does not distinguish between type categories.
 
 ### Task 2: Validate the Brief
 
@@ -152,9 +152,9 @@ After the brief is committed, author these 5 gold scenarios:
 
 | Scenario | Topic | Why Selected |
 |----------|-------|-------------|
-| phy_01 | Motion & Speed | d-t graph + numeric + MCQ |
+| phy_01 | Motion & Speed | d-t graph + numeric_with_unit + MCQ |
 | phy_02 | Acceleration & Velocity | v-t graph + area-under-curve |
-| phy_06 | Circuit Fundamentals | Circuit diagram + numeric |
+| phy_06 | Circuit Fundamentals | Circuit diagram + numeric_with_unit |
 | phy_13 | Light & Optics | Ray diagram SVG |
 | phy_19 | Radioactive Decay & Half-Life | Decay graph + calculation |
 
