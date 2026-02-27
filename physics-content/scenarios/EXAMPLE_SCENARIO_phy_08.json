@@ -124,7 +124,7 @@
       "methodMarks": null,
       "solutionSteps": [
         { "text": "The correct answer is B — alternating current (AC) repeatedly reverses direction, flowing back and forth. Direct current (DC) flows in one direction only." },
-        { "text": "The UK mains supply is AC at 230 V and 50 Hz (changes direction 50 times per second). Batteries provide DC." },
+        { "text": "The UK mains supply is AC at 230 V and 50 Hz (50 complete cycles per second, so the current reverses direction 100 times per second). Batteries provide DC." },
         { "text": "A common mistake is swapping AC and DC. Remember: AC = Alternating = Changes direction. DC = Direct = one Direction only. The mains uses AC because it can be easily transformed to different voltages using transformers." }
       ],
       "topicTags": ["phy.electricity.power.ac-dc"],
