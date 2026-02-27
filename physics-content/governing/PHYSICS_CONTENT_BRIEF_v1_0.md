@@ -341,7 +341,7 @@ Required subtopics:
 Interaction types:
 - Part (a): diagram_label — AO1 — 3 marks (label components on a circuit diagram: ammeter, voltmeter, resistor)
 - Part (b): mcq — AO1 — 1 mark (recall: ammeter placement — series or parallel?)
-- Part (c): numeric_with_unit — AO2 — 2 marks (calculate resistance using V = IR from circuit values)
+- Part (c): numeric_with_unit — AO2 — 2 marks (calculate current using V = IR from circuit values)
 - Part (d): mcq — AO2 — 1 mark (predict what happens to total resistance when a resistor is added in parallel)
 - Part (e): self_assessed — AO3 — 3 marks (explain why current is the same at all points in a series circuit but voltage is shared)
 
@@ -352,7 +352,7 @@ Required misconceptions:
 - confuses-voltage-current
 
 Graph/Diagram/Data table requirements:
-- Circuit diagram with series and parallel sections, ammeter and voltmeter positions, standard IEC symbols. Label bank with distractors (e.g. thermistor, LDR, diode).
+- Series circuit diagram with ammeter and voltmeter positions, standard IEC symbols. Label bank with distractors (e.g. thermistor, LDR, diode). Parallel circuit behaviour is assessed conceptually via MCQ (no separate diagram required).
 
 AO spread: AO1: 4, AO2: 3, AO3: 3
 Notes: GOLD EXAMPLE. PHY2 compliance: formula sheet provided (V = IR). Circuit diagram label uses standard IEC symbols per curriculum doc.
@@ -586,8 +586,8 @@ Required subtopics:
 
 Interaction types:
 - Part (a): mcq — AO1 — 1 mark (recall: state the law of reflection)
-- Part (b): diagram_label — AO1 — 2 marks (label incident ray, refracted ray, and normal on a ray diagram)
-- Part (c): numeric_with_unit — AO2 — 2 marks (calculate refractive index using Snell's law: n = sin i / sin r)
+- Part (b): diagram_label — AO1 — 2 marks (label incident ray and refracted ray on a ray diagram; normal is pre-drawn as a dashed line)
+- Part (c): numeric_with_unit — AO2 — 2 marks (calculate angle of refraction using Snell's law: n = sin i / sin r)
 - Part (d): mcq — AO2 — 1 mark (identify which situation produces total internal reflection — angle must exceed critical angle)
 - Part (e): self_assessed — AO3 — 4 marks (explain how optical fibres use total internal reflection for data transmission, and why the critical angle matters)
 
@@ -782,6 +782,7 @@ Required misconceptions:
 - confuses-proton-nucleon-number
 - confuses-isotopes-elements
 - thinks-radiation-makes-radioactive
+- confuses-decay-equation-balancing
 
 Graph/Diagram/Data table requirements:
 - Nuclear model diagram showing protons, neutrons in nucleus and electrons in shells. Hotspots for labels. Label bank with distractors (e.g. photon, positron, quark).
@@ -801,21 +802,20 @@ Parts: 5
 Icon: ⏳
 
 Required subtopics:
-- Decay equations (alpha and beta) — must appear
+- Decay equations (alpha and beta) — preferred
 - Half-life definition and calculation — must appear
 - Decay graphs — must appear
 - Background radiation — preferred
 
 Interaction types:
-- Part (a): graph_reading — AO2 — 2 marks (read the count rate at given times from a decay curve; identify the half-life)
-- Part (b): calculation — AO2 — 2 marks (calculate the remaining activity after a given number of half-lives)
+- Part (a): graph_reading — AO2 — 2 marks (read the count rate at given times from a decay curve)
+- Part (b): calculation — AO2 — 2 marks (determine the half-life from the decay curve using halving method)
 - Part (c): mcq — AO1 — 1 mark (recall: definition of half-life)
-- Part (d): numeric_with_unit — AO2 — 2 marks (determine the number of half-lives elapsed given initial and final activity)
-- Part (e): self_assessed — AO3 — 3 marks (explain why a radioactive source with a long half-life is suitable for medical tracers vs industrial gauges — link to half-life, type, and application)
+- Part (d): numeric_with_unit — AO2 — 2 marks (calculate the activity after a given number of half-lives using the half-life formula)
+- Part (e): self_assessed — AO3 — 3 marks (explain why a specific radioactive isotope is suitable for medical treatment — link to half-life, radiation type, and biological uptake)
 
 Required misconceptions:
 - thinks-half-life-means-half-gone
-- confuses-decay-equation-balancing
 - thinks-background-radiation-harmful
 - thinks-radiation-makes-radioactive
 

@@ -6,6 +6,7 @@ phy_01 (Journey to School)
   Parts: a:mcq(1), b:graph_reading(3), c:numeric_with_unit(2), d:mcq(1), e:self_assessed(3)
   Graphs: ['distanceTime']
   Misconceptions: ['confuses-d-t-gradient-with-acceleration', 'confuses-distance-displacement', 'confuses-speed-velocity']
+  Contract alignment: all parts match contract types, marks, and misconceptions ✅
     phy_01_b/reading_1: ±8 on 400 = 2.0% ✅
     phy_01_b/reading_2: ±1 on 50 = 2.0% ✅
     phy_01_b/reading_3: ±0.08 on 4 = 2.0% ✅
@@ -13,9 +14,10 @@ phy_01 (Journey to School)
 
 phy_02 (Comparing Two Car Journeys)
   Marks: 10/10 ✅
-  Parts: a:mcq(1), b:graph_reading(3), c:numeric_with_unit(2), d:mcq(1), e:self_assessed(3)
-  Graphs: ['velocityTime']
+  Parts: a:mcq(1), b:graph_reading(3), c:calculation(2), d:mcq(1), e:self_assessed(3)
+  Graphs: ['velocityTime'] — includes acceleration, constant velocity, and deceleration sections ✅
   Misconceptions: ['confuses-v-t-gradient-and-area', 'forgets-v-t-area-is-distance', 'thinks-acceleration-means-speeding-up']
+  Contract alignment: all parts match contract types, marks, and misconceptions ✅
     phy_02_b/reading_1: ±0.4 on 20 = 2.0% ✅
     phy_02_b/reading_2: ±0.2 on 10 = 2.0% ✅
     phy_02_b/reading_3: ±0.04 on 2 = 2.0% ✅
@@ -26,6 +28,7 @@ phy_06 (Investigating Series and Parallel Circuits)
   Parts: a:diagram_label(3), b:mcq(1), c:numeric_with_unit(2), d:mcq(1), e:self_assessed(3)
   Diagrams: ['seriesCircuit']
   Misconceptions: ['confuses-ammeter-voltmeter-placement', 'confuses-series-parallel-current', 'confuses-voltage-current', 'thinks-current-used-up']
+  Contract alignment: all parts match contract types, marks, and misconceptions ✅
     phy_06_c: ±0.01 on 1 = 1.0% ✅
 
 phy_13 (Refraction and Total Internal Reflection)
@@ -33,13 +36,15 @@ phy_13 (Refraction and Total Internal Reflection)
   Parts: a:mcq(1), b:diagram_label(2), c:numeric_with_unit(2), d:mcq(1), e:self_assessed(4)
   Diagrams: ['rayDiagram']
   Misconceptions: ['confuses-critical-angle-TIR', 'confuses-real-virtual-images', 'confuses-reflection-refraction', 'thinks-light-bends-away-from-normal']
+  Contract alignment: all parts match contract types, marks, and misconceptions ✅
     phy_13_c: ±0.5 on 28 = 1.8% ✅
 
 phy_19 (Radioactive Decay of Iodine-131)
   Marks: 10/10 ✅
-  Parts: a:graph_reading(2), b:numeric_with_unit(2), c:mcq(1), d:numeric_with_unit(2), e:self_assessed(3)
+  Parts: a:graph_reading(2), b:calculation(2), c:mcq(1), d:numeric_with_unit(2), e:self_assessed(3)
   Graphs: ['decayCurve']
-  Misconceptions: ['thinks-half-life-means-half-gone', 'thinks-radiation-makes-radioactive']
+  Misconceptions: ['thinks-background-radiation-harmful', 'thinks-half-life-means-half-gone', 'thinks-radiation-makes-radioactive']
+  Contract alignment: all parts match contract types, marks, and misconceptions ✅
     phy_19_a/reading_1: ±4 on 200 = 2.0% ✅
     phy_19_a/reading_2: ±0.48 on 24 = 2.0% ✅
     phy_19_b: ±0.16 on 8 = 2.0% ✅
@@ -47,6 +52,11 @@ phy_19 (Radioactive Decay of Iodine-131)
 
 ============================================================
 ALL 5 GOLD EXAMPLES VALID — ALL TOLERANCES ≤2%
+ALL 5 GOLD EXAMPLES ALIGNED WITH COVERAGE CONTRACTS ✅
 Output directory: gold/ (per kickoff v1.1 Task 4)
 ---
-Validation run: 2026-02-27T12:15:15Z
+Validation run: 2026-02-27T14:30:00Z
+Fixes applied: phy_02 part(c) type→calculation, phy_02 graph deceleration added,
+  phy_02 part(d) rewritten for deceleration, phy_02 part(e) distances recalculated,
+  phy_19 icon→⏳, phy_19 part(b) type→calculation,
+  phy_19 part(a) +thinks-background-radiation-harmful tag

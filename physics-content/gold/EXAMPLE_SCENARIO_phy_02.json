@@ -3,7 +3,7 @@
   "title": "Comparing Two Car Journeys",
   "icon": "🚀",
   "subject": "physics",
-  "context": "Two cars, A and B, start from rest at the same traffic light. The velocity-time graph below shows how the velocity of each car changes over the first 30 seconds. Car A accelerates uniformly to 20 m/s, then maintains this speed. Car B accelerates more slowly to 15 m/s, then also maintains a constant speed.",
+  "context": "Two cars, A and B, start from rest at the same traffic light. The velocity-time graph below shows how the velocity of each car changes over the first 30 seconds. Car A accelerates uniformly to 20 m/s, maintains this speed, and then decelerates. Car B accelerates more slowly to 15 m/s, then maintains a constant speed.",
   "difficulty": "foundation-higher",
 
   "diagrams": null,
@@ -20,7 +20,7 @@
             { "x": 0, "y": 0 },
             { "x": 10, "y": 20 },
             { "x": 20, "y": 20 },
-            { "x": 30, "y": 20 }
+            { "x": 30, "y": 10 }
           ]
         },
         {
@@ -105,14 +105,14 @@
     {
       "id": "phy_02_c",
       "partLabel": "c",
-      "type": "numeric_with_unit",
+      "type": "calculation",
       "marks": 2,
       "question": "Calculate the total distance travelled by Car A in the first 20 seconds. Use the area under the velocity-time graph.",
       "diagramRef": null,
       "graphRef": "velocityTime",
       "dataTableRef": null,
       "answerSchema": {
-        "type": "numeric_with_unit",
+        "type": "calculation",
         "correct": 300,
         "tolerance": 6,
         "unitOptions": ["m", "m/s", "m/s²", "s"],
@@ -140,12 +140,12 @@
       "partLabel": "d",
       "type": "mcq",
       "marks": 1,
-      "question": "Between 15 and 30 seconds, Car B's line on the velocity-time graph is horizontal. What does this tell you about Car B's motion?",
+      "question": "Between 20 and 30 seconds, the line for Car A slopes downward on the velocity-time graph. What does this tell you about Car A's motion?",
       "options": [
-        { "id": "opt_a", "text": "Car B is decelerating" },
-        { "id": "opt_b", "text": "Car B is stationary" },
-        { "id": "opt_c", "text": "Car B is travelling at a constant velocity" },
-        { "id": "opt_d", "text": "Car B is accelerating" }
+        { "id": "opt_a", "text": "Car A is stationary" },
+        { "id": "opt_b", "text": "Car A is accelerating" },
+        { "id": "opt_c", "text": "Car A is decelerating" },
+        { "id": "opt_d", "text": "Car A is travelling at a constant velocity" }
       ],
       "diagramRef": null,
       "graphRef": "velocityTime",
@@ -156,9 +156,9 @@
       },
       "methodMarks": null,
       "solutionSteps": [
-        { "text": "The correct answer is C — a horizontal line on a velocity-time graph means constant velocity (zero acceleration)." },
-        { "text": "This is different from a distance-time graph, where a horizontal line means stationary. On a v-t graph, a horizontal line at 15 m/s means the car is moving at a steady 15 m/s." },
-        { "text": "A common mistake is choosing B (stationary). The car would only be stationary if the line was horizontal at v = 0 m/s, not at v = 15 m/s." }
+        { "text": "The correct answer is C — a downward-sloping line on a velocity-time graph means the velocity is decreasing, which is deceleration (negative acceleration)." },
+        { "text": "The car is still moving (its velocity is above zero), but it is slowing down. Between 20 and 30 seconds, Car A's velocity drops from 20 m/s to 10 m/s." },
+        { "text": "A common mistake is thinking that deceleration means the car has stopped. Deceleration means the speed is decreasing — the car is still moving. Another mistake is not recognising deceleration as a form of acceleration (it is negative acceleration)." }
       ],
       "topicTags": ["phy.forces.motion-graphs.velocity-time"],
       "skillTags": ["interpret-graph"],
@@ -176,11 +176,11 @@
       "dataTableRef": null,
       "answerSchema": {
         "type": "self_assessed",
-        "modelAnswer": "Car A travels further than Car B in 30 seconds. The distance travelled is the area under the velocity-time graph. Car A has a larger area because it reaches a higher velocity (20 m/s vs 15 m/s) and accelerates more quickly (reaching top speed in 10 s vs 15 s). Car A's total area (triangle + rectangle) is approximately 500 m, while Car B's total area is approximately 337.5 m. Therefore Car A travels about 163 m further than Car B.",
+        "modelAnswer": "Car A travels further than Car B in 30 seconds. The distance travelled is the area under the velocity-time graph. Car A has a larger area because it reaches a higher peak velocity (20 m/s vs 15 m/s) and accelerates more quickly (reaching top speed in 10 s vs 15 s). Car A's total area (triangle + rectangle + trapezium) is 450 m, while Car B's total area (triangle + rectangle) is 337.5 m. Therefore Car A travels 112.5 m further than Car B.",
         "markSchemePoints": [
           { "id": "p1", "text": "Car A travels further than Car B" },
           { "id": "p2", "text": "Distance = area under the velocity-time graph" },
-          { "id": "p3", "text": "Car A has a greater area because it has a higher constant velocity (20 vs 15 m/s)" },
+          { "id": "p3", "text": "Car A has a greater area because it has a higher peak velocity (20 vs 15 m/s)" },
           { "id": "p4", "text": "Correct or reasonable calculation/estimate of at least one car's distance" }
         ],
         "maxCheckable": 3,
@@ -188,10 +188,10 @@
       },
       "methodMarks": null,
       "solutionSteps": [
-        { "text": "Car A's distance: triangle (0–10 s) = ½ × 10 × 20 = 100 m; rectangle (10–30 s) = 20 × 20 = 400 m. Total = 500 m.", "formula": false },
+        { "text": "Car A's distance: triangle (0–10 s) = ½ × 10 × 20 = 100 m; rectangle (10–20 s) = 10 × 20 = 200 m; trapezium (20–30 s) = ½ × (20 + 10) × 10 = 150 m. Total = 450 m.", "formula": false },
         { "text": "Car B's distance: triangle (0–15 s) = ½ × 15 × 15 = 112.5 m; rectangle (15–30 s) = 15 × 15 = 225 m. Total = 337.5 m.", "formula": false },
-        { "text": "Car A travels 500 − 337.5 = 162.5 m further than Car B." },
-        { "text": "The key reasoning is that the area under a v-t graph gives distance. A higher velocity and earlier acceleration both contribute to a larger area and therefore greater distance." },
+        { "text": "Car A travels 450 − 337.5 = 112.5 m further than Car B." },
+        { "text": "The key reasoning is that the area under a v-t graph gives distance. A higher velocity and earlier acceleration both contribute to a larger area and therefore greater distance. Car A also decelerates at the end (20–30 s), reducing its total distance compared to maintaining constant velocity, but it still travels significantly further than Car B." },
         { "text": "A common mistake is comparing only the final velocities without considering the full area under each line. The area takes into account both the speed and the duration." }
       ],
       "topicTags": ["phy.forces.motion-graphs.velocity-time", "phy.forces.motion-graphs.area-under-graph"],

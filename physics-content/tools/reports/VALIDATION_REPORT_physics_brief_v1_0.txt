@@ -1,3 +1,6 @@
+PHYSICS CONTENT BRIEF v1.0 — VALIDATION REPORT
+============================================================
+
 Found 22 contracts
 
   phy_01: 10 marks = AO1:2 + AO2:5 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
@@ -65,9 +68,40 @@ GROUP-LEVEL CHECKS (45% ceiling):
 ✅ All interaction types approved: {'numeric_with_unit', 'graph_reading', 'data_table', 'calculation', 'self_assessed', 'mcq', 'process_sequence', 'diagram_label', 'keyword_match'}
 ✅ All 69 contract tags exist in master list (76 total)
 
+Unused master tags (7):
+  - assumes-heavier-falls-faster
+  - thinks-action-reaction-same-object
+  - confuses-elastic-plastic-deformation
+  - confuses-convex-concave-lenses
+  - forgets-shc-units
+  - confuses-latent-heat-types
+  - includes-anomalies-in-mean
+
+Orphan tags (contract tags not in master): 0
+
+============================================================
+GOLD EXAMPLE ALIGNMENT (5 gold examples):
+
+  phy_01: icon ✅ | types ✅ | marks ✅ | misconceptions ✅ | graph ✅
+  phy_02: icon ✅ | types ✅ | marks ✅ | misconceptions ✅ | graph ✅
+  phy_06: icon ✅ | types ✅ | marks ✅ | misconceptions ✅ | diagram ✅
+  phy_13: icon ✅ | types ✅ | marks ✅ | misconceptions ✅ | diagram ✅
+  phy_19: icon ✅ | types ✅ | marks ✅ | misconceptions ✅ | graph ✅
+
 ============================================================
 
 ✅ ALL CHECKS PASSED — Brief is valid
 ---
-Validation run: 2026-02-27T11:58:43Z
-Fixes applied: numeric→numeric_with_unit, phy_19 contract alignment, tolerance harmonisation
+Validation run: 2026-02-27T15:10:00Z
+Fixes applied (this run):
+  - phy_02 contract: part(c) type → calculation, part(d) → deceleration MCQ,
+    graph requirement now includes deceleration section
+  - phy_06 contract: part(c) → calculate current (not resistance),
+    diagram requirement → series circuit only (parallel via MCQ)
+  - phy_13 contract: part(b) → 2 labels (normal pre-drawn),
+    part(c) → calculate angle of refraction (not refractive index)
+  - phy_18 contract: +confuses-decay-equation-balancing (now 5 misconceptions)
+  - phy_19 contract: subtopics relaxed (decay equations → preferred),
+    part(b) → calculation type (half-life from graph),
+    part(d) → activity after n half-lives,
+    misconceptions → 3 tags (decay-equation-balancing moved to phy_18)

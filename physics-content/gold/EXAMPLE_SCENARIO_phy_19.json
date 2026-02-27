@@ -1,7 +1,7 @@
 {
   "id": "phy_19",
   "title": "Radioactive Decay of Iodine-131",
-  "icon": "☢️",
+  "icon": "⏳",
   "subject": "physics",
   "context": "A hospital uses iodine-131 to treat thyroid conditions. Iodine-131 is a radioactive isotope that emits beta (β) radiation. A sample initially has an activity of 800 counts per minute. The graph below shows how the activity of the sample decreases over time. The background radiation count in the hospital is 20 counts per minute.",
   "difficulty": "foundation-higher",
@@ -63,20 +63,20 @@
       ],
       "topicTags": ["phy.radioactivity.decay.decay-curve"],
       "skillTags": ["interpret-graph"],
-      "misconceptionTags": ["thinks-half-life-means-half-gone"],
+      "misconceptionTags": ["thinks-half-life-means-half-gone", "thinks-background-radiation-harmful"],
       "isTeacherMarkedInExam": false
     },
     {
       "id": "phy_19_b",
       "partLabel": "b",
-      "type": "numeric_with_unit",
+      "type": "calculation",
       "marks": 2,
       "question": "Use the graph to determine the half-life of iodine-131. Show your working.",
       "diagramRef": null,
       "graphRef": "decayCurve",
       "dataTableRef": null,
       "answerSchema": {
-        "type": "numeric_with_unit",
+        "type": "calculation",
         "correct": 8,
         "tolerance": 0.16,
         "unitOptions": ["days", "hours", "minutes", "seconds"],
