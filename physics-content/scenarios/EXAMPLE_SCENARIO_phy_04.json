@@ -91,7 +91,7 @@
         { "id": "m1", "description": "Applies conservation of momentum: total momentum before = total momentum after", "marks": 1 }
       ],
       "solutionSteps": [
-        { "text": "By the principle of conservation of momentum: total momentum before collision = total momentum after collision." },
+        { "text": "By the principle of conservation of momentum, using p = mv from the formula sheet: total momentum before collision = total momentum after collision." },
         { "text": "Before: p_total = (2 × 3) + (1 × 0) = 6 + 0 = 6 kg m/s", "formula": true },
         { "text": "After: the trolleys stick together, so combined mass = 2 + 1 = 3 kg.", "formula": false },
         { "text": "p_total = (2 + 1) × v → 6 = 3v → v = 6 ÷ 3 = 2 m/s", "formula": true },
