@@ -1,0 +1,188 @@
+{
+  "id": "phy_21",
+  "title": "Stars and the Life of the Universe",
+  "icon": "\ud83c\udf1f",
+  "subject": "physics",
+  "context": "A student is revising stellar evolution and the origin of the universe. They study a diagram showing the life cycle of a star similar to our Sun, from its birth in a nebula through to its final stage. They also learn about the observational evidence that supports the Big Bang theory, including redshift and the cosmic microwave background radiation (CMBR).",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "stellarEvolution": {
+      "imageSrc": "./src/assets/diagrams/phy_21_stellar_evolution.svg",
+      "imageAlt": "A stellar evolution diagram showing the life cycle of a Sun-like star, progressing from nebula through protostar, main sequence, red giant, planetary nebula, to white dwarf. Labels A and B indicate two stages for identification.",
+      "title": "Life cycle of a Sun-like star",
+      "width": 700,
+      "aspectRatio": "16:9",
+      "hotspots": [
+        { "id": "label_a", "x": 45, "y": 50, "correct": "main_sequence" },
+        { "id": "label_b", "x": 70, "y": 35, "correct": "red_giant" }
+      ],
+      "termBank": [
+        { "id": "main_sequence", "text": "Main sequence star" },
+        { "id": "red_giant", "text": "Red giant" },
+        { "id": "white_dwarf", "text": "White dwarf" },
+        { "id": "neutron_star", "text": "Neutron star" },
+        { "id": "black_hole", "text": "Black hole" },
+        { "id": "nebula", "text": "Nebula" }
+      ],
+      "description": "A horizontal diagram showing the life cycle of a Sun-like star, progressing from left to right. On the far left, a diffuse cloud represents a nebula. Next, a smaller, brighter sphere represents a protostar. In the centre, a medium yellow sphere (labelled A) represents the main sequence star \u2014 this is where the star spends most of its life. To the right, a much larger red sphere (labelled B) represents the red giant phase. Further right, a planetary nebula is shown as an expanding shell of gas. Finally, on the far right, a tiny white dot represents a white dwarf. Arrows connect each stage to the next, showing the progression. Blue leader lines point from outside the diagram to labels A and B."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_21_a",
+      "partLabel": "a",
+      "type": "process_sequence",
+      "marks": 3,
+      "question": "Place the following stages in the correct order to show the life cycle of a star similar to our Sun, from birth to final stage.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "process_sequence",
+        "items": [
+          { "id": "stage_nebula", "text": "Nebula (cloud of gas and dust)" },
+          { "id": "stage_proto", "text": "Protostar" },
+          { "id": "stage_main", "text": "Main sequence star" },
+          { "id": "stage_red", "text": "Red giant" },
+          { "id": "stage_white", "text": "White dwarf" }
+        ],
+        "correctOrder": ["stage_nebula", "stage_proto", "stage_main", "stage_red", "stage_white"],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A Sun-like star begins its life in a nebula \u2014 a large cloud of hydrogen gas and dust. Gravity causes the cloud to collapse inward, forming a protostar." },
+        { "text": "As the protostar contracts further, its core temperature rises until hydrogen nuclei begin to fuse into helium. At this point the star becomes a main sequence star, where it spends most of its life (billions of years). The outward pressure from nuclear fusion balances the inward pull of gravity." },
+        { "text": "When the hydrogen fuel in the core runs out, the star expands and cools to become a red giant. The outer layers are eventually ejected as a planetary nebula, leaving behind a hot, dense white dwarf that slowly cools over time." },
+        { "text": "A common mistake is confusing the life cycle of a Sun-like star with that of a massive star. A Sun-like star ends as a white dwarf, whereas a much more massive star goes through a red supergiant phase and ends as either a neutron star or a black hole after a supernova explosion." }
+      ],
+      "topicTags": ["phy.space.stars.life-cycle", "phy.space.stars.main-sequence"],
+      "skillTags": ["recall-fact", "sequence"],
+      "misconceptionTags": ["confuses-star-lifecycle-stages"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_21_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What stage does a star like our Sun spend most of its life in?",
+      "options": [
+        { "id": "opt_a", "text": "Protostar" },
+        { "id": "opt_b", "text": "Main sequence star" },
+        { "id": "opt_c", "text": "Red giant" },
+        { "id": "opt_d", "text": "White dwarf" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B \u2014 a star like our Sun spends most of its life as a main sequence star. Our Sun has been in the main sequence stage for about 4.6 billion years and will remain there for another 5 billion years approximately." },
+        { "text": "During the main sequence stage, the star is stable because the outward radiation pressure from hydrogen fusion in the core balances the inward gravitational force. This equilibrium allows the star to shine steadily for billions of years." },
+        { "text": "A common mistake is confusing different stages of the stellar life cycle. The protostar stage is relatively brief (millions of years), the red giant phase lasts only hundreds of millions of years, and the white dwarf is the dead remnant \u2014 not an active stage. The main sequence is by far the longest phase." }
+      ],
+      "topicTags": ["phy.space.stars.main-sequence"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-star-lifecycle-stages"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_21_c",
+      "partLabel": "c",
+      "type": "diagram_label",
+      "marks": 2,
+      "question": "The diagram shows the life cycle of a Sun-like star. Label stages A and B.",
+      "diagramRef": "stellarEvolution",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b"],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Main sequence star \u2014 this is the stable, middle phase of the star\u2019s life where hydrogen is fused into helium in the core. The star is shown as a medium-sized yellow sphere, representing its moderate temperature and size." },
+        { "text": "B = Red giant \u2014 after the hydrogen fuel in the core is exhausted, the outer layers of the star expand and cool, forming a much larger, cooler red star. The red giant is significantly bigger than the main sequence star." },
+        { "text": "A common mistake is confusing the stages of stellar evolution. Students sometimes label the red giant as a red supergiant or confuse the main sequence star with a protostar. Remember: a protostar has not yet started nuclear fusion, while a main sequence star is actively fusing hydrogen. A red giant forms from a Sun-like star; a red supergiant forms from a much more massive star." }
+      ],
+      "topicTags": ["phy.space.stars.life-cycle", "phy.space.stars.main-sequence", "phy.space.stars.red-giant"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-star-lifecycle-stages"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_21_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What does the observation of redshift in light from distant galaxies tell us about the universe?",
+      "options": [
+        { "id": "opt_a", "text": "The universe is getting hotter" },
+        { "id": "opt_b", "text": "The universe is expanding and galaxies are moving apart" },
+        { "id": "opt_c", "text": "The universe is contracting and galaxies are moving closer together" },
+        { "id": "opt_d", "text": "Light travels slower over large distances" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B \u2014 redshift tells us the universe is expanding and galaxies are moving apart. When astronomers observe light from distant galaxies, the wavelength is shifted towards the red end of the spectrum (longer wavelength, lower frequency), indicating the galaxies are moving away from us." },
+        { "text": "The further away a galaxy is, the greater its redshift, meaning it is moving away faster. This was first observed by Edwin Hubble and supports the idea that the universe is expanding in all directions." },
+        { "text": "A common mistake is confusing redshift and blueshift. Redshift means the object is moving away (wavelength increases, shifts to red). Blueshift means the object is moving towards us (wavelength decreases, shifts to blue). Nearly all distant galaxies show redshift, providing strong evidence for an expanding universe." }
+      ],
+      "topicTags": ["phy.space.universe.redshift", "phy.space.universe.expanding-universe"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-redshift-blueshift"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_21_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain how the cosmic microwave background radiation (CMBR) and redshift of distant galaxies provide evidence for the Big Bang theory. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "The Big Bang theory states that the universe began from a single extremely hot, dense point approximately 13.8 billion years ago and has been expanding ever since. Redshift provides evidence for this because light from distant galaxies is shifted to longer wavelengths, showing that galaxies are moving away from us in all directions. The further away a galaxy is, the greater its redshift, which means the universe is expanding \u2014 consistent with everything having started from one point. The cosmic microwave background radiation (CMBR) is low-frequency microwave radiation detected from every direction in space. It is the remnant thermal energy from the early universe, which was initially very hot. As the universe expanded and cooled, this radiation stretched to microwave wavelengths. The Big Bang theory predicted this background radiation before it was discovered, making it powerful supporting evidence.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Redshift: light from distant galaxies is shifted to longer wavelengths, showing galaxies are moving apart \u2014 the universe is expanding" },
+          { "id": "p2", "text": "CMBR: low-frequency microwave radiation detected from all directions \u2014 remnant energy from the hot early universe that has cooled as the universe expanded" },
+          { "id": "p3", "text": "Both observations are consistent with the Big Bang theory: everything began from a single hot, dense point and has been expanding and cooling ever since" },
+          { "id": "p4", "text": "The Big Bang theory predicted CMBR before it was discovered, providing strong supporting evidence" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Redshift: when astronomers observe light from distant galaxies, the absorption lines in their spectra are shifted towards the red end (longer wavelengths). This shows the galaxies are moving away from us. The further away a galaxy is, the faster it recedes. This universal expansion is exactly what we would expect if everything originated from a single point \u2014 supporting the Big Bang theory." },
+        { "text": "CMBR: the cosmic microwave background radiation is a faint glow of microwave radiation coming from every direction in space. It was first detected in 1965 by Penzias and Wilson. The Big Bang theory explains this as the cooled remnant of the extremely hot radiation that filled the early universe. As the universe expanded, this radiation was stretched (redshifted) from very short wavelengths to microwaves." },
+        { "text": "Together, redshift and CMBR provide two independent lines of evidence for the Big Bang. Redshift shows the universe is expanding (consistent with an initial explosion-like expansion), and CMBR shows the universe was once very hot and has been cooling as it expands." },
+        { "text": "A common mistake is thinking the Big Bang was a conventional explosion that happened at a specific location in space. In fact, the Big Bang was the rapid expansion of space itself \u2014 it did not happen at one point in existing space. Every point in the universe was the centre of the expansion. The CMBR comes from all directions precisely because the Big Bang happened everywhere at once, not at a single place." }
+      ],
+      "topicTags": ["phy.space.universe.big-bang", "phy.space.universe.cmbr", "phy.space.universe.redshift"],
+      "skillTags": ["explain-mechanism", "evaluate-evidence"],
+      "misconceptionTags": ["thinks-big-bang-was-explosion", "confuses-redshift-blueshift"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

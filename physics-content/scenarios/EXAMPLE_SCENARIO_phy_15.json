@@ -1,0 +1,201 @@
+{
+  "id": "phy_15",
+  "title": "Heating Water and Changes of State",
+  "icon": "🌡️",
+  "subject": "physics",
+  "context": "A student heats a block of ice from -20 \u00b0C using an electric heater. The temperature is recorded every 2 minutes and plotted on a heating curve. The student also investigates how different materials transfer thermal energy. The specific heat capacity of water is 4200 J/kg\u00b0C.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+
+  "graphs": {
+    "heatingCurve": {
+      "xAxis": { "label": "Time (min)", "min": 0, "max": 36, "step": 2 },
+      "yAxis": { "label": "Temperature (\u00b0C)", "min": -30, "max": 120, "step": 10 },
+      "lines": [
+        {
+          "id": "heating",
+          "color": "#E63946",
+          "points": [
+            { "x": 0, "y": -20 },
+            { "x": 2, "y": -10 },
+            { "x": 4, "y": 0 },
+            { "x": 6, "y": 0 },
+            { "x": 8, "y": 0 },
+            { "x": 10, "y": 0 },
+            { "x": 12, "y": 15 },
+            { "x": 14, "y": 30 },
+            { "x": 16, "y": 45 },
+            { "x": 18, "y": 60 },
+            { "x": 20, "y": 75 },
+            { "x": 22, "y": 90 },
+            { "x": 24, "y": 100 },
+            { "x": 26, "y": 100 },
+            { "x": 28, "y": 100 },
+            { "x": 30, "y": 100 },
+            { "x": 32, "y": 100 },
+            { "x": 34, "y": 110 },
+            { "x": 36, "y": 120 }
+          ]
+        }
+      ],
+      "interactiveMode": "read"
+    }
+  },
+
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_15_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which method of heat transfer does not require a medium (material) to travel through?",
+      "options": [
+        { "id": "opt_a", "text": "Conduction" },
+        { "id": "opt_b", "text": "Convection" },
+        { "id": "opt_c", "text": "Radiation" },
+        { "id": "opt_d", "text": "Evaporation" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C \u2014 radiation (infrared electromagnetic waves) can travel through a vacuum. This is how energy from the Sun reaches the Earth across empty space." },
+        { "text": "Conduction requires particles in direct contact to transfer kinetic energy. Convection requires a fluid (liquid or gas) in which warmer, less dense regions rise and cooler, denser regions sink. Both need a medium." },
+        { "text": "A common mistake is confusing conduction, convection, and radiation. Remember: conduction = particle vibrations passed along through contact; convection = bulk movement of fluid due to density differences; radiation = electromagnetic waves that need no medium." }
+      ],
+      "topicTags": ["phy.energy.heat-transfer.radiation", "phy.energy.heat-transfer.conduction-convection-radiation"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-conduction-convection-radiation"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_15_b",
+      "partLabel": "b",
+      "type": "graph_reading",
+      "marks": 2,
+      "question": "Using the heating curve: (i) What is the temperature of the substance at 20 minutes? (ii) How long does the melting plateau (flat section at 0 \u00b0C) last?",
+      "diagramRef": null,
+      "graphRef": "heatingCurve",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "graph_reading",
+        "readings": [
+          { "id": "reading_1", "correct": 75, "tolerance": 1.5, "unit": "\u00b0C", "prompt": "Temperature at 20 minutes" },
+          { "id": "reading_2", "correct": 6, "tolerance": 0.12, "unit": "min", "prompt": "Duration of the melting plateau" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) Read across from 20 minutes on the x-axis to the heating curve, then read across to the y-axis. The temperature at 20 minutes is 75 \u00b0C." },
+        { "text": "(ii) The melting plateau is the flat section at 0 \u00b0C. It begins at 4 minutes and ends at 10 minutes, so it lasts 10 \u2212 4 = 6 minutes." },
+        { "text": "During the flat section, the temperature stays constant even though energy is still being supplied. This energy is used to break the bonds between particles (latent heat of fusion) rather than to increase the kinetic energy of the particles. A common mistake is confusing specific heat capacity with latent heat: specific heat capacity relates to temperature change, while latent heat relates to a change of state at constant temperature." }
+      ],
+      "topicTags": ["phy.energy.heat-transfer.heating-cooling-curves", "phy.energy.heat-transfer.latent-heat"],
+      "skillTags": ["interpret-graph"],
+      "misconceptionTags": ["confuses-shc-latent-heat", "confuses-heat-temperature"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_15_c",
+      "partLabel": "c",
+      "type": "calculation",
+      "marks": 2,
+      "question": "After all the ice has melted, the student heats 2 kg of water from 25 \u00b0C to 75 \u00b0C. Calculate the energy transferred to the water. Use the equation from the formula sheet: Q = mc\u0394T. The specific heat capacity of water is 4200 J/kg\u00b0C.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "calculation",
+        "correct": 420000,
+        "tolerance": 8400,
+        "unitOptions": ["J", "W", "kg", "\u00b0C"],
+        "correctUnit": "J"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into Q = mc\u0394T: Q = 2 \u00d7 4200 \u00d7 50", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: Q = mc\u0394T", "formula": true },
+        { "text": "\u0394T = 75 \u2212 25 = 50 \u00b0C", "formula": true },
+        { "text": "Q = 2 kg \u00d7 4200 J/kg\u00b0C \u00d7 50 \u00b0C = 420 000 J", "formula": true },
+        { "text": "A common mistake is confusing heat and temperature. Heat (Q) is the energy transferred, measured in joules. Temperature is a measure of how hot something is, measured in degrees Celsius. Adding heat does not always increase temperature \u2014 during a change of state, temperature remains constant while latent heat is absorbed." }
+      ],
+      "topicTags": ["phy.energy.heat-transfer.specific-heat-capacity"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-heat-temperature"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_15_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Look at the flat section of the heating curve at 100 \u00b0C. What is happening to the substance during this section?",
+      "options": [
+        { "id": "opt_a", "text": "The substance is cooling down because energy is being lost" },
+        { "id": "opt_b", "text": "The heater has stopped working so no energy is being transferred" },
+        { "id": "opt_c", "text": "The substance is changing state from liquid to gas at constant temperature" },
+        { "id": "opt_d", "text": "The temperature is increasing but it is too small to measure" }
+      ],
+      "diagramRef": null,
+      "graphRef": "heatingCurve",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C \u2014 during the flat section at 100 \u00b0C, the substance is boiling (changing state from liquid to gas). Energy is still being supplied by the heater, but it is used to break intermolecular bonds rather than to increase the kinetic energy of the particles." },
+        { "text": "The energy absorbed during a change of state is called latent heat. At 100 \u00b0C, this is the specific latent heat of vaporisation. The temperature remains constant throughout the state change because the energy goes into overcoming attractive forces between particles, not into raising the temperature." },
+        { "text": "A common mistake is thinking that 'cold transfers to hot' or that temperature must always rise when energy is supplied. During a change of state, energy is absorbed but the temperature does not change. Energy always transfers from hot to cold objects, never the other way around." }
+      ],
+      "topicTags": ["phy.energy.heat-transfer.latent-heat", "phy.energy.heat-transfer.heating-cooling-curves"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-cold-transfers-to-hot", "confuses-shc-latent-heat"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_15_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 4,
+      "question": "A metal spoon and a wooden spoon are both left in a kitchen at room temperature (20 \u00b0C). When you pick them up, the metal spoon feels much colder than the wooden spoon. Explain why the metal spoon feels colder, even though both spoons are at the same temperature. In your answer, refer to thermal conductivity and the rate of heat transfer. [4 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Both spoons are at the same temperature (20 \u00b0C) \u2014 neither is actually colder than the other. When you touch the metal spoon, energy is transferred from your hand (at about 37 \u00b0C) to the spoon by conduction. Metal has a much higher thermal conductivity than wood, so it conducts heat away from your hand at a much faster rate. This rapid loss of thermal energy from your skin makes the metal feel cold. The wooden spoon has a low thermal conductivity, so it conducts heat away from your hand much more slowly. Less energy is lost per second, so the wooden spoon does not feel as cold. The sensation of 'coldness' is caused by the rate of heat loss from your skin, not the actual temperature of the object. This is why metals feel cold even at room temperature, while insulators like wood, plastic, and fabric feel warmer.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Both spoons are at the same temperature \u2014 the metal spoon is not actually colder" },
+          { "id": "p2", "text": "Metal has a higher thermal conductivity than wood, so it conducts heat faster" },
+          { "id": "p3", "text": "Heat transfers from your warm hand to the cooler spoon by conduction (not cold transferring to hot)" },
+          { "id": "p4", "text": "The metal spoon feels colder because it removes heat from your hand at a faster rate, not because it is at a lower temperature" }
+        ],
+        "maxCheckable": 4,
+        "marks": 4
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Both spoons are at room temperature (20 \u00b0C). When you touch either spoon, thermal energy transfers from your warm hand (about 37 \u00b0C) to the cooler spoon by conduction. Energy always flows from hot to cold \u2014 cold does not transfer to hot." },
+        { "text": "Metal is a good thermal conductor (high thermal conductivity). It has free electrons and closely packed ions that transfer kinetic energy rapidly. Wood is a poor thermal conductor (a thermal insulator) with low thermal conductivity." },
+        { "text": "Because metal conducts heat away from your hand much faster than wood, your skin loses thermal energy more rapidly when touching the metal spoon. This greater rate of heat loss is what makes the metal feel colder." },
+        { "text": "A common mistake is thinking that the metal spoon is actually at a lower temperature, or that 'coldness' flows from the spoon into your hand. In reality, heat always transfers from hot to cold. The sensation of coldness depends on the rate of energy transfer away from your skin, which is determined by the thermal conductivity of the material. This is also different from convection or radiation \u2014 the heat transfer here is by conduction through direct contact." }
+      ],
+      "topicTags": ["phy.energy.heat-transfer.conduction", "phy.energy.heat-transfer.thermal-conductivity"],
+      "skillTags": ["explain-mechanism", "apply-knowledge"],
+      "misconceptionTags": ["thinks-cold-transfers-to-hot", "confuses-heat-temperature", "confuses-conduction-convection-radiation"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

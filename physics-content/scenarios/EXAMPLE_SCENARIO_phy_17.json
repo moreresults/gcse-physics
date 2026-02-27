@@ -1,0 +1,168 @@
+{
+  "id": "phy_17",
+  "title": "Pressure and Deep-Sea Diving",
+  "icon": "\uD83C\uDF88",
+  "subject": "physics",
+  "context": "A deep-sea diver explores an underwater site. The diver wears boots with a total area of 0.03 m\u00b2 in contact with the seabed, and the total downward force from the diver and equipment is 600 N. The density of seawater is 1000 kg/m\u00b3. Use g = 10 N/kg.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_17_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which equation correctly gives the pressure exerted by a force on a surface?",
+      "options": [
+        { "id": "opt_a", "text": "P = F \u00d7 A" },
+        { "id": "opt_b", "text": "P = F / A" },
+        { "id": "opt_c", "text": "P = A / F" },
+        { "id": "opt_d", "text": "P = F \u2212 A" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B \u2014 pressure is defined as force per unit area: P = F / A, where P is pressure in pascals (Pa), F is force in newtons (N), and A is area in metres squared (m\u00b2)." },
+        { "text": "Option A (F \u00d7 A) multiplies force by area, which does not give a meaningful physical quantity for pressure. Option C inverts the relationship. Option D subtracts area from force, which has no physical meaning." },
+        { "text": "A common mistake is confusing pressure and force. Pressure is NOT the same as force \u2014 pressure depends on the area over which the force is applied. A small force over a tiny area can produce a very large pressure (e.g. a drawing pin), while a large force over a big area can produce a small pressure (e.g. snowshoes)." }
+      ],
+      "topicTags": ["phy.forces.pressure.pressure-equation"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-pressure-force"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_17_b",
+      "partLabel": "b",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The diver stands on a flat section of the seabed. The total downward force from the diver and equipment is 600 N, and the total area of the boots in contact with the seabed is 0.03 m\u00b2. Calculate the pressure the diver exerts on the seabed. Use the equation P = F / A.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 20000,
+        "tolerance": 400,
+        "unitOptions": ["Pa", "N", "m\u00b2", "N/m\u00b2"],
+        "correctUnit": "Pa"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into P = F / A: P = 600 / 0.03", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: P = F / A", "formula": true },
+        { "text": "P = 600 N \u00f7 0.03 m\u00b2", "formula": true },
+        { "text": "P = 20 000 Pa", "formula": true },
+        { "text": "A common mistake is confusing pressure and force and giving the answer as 600 N. Pressure is NOT the same as force \u2014 you must divide the force by the area. Note how a relatively small force (600 N) over a very small area (0.03 m\u00b2) produces a large pressure (20 000 Pa). The unit of pressure is the pascal (Pa), which is equivalent to N/m\u00b2." }
+      ],
+      "topicTags": ["phy.forces.pressure.pressure-equation"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-pressure-force", "forgets-to-convert-units"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_17_c",
+      "partLabel": "c",
+      "type": "calculation",
+      "marks": 2,
+      "question": "The diver descends to a depth of 50 m below the surface of the sea. Calculate the pressure due to the column of seawater at this depth. Use the equation P = h\u03C1g. The density of seawater is 1000 kg/m\u00b3 and g = 10 N/kg.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "calculation",
+        "correct": 500000,
+        "tolerance": 10000,
+        "unitOptions": ["Pa", "N", "m", "kg/m\u00b3"],
+        "correctUnit": "Pa"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into P = h\u03C1g: P = 50 \u00d7 1000 \u00d7 10", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: P = h\u03C1g, where h is depth in metres, \u03C1 is density in kg/m\u00b3, and g is gravitational field strength in N/kg.", "formula": true },
+        { "text": "P = 50 m \u00d7 1000 kg/m\u00b3 \u00d7 10 N/kg", "formula": true },
+        { "text": "P = 500 000 Pa", "formula": true },
+        { "text": "A common mistake is forgetting the depth-pressure relationship \u2014 students sometimes only use P = F / A and ignore the effect of the column of liquid above. The pressure at depth depends on three factors: the depth (h), the density of the liquid (\u03C1), and the gravitational field strength (g). Deeper water means a taller column of liquid pushing down, so the pressure is greater." }
+      ],
+      "topicTags": ["phy.forces.pressure.pressure-in-fluids", "phy.forces.pressure.depth-pressure"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["forgets-depth-pressure-relationship", "forgets-to-convert-units"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_17_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "A sealed container holds a fixed amount of gas at constant temperature. The pressure of the gas is doubled. According to Boyle\u2019s law, what happens to the volume of the gas?",
+      "options": [
+        { "id": "opt_a", "text": "The volume doubles" },
+        { "id": "opt_b", "text": "The volume stays the same" },
+        { "id": "opt_c", "text": "The volume halves" },
+        { "id": "opt_d", "text": "The volume reduces to one quarter" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C \u2014 Boyle\u2019s law states that for a fixed mass of gas at constant temperature, pressure \u00d7 volume = constant (PV = constant). If pressure doubles, volume must halve to keep the product the same." },
+        { "text": "For example, if P\u2081 = 100 kPa and V\u2081 = 10 cm\u00b3, then P\u2081V\u2081 = 1000. If P\u2082 = 200 kPa, then V\u2082 = 1000 \u00f7 200 = 5 cm\u00b3 \u2014 the volume has halved." },
+        { "text": "A common mistake is confusing the direction of Boyle\u2019s law and thinking that doubling the pressure also doubles the volume. Pressure and volume are inversely proportional \u2014 when one goes up, the other must go down. Option A describes a directly proportional relationship, which is incorrect for Boyle\u2019s law." }
+      ],
+      "topicTags": ["phy.forces.pressure.boyles-law"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-boyles-law-direction"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_17_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Deep-sea divers must ascend (return to the surface) slowly after spending time at great depth. Explain why ascending too quickly can be dangerous, using your knowledge of pressure and gases. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "At great depths the pressure is very high (P = h\u03C1g), so gases from the breathing supply dissolve more readily into the diver\u2019s blood and tissues because of the increased pressure. If the diver ascends too quickly, the pressure decreases rapidly. According to Boyle\u2019s law (PV = constant), when the pressure drops the volume of dissolved gas increases. The gas comes out of solution and forms bubbles in the blood and tissues. These bubbles can block blood vessels and damage tissues, causing a painful and potentially fatal condition called decompression sickness (the bends). Ascending slowly allows the dissolved gases to be released gradually through the lungs without forming dangerous bubbles.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "At depth, pressure is high so more gas dissolves in the diver\u2019s blood and tissues" },
+          { "id": "p2", "text": "If the diver ascends too quickly, pressure drops rapidly and dissolved gas expands / comes out of solution forming bubbles (link to Boyle\u2019s law)" },
+          { "id": "p3", "text": "Gas bubbles in the blood can block blood vessels and damage tissues, causing decompression sickness" },
+          { "id": "p4", "text": "Ascending slowly allows gas to be released gradually through the lungs, preventing bubble formation" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "At great depths, the water pressure is very high (P = h\u03C1g). This high pressure forces extra gas (mainly nitrogen) from the breathing supply to dissolve into the diver\u2019s blood and body tissues. The deeper the dive, the more gas dissolves." },
+        { "text": "If the diver ascends too quickly, the surrounding pressure drops rapidly. By Boyle\u2019s law (PV = constant), a decrease in pressure causes the volume of gas to increase. The dissolved gas comes out of solution and forms bubbles inside the blood and tissues." },
+        { "text": "These gas bubbles can block blood vessels, restrict blood flow, and damage organs and joints. This condition is called decompression sickness (or 'the bends') and can be extremely painful or even fatal." },
+        { "text": "A common mistake is forgetting the depth-pressure relationship and not linking the high pressure at depth to increased gas solubility. Students must connect all three ideas: high pressure at depth \u2192 more gas dissolves \u2192 rapid ascent reduces pressure \u2192 gas expands and forms bubbles \u2192 decompression sickness." }
+      ],
+      "topicTags": ["phy.forces.pressure.pressure-in-fluids", "phy.forces.pressure.boyles-law", "phy.forces.pressure.depth-pressure"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["forgets-depth-pressure-relationship", "confuses-boyles-law-direction"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

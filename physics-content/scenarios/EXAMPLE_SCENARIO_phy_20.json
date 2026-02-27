@@ -1,0 +1,186 @@
+{
+  "id": "phy_20",
+  "title": "Nuclear Reactors: Fission and Fusion",
+  "icon": "\u269b\ufe0f",
+  "subject": "physics",
+  "context": "A student is studying nuclear energy. They look at a diagram of a nuclear fission chain reaction inside a reactor. The reactor uses uranium-235 as fuel. The student also learns about nuclear fusion \u2014 the process that powers stars. They are asked to compare fission and fusion and to calculate the energy released using Einstein\u2019s famous equation E = mc\u00b2.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "fissionDiagram": {
+      "imageSrc": "./src/assets/diagrams/phy_20_fission_chain.svg",
+      "imageAlt": "A fission chain reaction diagram showing neutrons hitting uranium nuclei inside a reactor, with fuel rods and control rods labelled.",
+      "title": "Nuclear fission chain reaction",
+      "width": 600,
+      "aspectRatio": "16:9",
+      "hotspots": [
+        { "id": "label_a", "x": 15, "y": 50, "correct": "fuel_rod" },
+        { "id": "label_b", "x": 85, "y": 25, "correct": "control_rod" }
+      ],
+      "termBank": [
+        { "id": "fuel_rod", "text": "Fuel rod (uranium-235)" },
+        { "id": "control_rod", "text": "Control rod" },
+        { "id": "moderator", "text": "Moderator" },
+        { "id": "coolant", "text": "Coolant" },
+        { "id": "neutron", "text": "Neutron" }
+      ],
+      "description": "A schematic diagram of a nuclear fission chain reaction inside a reactor. On the left, a vertical cylinder represents a fuel rod containing uranium-235 \u2014 a neutron approaches it from the left. The uranium nucleus is shown splitting into two smaller nuclei (fission fragments) with 2\u20133 neutrons being released in different directions. These released neutrons travel toward other uranium nuclei, causing further fission events \u2014 showing the chain reaction branching out to the right. A vertical rod labelled B is positioned between fuel rods \u2014 this is the control rod, used to absorb excess neutrons and control the rate of reaction. Label A points to the fuel rod, Label B points to the control rod. Blue leader lines connect labels to targets."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_20_a",
+      "partLabel": "a",
+      "type": "diagram_label",
+      "marks": 2,
+      "question": "The diagram shows a nuclear fission chain reaction inside a reactor. Label parts A and B on the diagram.",
+      "diagramRef": "fissionDiagram",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b"],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Fuel rod (uranium-235) \u2014 the fuel rod contains the fissile material (uranium-235). When a neutron is absorbed by a uranium-235 nucleus, the nucleus becomes unstable and splits (fission), releasing energy and more neutrons." },
+        { "text": "B = Control rod \u2014 control rods are made of a neutron-absorbing material such as boron. They are inserted between the fuel rods to absorb excess neutrons and control the rate of the chain reaction. Pushing them further in slows the reaction; pulling them out speeds it up." },
+        { "text": "A common mistake is confusing fission and fusion. Fission is the splitting of a large, unstable nucleus into two smaller nuclei. Fusion is the joining of two small nuclei to form a larger nucleus. Both release energy, but they are very different processes." }
+      ],
+      "topicTags": ["phy.atomic.nuclear-fission.chain-reaction", "phy.atomic.nuclear-fission.reactor-components"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-fission-fusion"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_20_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which fuel is used in most nuclear power stations?",
+      "options": [
+        { "id": "opt_a", "text": "Plutonium-239" },
+        { "id": "opt_b", "text": "Uranium-235" },
+        { "id": "opt_c", "text": "Carbon-12" },
+        { "id": "opt_d", "text": "Hydrogen-2 (deuterium)" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B \u2014 uranium-235 is the fuel used in most nuclear power stations. It is a fissile isotope, meaning its nucleus can be split by a slow (thermal) neutron, releasing a large amount of energy." },
+        { "text": "Plutonium-239 (option A) can also undergo fission and is sometimes used or produced in reactors, but uranium-235 is the primary fuel. Carbon-12 (option C) is not a nuclear fuel. Deuterium (option D) is a fuel for nuclear fusion, not fission." },
+        { "text": "A common mistake is confusing the fuels for fission and fusion. Fission uses heavy elements like uranium-235. Fusion uses light elements like hydrogen isotopes (deuterium and tritium). Remember: fission splits big nuclei; fusion joins small nuclei." }
+      ],
+      "topicTags": ["phy.atomic.nuclear-fission.fuel"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-fission-fusion"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_20_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "A nuclear reaction has a mass defect of 0.002 kg. Using the equation from the formula sheet, E = mc\u00b2, calculate the energy released. Use c\u00b2 = 9 \u00d7 10\u00b9\u2076 m\u00b2/s\u00b2.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 1.8e14,
+        "tolerance": 3.6e12,
+        "unitOptions": ["J", "kg", "m/s", "W"],
+        "correctUnit": "J"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into E = mc\u00b2: E = 0.002 \u00d7 9 \u00d7 10\u00b9\u2076", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: E = mc\u00b2", "formula": true },
+        { "text": "Substitute the values: E = 0.002 kg \u00d7 9 \u00d7 10\u00b9\u2076 m\u00b2/s\u00b2", "formula": true },
+        { "text": "E = 0.002 \u00d7 9 \u00d7 10\u00b9\u2076 = 1.8 \u00d7 10\u00b9\u2074 J", "formula": true },
+        { "text": "This shows that even a tiny mass defect (0.002 kg) releases an enormous amount of energy \u2014 this is why nuclear reactions are so much more energetic than chemical reactions." },
+        { "text": "A common mistake is thinking that radiation from a nuclear reaction makes nearby objects radioactive. Irradiation (being exposed to radiation) does not make an object radioactive. An object only becomes radioactive if radioactive material is deposited on or inside it (contamination)." }
+      ],
+      "topicTags": ["phy.atomic.nuclear-fission.energy-calculation", "phy.atomic.nuclear-fission.mass-energy-equivalence"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["thinks-radiation-makes-radioactive"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_20_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What conditions are required for nuclear fusion to occur?",
+      "options": [
+        { "id": "opt_a", "text": "Very low temperature and very low pressure" },
+        { "id": "opt_b", "text": "Very high temperature and very low pressure" },
+        { "id": "opt_c", "text": "Very high temperature and very high pressure" },
+        { "id": "opt_d", "text": "Very low temperature and very high pressure" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C \u2014 nuclear fusion requires both very high temperature and very high pressure. These extreme conditions are needed to overcome the electrostatic repulsion between the positively charged nuclei so that they can get close enough for the strong nuclear force to bind them together." },
+        { "text": "The very high temperature (millions of degrees Celsius) gives the nuclei enough kinetic energy to overcome repulsion. The very high pressure forces the nuclei close enough together for fusion to occur. These conditions exist naturally in the cores of stars like our Sun." },
+        { "text": "A common mistake is confusing the properties of alpha, beta, and gamma radiation with the conditions for nuclear reactions. Alpha particles are helium nuclei (2 protons, 2 neutrons) with low penetrating power; beta particles are high-speed electrons with medium penetrating power; gamma rays are electromagnetic waves with high penetrating power. These are types of radiation emitted by unstable nuclei \u2014 they are not the same as the conditions needed for fusion." }
+      ],
+      "topicTags": ["phy.atomic.nuclear-fusion.conditions"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-alpha-beta-gamma-properties"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_20_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Compare nuclear fission and nuclear fusion. In your answer, describe the products of each process, the conditions needed, and discuss the advantages and disadvantages of each as an energy source. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Nuclear fission is the splitting of a large, unstable nucleus (such as uranium-235) into two smaller daughter nuclei, releasing energy and two or three neutrons. It occurs at relatively low temperatures inside a nuclear reactor and is used in current nuclear power stations. However, fission produces radioactive waste that remains hazardous for thousands of years and must be stored safely. Nuclear fusion is the joining of two small, light nuclei (such as hydrogen isotopes) to form a larger nucleus, releasing energy. Fusion requires extremely high temperatures (millions of degrees) and very high pressures, which makes it very difficult to achieve and sustain on Earth. Fusion produces far less radioactive waste than fission, and its fuel (hydrogen) is abundant and virtually unlimited. Fusion is considered more sustainable and cleaner than fission, but scientists have not yet been able to build a commercially viable fusion reactor.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Fission: splitting of a large nucleus into two smaller nuclei, releasing neutrons and energy; fusion: joining of two small nuclei to form a larger nucleus, releasing energy" },
+          { "id": "p2", "text": "Fission occurs at lower temperatures in reactors; fusion requires extremely high temperature and pressure (as found in stars)" },
+          { "id": "p3", "text": "Fission produces long-lived radioactive waste; fusion produces much less radioactive waste" },
+          { "id": "p4", "text": "Fusion fuel (hydrogen) is more abundant and sustainable than fission fuel (uranium), but fusion is not yet viable for commercial power generation" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Fission is the splitting of a large nucleus (e.g. uranium-235) into two smaller nuclei (fission fragments), along with 2\u20133 neutrons and a large amount of energy. This is the process used in all current nuclear power stations." },
+        { "text": "Fusion is the joining of two light nuclei (e.g. deuterium and tritium, both isotopes of hydrogen) to form a larger nucleus (e.g. helium), releasing energy. Fusion is the process that powers the Sun and other stars." },
+        { "text": "Conditions: Fission can be initiated by a single slow neutron at relatively normal temperatures inside a reactor. Fusion requires extremely high temperatures (over 100 million \u00b0C) and very high pressures to overcome the electrostatic repulsion between positively charged nuclei." },
+        { "text": "Waste and sustainability: Fission produces highly radioactive waste products that take thousands of years to decay and must be stored securely. Fusion produces helium (non-radioactive) and some neutron-activated materials, but far less long-lived waste. Hydrogen fuel for fusion is abundant in seawater, making it potentially more sustainable than uranium." },
+        { "text": "A common mistake is confusing fission and fusion. Remember: fission = splitting (think 'fission = fissure = split'); fusion = fusing together (think 'fusion = fuse = join'). Both processes release energy because the products have a lower total mass than the reactants \u2014 the lost mass is converted to energy via E = mc\u00b2." }
+      ],
+      "topicTags": ["phy.atomic.nuclear-fission.process", "phy.atomic.nuclear-fusion.process", "phy.atomic.nuclear-fission.waste"],
+      "skillTags": ["describe-trend", "explain-mechanism"],
+      "misconceptionTags": ["confuses-fission-fusion", "thinks-radiation-makes-radioactive"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

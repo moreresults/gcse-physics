@@ -1,0 +1,203 @@
+{
+  "id": "phy_16",
+  "title": "Power Station Energy and Sankey Diagrams",
+  "icon": "🌍",
+  "subject": "physics",
+  "context": "A coal-fired power station burns coal to generate electricity. The Sankey diagram below shows the energy transfers in the power station for every 1000 J of energy input from burning coal. A student also compares different energy sources using the data table provided, which shows their type, annual output, reliability, and carbon dioxide emissions.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "sankeyCoal": {
+      "imageSrc": "./src/assets/diagrams/phy_16_sankey.svg",
+      "imageAlt": "A Sankey diagram for a coal-fired power station. A wide arrow enters from the left representing 1000 J of chemical energy input. The arrow splits into two: a narrower arrow continuing right labelled A (useful electrical energy output, 400 J) and a wider arrow curving downward labelled B (wasted thermal energy output, 600 J).",
+      "title": "Sankey diagram for a coal-fired power station",
+      "width": 600,
+      "aspectRatio": "16:9",
+      "hotspots": [
+        { "id": "label_a", "x": 78, "y": 30, "correct": "useful_output" },
+        { "id": "label_b", "x": 72, "y": 75, "correct": "wasted_output" }
+      ],
+      "termBank": [
+        { "id": "useful_output", "text": "Useful electrical energy output (400 J)" },
+        { "id": "wasted_output", "text": "Wasted thermal energy output (600 J)" },
+        { "id": "total_input", "text": "Total chemical energy input (1000 J)" },
+        { "id": "kinetic_energy", "text": "Kinetic energy (1000 J)" },
+        { "id": "sound_energy", "text": "Sound energy output (400 J)" },
+        { "id": "light_energy", "text": "Light energy output (600 J)" }
+      ],
+      "description": "A Sankey diagram drawn on a white background. On the far left, a wide horizontal arrow (solid grey, #666666) enters the diagram representing 1000 J of chemical energy from burning coal. The width of this arrow represents the total energy input. Partway across the diagram the arrow splits into two branches. The upper branch continues horizontally to the right as a narrower arrow (solid green, #34C759) representing the useful electrical energy output — labelled A with a blue (#007AFF) leader line. This arrow is 40% of the width of the input arrow, representing 400 J. The lower branch curves downward as a wider arrow (solid red, #FF3B30) representing the wasted thermal energy — labelled B with a blue (#007AFF) leader line. This arrow is 60% of the width of the input arrow, representing 600 J. The widths of the two output arrows add up to the width of the input arrow, demonstrating conservation of energy. A scale bar or annotation indicates the total input is 1000 J."
+    }
+  },
+
+  "graphs": null,
+
+  "dataTables": {
+    "energySources": {
+      "columns": [
+        { "header": "Energy Source", "key": "source" },
+        { "header": "Type", "key": "type" },
+        { "header": "Annual Output (GWh)", "key": "annualOutput" },
+        { "header": "Reliability (%)", "key": "reliability" },
+        { "header": "CO₂ Emissions (g/kWh)", "key": "co2Emissions" }
+      ],
+      "rows": [
+        { "source": "Coal", "type": "Non-renewable", "annualOutput": 2200, "reliability": 85, "co2Emissions": 910 },
+        { "source": "Natural gas", "type": "Non-renewable", "annualOutput": 1800, "reliability": 90, "co2Emissions": 400 },
+        { "source": "Nuclear", "type": "Non-renewable", "annualOutput": 2600, "reliability": 92, "co2Emissions": 12 },
+        { "source": "Wind", "type": "Renewable", "annualOutput": 50, "reliability": 30, "co2Emissions": 11 },
+        { "source": "Solar", "type": "Renewable", "annualOutput": 35, "reliability": 15, "co2Emissions": 45 }
+      ]
+    }
+  },
+
+  "parts": [
+    {
+      "id": "phy_16_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following is a renewable energy source?",
+      "options": [
+        { "id": "opt_a", "text": "Coal" },
+        { "id": "opt_b", "text": "Natural gas" },
+        { "id": "opt_c", "text": "Wind" },
+        { "id": "opt_d", "text": "Nuclear" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C — wind is a renewable energy source. Renewable energy sources are those that can be replenished naturally on a short timescale and will not run out. Wind is driven by the Sun heating the atmosphere unevenly, creating convection currents." },
+        { "text": "Coal and natural gas are fossil fuels (non-renewable) — they took millions of years to form and are being used much faster than they can be replaced. Nuclear fuel (uranium) is also classified as non-renewable because there is a finite supply that cannot be replenished." },
+        { "text": "A common misconception is thinking that renewable means unlimited. Renewable sources like wind and solar are not available all the time — wind does not always blow and the Sun does not always shine. Renewable means the source is naturally replenished, not that it provides an unlimited or constant supply of energy." }
+      ],
+      "topicTags": ["phy.energy.resources.renewable-non-renewable"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-renewable-means-unlimited"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_16_b",
+      "partLabel": "b",
+      "type": "diagram_label",
+      "marks": 2,
+      "question": "The Sankey diagram shows the energy transfers in a coal-fired power station for every 1000 J of energy input. Label arrows A and B on the Sankey diagram.",
+      "diagramRef": "sankeyCoal",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b"],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Useful electrical energy output (400 J) — this is the energy that is successfully converted into electricity by the power station. It is the narrower arrow because less than half of the input energy becomes useful output." },
+        { "text": "B = Wasted thermal energy output (600 J) — this is the energy lost to the surroundings as heat (mainly through cooling towers, exhaust gases, and friction). It is the wider arrow because more energy is wasted than is usefully transferred." },
+        { "text": "In a Sankey diagram, the width of each arrow is proportional to the amount of energy it represents. The total width of the output arrows must equal the width of the input arrow, because energy is conserved (it cannot be created or destroyed)." },
+        { "text": "A common misconception is confusing the widths of the arrows in a Sankey diagram. Students sometimes think the useful output arrow should be the widest because it is the 'most important' energy. In reality, the widths represent the amount of energy — and in most power stations, more energy is wasted than is usefully transferred, so the wasted arrow is wider." }
+      ],
+      "topicTags": ["phy.energy.resources.sankey-diagrams", "phy.energy.conservation.energy-transfers"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-sankey-arrow-widths"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_16_c",
+      "partLabel": "c",
+      "type": "data_table",
+      "marks": 2,
+      "question": "Using the energy sources data table: (i) What is the annual output of wind power? (ii) What are the CO₂ emissions of natural gas?",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": "energySources",
+      "answerSchema": {
+        "type": "data_table",
+        "readings": [
+          { "id": "reading_1", "correct": 50, "tolerance": 1, "unit": "GWh", "prompt": "Annual output of wind power" },
+          { "id": "reading_2", "correct": 400, "tolerance": 8, "unit": "g/kWh", "prompt": "CO₂ emissions of natural gas" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) From the table, the annual output of wind power is 50 GWh. This is much lower than fossil fuel or nuclear power stations because individual wind turbines have a relatively small output and they only generate when the wind is blowing." },
+        { "text": "(ii) From the table, the CO₂ emissions of natural gas are 400 g/kWh. This is lower than coal (910 g/kWh) but much higher than nuclear (12 g/kWh) or wind (11 g/kWh), because burning natural gas still releases carbon dioxide." },
+        { "text": "When reading data from a table, always check the column headings for the correct units. A common mistake is giving an answer with the wrong unit — for example, writing GWh for a CO₂ emissions value, or g/kWh for an annual output value." },
+        { "text": "A common misconception is confusing energy and force. Energy (measured in joules, J, or kilowatt-hours, kWh) is the capacity to do work, while force (measured in newtons, N) is a push or pull. A power station transfers energy — it does not produce a force. Students sometimes mix up these concepts when discussing energy resources." }
+      ],
+      "topicTags": ["phy.energy.resources.renewable-non-renewable", "phy.energy.resources.comparison"],
+      "skillTags": ["read-data", "interpret-data"],
+      "misconceptionTags": ["confuses-energy-force"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_16_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What is the main disadvantage of burning fossil fuels to generate electricity?",
+      "options": [
+        { "id": "opt_a", "text": "They are too expensive to extract from the ground" },
+        { "id": "opt_b", "text": "They release carbon dioxide, contributing to climate change" },
+        { "id": "opt_c", "text": "They produce radioactive waste that is difficult to store" },
+        { "id": "opt_d", "text": "They can only generate electricity when the wind is blowing" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — the main disadvantage of fossil fuels is that burning them releases carbon dioxide (CO₂), a greenhouse gas that contributes to global warming and climate change. Fossil fuels also release sulfur dioxide (causing acid rain) and particulates (causing respiratory problems)." },
+        { "text": "Option C (radioactive waste) is a disadvantage of nuclear power, not fossil fuels. Option D (wind dependency) is a disadvantage of wind power. Option A is not the main environmental concern — fossil fuels are currently relatively cheap to extract, though this is changing." },
+        { "text": "A common misconception is thinking that renewable means unlimited. While fossil fuels are non-renewable and will eventually run out, the most urgent problem with fossil fuels is the environmental damage from CO₂ emissions, not simply that they are finite. The greenhouse effect and climate change are the primary reasons governments are transitioning to renewable energy sources." }
+      ],
+      "topicTags": ["phy.energy.resources.environmental-impact", "phy.energy.resources.fossil-fuels"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-renewable-means-unlimited"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_16_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Evaluate the advantages and disadvantages of using nuclear power compared to wind power for generating electricity. Consider reliability, environmental impact, and energy output in your answer. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Nuclear power has a much higher annual output (2600 GWh) than wind power (50 GWh per turbine) and is highly reliable (92%), meaning it can provide a constant base-load supply of electricity. It also produces very low CO₂ emissions during operation (12 g/kWh), so it does not contribute significantly to climate change. However, nuclear power produces radioactive waste that remains dangerous for thousands of years and must be stored safely, and there is a risk (though very small) of catastrophic accidents. Decommissioning nuclear plants is also extremely expensive. Wind power is truly renewable and produces very low CO₂ emissions (11 g/kWh), with no dangerous waste. However, wind is unreliable (only 30% reliability) because it depends on weather conditions — turbines do not generate electricity when the wind is not blowing. Wind farms also require large areas of land and can be considered visually intrusive. Overall, nuclear power is better for providing reliable, high-output, low-carbon electricity, but wind power is safer and produces no hazardous waste.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Nuclear: high output and high reliability — can provide constant base-load electricity; wind: low reliability — depends on weather" },
+          { "id": "p2", "text": "Both produce very low CO₂ emissions during operation, unlike fossil fuels" },
+          { "id": "p3", "text": "Nuclear: produces radioactive waste that is dangerous and expensive to manage; wind: no dangerous waste" },
+          { "id": "p4", "text": "Balanced conclusion weighing up both sides — e.g. nuclear is more reliable but wind is safer" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Nuclear power stations have very high annual output (2600 GWh) and reliability (92%), making them suitable for providing a constant supply of electricity (base-load power). Wind turbines have much lower individual output (50 GWh) and reliability (30%) because they depend on wind speed." },
+        { "text": "Both nuclear and wind produce very low CO₂ emissions during operation (12 g/kWh and 11 g/kWh respectively), making them far better than fossil fuels for reducing climate change. However, nuclear produces radioactive waste that remains hazardous for thousands of years and requires expensive, secure long-term storage." },
+        { "text": "Wind power has the advantage of producing no dangerous waste and being truly renewable. The main drawback is intermittency — wind does not blow constantly, so backup generation or energy storage is needed. Wind farms also require large land areas and can affect wildlife and landscapes." },
+        { "text": "A common misconception is confusing energy and force when discussing power stations. Students sometimes say a power station 'produces force' or that energy sources 'have more force'. Energy resources supply energy (measured in joules or kWh), not force (measured in newtons). The output of a power station is measured in watts (joules per second), not newtons." }
+      ],
+      "topicTags": ["phy.energy.resources.nuclear", "phy.energy.resources.wind", "phy.energy.resources.comparison"],
+      "skillTags": ["evaluate-argument", "compare-contrast"],
+      "misconceptionTags": ["confuses-energy-force"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

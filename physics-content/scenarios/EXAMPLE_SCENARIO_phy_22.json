@@ -1,0 +1,168 @@
+{
+  "id": "phy_22",
+  "title": "Satellite Orbits Around Mars",
+  "icon": "\ud83e\ude90",
+  "subject": "physics",
+  "context": "A space agency is planning a mission to Mars. A satellite of mass 80 kg will be placed into a circular orbit around the planet. The gravitational field strength on the surface of Mars is 4 N/kg. The satellite orbits at a radius of 7000 km (7,000,000 m) from the centre of Mars with an orbital period of 5500 s. Use \u03c0 = 3.14.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_22_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What is the unit used to measure gravitational field strength?",
+      "options": [
+        { "id": "opt_a", "text": "N (newtons)" },
+        { "id": "opt_b", "text": "N/kg (newtons per kilogram)" },
+        { "id": "opt_c", "text": "kg (kilograms)" },
+        { "id": "opt_d", "text": "m/s\u00b2 (metres per second squared)" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B \u2014 gravitational field strength is measured in newtons per kilogram (N/kg). It tells you the force of gravity acting on each kilogram of mass." },
+        { "text": "Option A (N) is the unit of force or weight, not gravitational field strength. Option D (m/s\u00b2) is the unit of acceleration, which is numerically equal to g but not the standard unit for gravitational field strength at GCSE." },
+        { "text": "A common mistake is confusing weight and mass, especially in space contexts. Weight (N) depends on the gravitational field strength, while mass (kg) stays the same regardless of location. On Mars, an object has the same mass as on Earth but a different weight because g is different." }
+      ],
+      "topicTags": ["phy.forces.gravity.field-strength"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-mass-weight"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_22_b",
+      "partLabel": "b",
+      "type": "calculation",
+      "marks": 2,
+      "question": "Calculate the weight of the 80 kg satellite on the surface of Mars. Use the equation from the formula sheet: W = mg.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "calculation",
+        "correct": 320,
+        "tolerance": 6.4,
+        "unitOptions": ["N", "kg", "N/kg", "m/s"],
+        "correctUnit": "N"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into W = mg: W = 80 \u00d7 4", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: W = mg", "formula": true },
+        { "text": "W = 80 kg \u00d7 4 N/kg", "formula": true },
+        { "text": "W = 320 N", "formula": true },
+        { "text": "A common mistake is confusing weight and mass in space. The satellite has a mass of 80 kg everywhere \u2014 on Earth, on Mars, and in orbit. However, its weight changes depending on the gravitational field strength. On Mars (g = 4 N/kg), the satellite weighs 320 N, which is much less than its weight on Earth (80 \u00d7 9.8 = 784 N). Mass is measured in kg and never changes; weight is measured in N and depends on location." }
+      ],
+      "topicTags": ["phy.forces.gravity.weight-calculation", "phy.forces.gravity.field-strength"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-weight-mass-space"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_22_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The satellite orbits Mars at a radius of 7000 km (7,000,000 m) with an orbital period of 5500 s. Calculate the orbital speed of the satellite. Use the equation from the formula sheet: v = 2\u03c0r/T. Use \u03c0 = 3.14.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 8000,
+        "tolerance": 160,
+        "unitOptions": ["m/s", "km/h", "m", "s"],
+        "correctUnit": "m/s"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct substitution into v = 2\u03c0r/T: v = 2 \u00d7 3.14 \u00d7 7,000,000 / 5500", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: v = 2\u03c0r/T", "formula": true },
+        { "text": "v = 2 \u00d7 3.14 \u00d7 7,000,000 / 5500", "formula": true },
+        { "text": "v = 43,960,000 / 5500 = 7993 \u2248 8000 m/s", "formula": true },
+        { "text": "A common mistake is thinking that heavier satellites must orbit faster. In fact, orbital speed depends only on the radius of the orbit and the orbital period, not on the mass of the satellite. A 50 kg satellite and a 5000 kg satellite in the same orbit would travel at exactly the same speed." }
+      ],
+      "topicTags": ["phy.forces.gravity.orbital-speed", "phy.forces.gravity.circular-orbits"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["thinks-heavier-objects-orbit-faster"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_22_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What force keeps the satellite moving in a circular orbit around Mars?",
+      "options": [
+        { "id": "opt_a", "text": "Air resistance" },
+        { "id": "opt_b", "text": "The satellite's momentum" },
+        { "id": "opt_c", "text": "Gravity" },
+        { "id": "opt_d", "text": "The thrust from the satellite's engines" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C \u2014 gravity provides the centripetal force that keeps the satellite moving in a circular orbit. The gravitational pull of Mars acts towards the centre of the planet, continuously changing the satellite's direction of motion." },
+        { "text": "Option B is a common trap \u2014 momentum keeps the satellite moving, but it does not act as a force. Without gravity pulling the satellite inward, it would travel in a straight line (Newton's first law), not a circle." },
+        { "text": "A common mistake is confusing weight and mass when thinking about orbits. The satellite still has weight in orbit (gravity is still acting on it), but it appears weightless because it is in free fall. The gravitational force has not disappeared \u2014 it is being entirely used as the centripetal force for the circular orbit." }
+      ],
+      "topicTags": ["phy.forces.gravity.circular-orbits", "phy.forces.gravity.centripetal-force"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-weight-mass-space"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_22_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Astronauts on the International Space Station (ISS) appear to float as if there is no gravity. Explain why astronauts appear weightless in orbit, even though gravity is still acting on them. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "The ISS and the astronauts inside it are both in free fall around the Earth. Gravity is still acting on them \u2014 in fact, at the altitude of the ISS, gravitational field strength is only slightly less than on the surface (about 8.7 N/kg compared to 9.8 N/kg). The astronauts appear weightless because they and the space station are accelerating towards Earth at exactly the same rate. There is no contact force (normal reaction) between the astronaut and the floor of the station, which is what we normally feel as 'weight'. It is not the absence of gravity that causes apparent weightlessness, but the fact that everything in the station is falling together.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "The ISS and astronauts are in free fall (falling towards Earth due to gravity)" },
+          { "id": "p2", "text": "Gravity is still acting on the astronauts in orbit \u2014 it has not disappeared" },
+          { "id": "p3", "text": "The astronaut and the station accelerate at the same rate, so there is no contact force (normal reaction) between them" },
+          { "id": "p4", "text": "Apparent weightlessness is due to free fall, not the absence of gravity" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The ISS orbits Earth at about 400 km altitude. At this height, gravitational field strength is approximately 8.7 N/kg \u2014 only about 11% less than the 9.8 N/kg at the surface. Gravity has not disappeared." },
+        { "text": "The ISS is in free fall around the Earth. It is constantly falling towards Earth, but because it is also moving forward at high speed (about 7700 m/s), it continuously misses the Earth. This curved path is a circular orbit." },
+        { "text": "The astronauts inside the ISS are also in free fall \u2014 they fall at exactly the same rate as the station itself. Because astronaut and station accelerate identically, there is no normal contact force between the astronaut's feet and the floor." },
+        { "text": "A common mistake is thinking astronauts are weightless because they are far from Earth and gravity no longer reaches them. In reality, gravity extends throughout space. The sensation of weightlessness comes from free fall, not from the absence of gravity. A person in a falling lift on Earth would experience the same apparent weightlessness." }
+      ],
+      "topicTags": ["phy.forces.gravity.circular-orbits", "phy.forces.gravity.weightlessness"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-weight-mass-space"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

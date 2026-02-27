@@ -1,0 +1,196 @@
+{
+  "id": "phy_18",
+  "title": "Atomic Structure and Radiation Types",
+  "icon": "☢️",
+  "subject": "physics",
+  "context": "A student is revising atomic structure and radioactivity. They study the nuclear model of the atom and learn about the three main types of ionising radiation: alpha (α), beta (β), and gamma (γ). The student needs to label parts of an atom, recall the definition of isotopes, match radiation types to their properties, and explain why alpha sources are used in smoke detectors.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "atomicModel": {
+      "imageSrc": "./src/assets/diagrams/phy_18_atomic_model.svg",
+      "imageAlt": "A nuclear model of an atom showing protons and neutrons in the nucleus and electrons in shells surrounding it.",
+      "title": "Nuclear model of an atom",
+      "width": 500,
+      "aspectRatio": "1:1",
+      "hotspots": [
+        { "id": "label_a", "x": 45, "y": 40, "correct": "proton" },
+        { "id": "label_b", "x": 55, "y": 55, "correct": "neutron" },
+        { "id": "label_c", "x": 85, "y": 20, "correct": "electron" }
+      ],
+      "termBank": [
+        { "id": "proton", "text": "Proton" },
+        { "id": "neutron", "text": "Neutron" },
+        { "id": "electron", "text": "Electron" },
+        { "id": "photon", "text": "Photon" },
+        { "id": "positron", "text": "Positron" },
+        { "id": "quark", "text": "Quark" }
+      ],
+      "description": "A circular diagram representing an atom. At the centre is a cluster of spheres representing the nucleus — some spheres are red (protons) and some are blue (neutrons), packed tightly together. Two concentric circular orbits (electron shells) surround the nucleus. Small dots on these orbits represent electrons. The inner shell has 2 electrons, the outer shell has 4 electrons. Label A points to a red sphere in the nucleus (proton). Label B points to a blue sphere in the nucleus (neutron). Label C points to a dot on the outer electron shell (electron). Blue leader lines connect labels to their targets."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_18_a",
+      "partLabel": "a",
+      "type": "diagram_label",
+      "marks": 3,
+      "question": "The diagram shows a nuclear model of an atom. Label particles A, B, and C.",
+      "diagramRef": "atomicModel",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b", "label_c"],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Proton — a positively charged particle found in the nucleus. Each proton has a relative charge of +1 and a relative mass of 1." },
+        { "text": "B = Neutron — a neutral particle (no charge) found in the nucleus alongside protons. Each neutron has a relative charge of 0 and a relative mass of 1." },
+        { "text": "C = Electron — a negatively charged particle that orbits the nucleus in energy levels (shells). Each electron has a relative charge of −1 and a negligible mass (approximately 1/1836 of a proton)." },
+        { "text": "A common mistake is confusing the proton number (atomic number) with the nucleon number (mass number). The proton number (Z) counts only protons and defines the element. The nucleon number (A) counts both protons and neutrons in the nucleus." }
+      ],
+      "topicTags": ["phy.atomic.structure.nuclear-model", "phy.atomic.structure.subatomic-particles"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-proton-nucleon-number"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_18_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following correctly defines an isotope?",
+      "options": [
+        { "id": "opt_a", "text": "Atoms with the same number of protons but a different number of neutrons" },
+        { "id": "opt_b", "text": "Atoms with the same number of neutrons but a different number of protons" },
+        { "id": "opt_c", "text": "Atoms with a different number of electrons only" },
+        { "id": "opt_d", "text": "Atoms of different elements with the same mass number" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_a"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is A — isotopes are atoms of the same element that have the same number of protons but a different number of neutrons. Because they have the same number of protons, they are the same element (same atomic number), but they have different mass numbers." },
+        { "text": "Option B describes atoms of different elements (different proton numbers mean different elements). Option C is incorrect because changing only the number of electrons creates an ion, not an isotope. Option D describes different elements that happen to share a mass number." },
+        { "text": "A common mistake is confusing isotopes with different elements. Isotopes are always the same element — they have identical chemical properties because the number of protons (and therefore electrons) is the same. Only the number of neutrons differs, which changes the mass but not the chemical behaviour." }
+      ],
+      "topicTags": ["phy.atomic.structure.isotopes"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-isotopes-elements"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_18_c",
+      "partLabel": "c",
+      "type": "keyword_match",
+      "marks": 2,
+      "question": "Match each type of radiation to its correct description.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "keyword_match",
+        "terms": [
+          { "id": "term_1", "text": "Alpha radiation" },
+          { "id": "term_2", "text": "Gamma radiation" }
+        ],
+        "definitions": [
+          { "id": "def_1", "text": "Most ionising, stopped by paper" },
+          { "id": "def_2", "text": "Most penetrating, only stopped by thick lead" },
+          { "id": "def_3", "text": "Deflected by electric fields, stopped by aluminium" },
+          { "id": "def_4", "text": "Has a positive charge of +2" }
+        ],
+        "pairs": [
+          { "termId": "term_1", "definitionId": "def_1" },
+          { "termId": "term_2", "definitionId": "def_2" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Alpha radiation → Most ionising, stopped by paper. Alpha particles are helium nuclei (2 protons + 2 neutrons) with a charge of +2. Their large size and charge mean they ionise many atoms over a short distance, but they are easily absorbed — even a few centimetres of air or a sheet of paper stops them." },
+        { "text": "Gamma radiation → Most penetrating, only stopped by thick lead. Gamma rays are high-energy electromagnetic waves with no mass and no charge. They are the least ionising of the three types but the most penetrating — only thick lead or several metres of concrete significantly reduces their intensity." },
+        { "text": "A common mistake is confusing the properties of alpha, beta, and gamma radiation. Remember the trade-off: the more ionising a type of radiation is, the less penetrating it is, and vice versa. Alpha is most ionising but least penetrating; gamma is least ionising but most penetrating; beta is in between." }
+      ],
+      "topicTags": ["phy.atomic.radiation.alpha", "phy.atomic.radiation.gamma", "phy.atomic.radiation.properties"],
+      "skillTags": ["recall-fact", "match"],
+      "misconceptionTags": ["confuses-alpha-beta-gamma-properties"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_18_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following is a correct use of gamma radiation?",
+      "options": [
+        { "id": "opt_a", "text": "In smoke detectors to ionise air particles" },
+        { "id": "opt_b", "text": "Sterilising medical equipment" },
+        { "id": "opt_c", "text": "Measuring the thickness of paper in factories" },
+        { "id": "opt_d", "text": "Generating electricity in nuclear power stations" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — gamma radiation is used to sterilise medical equipment. Gamma rays are highly penetrating, so they can pass through sealed packaging and kill bacteria and viruses on surgical instruments without the need to open the packaging." },
+        { "text": "Option A is incorrect — smoke detectors use alpha radiation (not gamma), because alpha particles are strongly ionising over short distances. Option C describes a use of beta radiation (not gamma) — beta particles are partially absorbed by thin materials like paper, so changes in thickness alter the count rate. Option D is incorrect — nuclear power stations generate electricity from nuclear fission, not from radiation directly." },
+        { "text": "A common mistake is thinking that any object exposed to radiation becomes radioactive itself. Irradiation (exposing an object to radiation) does not make the object radioactive. The object only becomes radioactive if radioactive atoms are deposited on or inside it (contamination). Gamma sterilisation is safe precisely because it irradiates — it does not contaminate." }
+      ],
+      "topicTags": ["phy.atomic.radiation.gamma", "phy.atomic.radiation.uses"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-radiation-makes-radioactive"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_18_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why alpha sources are used in smoke detectors. In your answer, describe the role of ionisation, the short range of alpha radiation, and how smoke is detected. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "An alpha source inside a smoke detector ionises the air molecules between two charged metal plates. The ions and free electrons created by the alpha particles carry a small electric current across the gap between the plates. When smoke enters the detector, the smoke particles absorb the alpha radiation and attach to the ions, reducing the number of ions reaching the plates. This causes the current to drop. A circuit detects this drop in current and triggers the alarm. Alpha radiation is ideal because it is strongly ionising (so it creates enough ions to maintain a measurable current) and has a very short range (a few centimetres in air), meaning it is safely contained within the detector and poses no radiation hazard outside the device.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Alpha source ionises air molecules, creating ions that carry a small current between charged plates" },
+          { "id": "p2", "text": "Smoke particles absorb alpha radiation / attach to ions, reducing the current — triggering the alarm" },
+          { "id": "p3", "text": "Alpha is strongly ionising (creates many ions) and has a short range (safe, contained within the detector)" },
+          { "id": "p4", "text": "Short range means alpha radiation does not escape the detector, so it is safe for domestic use" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "An alpha source is placed inside the smoke detector. Alpha particles ionise air molecules between two charged metal plates, knocking electrons off the air molecules and creating positive ions and free electrons." },
+        { "text": "These ions and electrons carry a small but steady electric current between the plates. A circuit monitors this current continuously." },
+        { "text": "When smoke enters the detector, the smoke particles absorb the alpha radiation and bind to the ions. This reduces the number of charge carriers reaching the plates, causing the current to fall. The drop in current is detected by the circuit, which triggers the alarm." },
+        { "text": "Alpha radiation is ideal for this purpose because it is the most strongly ionising type of radiation (creating many ions in a short distance) and has a very short range in air (only a few centimetres). The short range means the radiation is safely contained within the small detector housing and cannot escape to harm people nearby." },
+        { "text": "A common mistake is confusing the balancing of nuclear decay equations with the properties used in applications. When writing the decay equation for an alpha emitter, the mass number decreases by 4 and the atomic number decreases by 2 — students often forget to conserve both mass number and atomic number on each side of the equation." }
+      ],
+      "topicTags": ["phy.atomic.radiation.alpha", "phy.atomic.radiation.uses", "phy.atomic.radiation.ionisation"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-decay-equation-balancing"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}
