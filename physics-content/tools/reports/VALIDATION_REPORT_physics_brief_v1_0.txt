@@ -1,0 +1,73 @@
+Found 22 contracts
+
+  phy_01: 10 marks = AO1:2 + AO2:5 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_02: 10 marks = AO1:2 + AO2:5 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_03: 10 marks = AO1:5 + AO2:2 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_04: 9 marks = AO1:2 + AO2:4 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_05: 9 marks = AO1:2 + AO2:4 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_06: 10 marks = AO1:4 + AO2:3 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_07: 10 marks = AO1:3 + AO2:4 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_08: 9 marks = AO1:2 + AO2:4 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_09: 10 marks = AO1:4 + AO2:3 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_10: 9 marks = AO1:2 + AO2:4 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_11: 10 marks = AO1:3 + AO2:4 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_12: 9 marks = AO1:3 + AO2:3 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_13: 10 marks = AO1:3 + AO2:3 + AO3:4 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_14: 9 marks = AO1:2 + AO2:4 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_15: 10 marks = AO1:2 + AO2:4 + AO3:4 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_16: 9 marks = AO1:4 + AO2:2 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_17: 9 marks = AO1:2 + AO2:4 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_18: 10 marks = AO1:4 + AO2:3 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_19: 10 marks = AO1:1 + AO2:6 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_20: 9 marks = AO1:4 + AO2:2 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+  phy_21: 10 marks = AO1:4 + AO2:3 + AO3:3 = 10 ✅ | Parts marks sum: 10 ✅
+  phy_22: 9 marks = AO1:2 + AO2:4 + AO3:3 = 9 ✅ | Parts marks sum: 9 ✅
+
+============================================================
+GRAND TOTAL: 210 marks
+  AO1: 62 (29.5%)
+  AO2: 80 (38.1%)
+  AO3: 68 (32.4%)
+  Sum check: 62+80+68 = 210
+  ✅ Grand total 210 within 208-212 range
+  ✅ AO1 at 29.5% within 40% ceiling
+  ✅ AO2 at 38.1% within 40% ceiling
+  ✅ AO3 at 32.4% within 40% ceiling
+
+============================================================
+GROUP-LEVEL CHECKS (45% ceiling):
+
+  Group 1: 48 marks | AO1: 13 (27.1%) | AO2: 20 (41.7%) | AO3: 15 (31.2%)
+    ✅ AO1 within 45%
+    ✅ AO2 within 45%
+    ✅ AO3 within 45%
+
+  Group 2: 48 marks | AO1: 15 (31.2%) | AO2: 18 (37.5%) | AO3: 15 (31.2%)
+    ✅ AO1 within 45%
+    ✅ AO2 within 45%
+    ✅ AO3 within 45%
+
+  Group 3: 38 marks | AO1: 11 (28.9%) | AO2: 14 (36.8%) | AO3: 13 (34.2%)
+    ✅ AO1 within 45%
+    ✅ AO2 within 45%
+    ✅ AO3 within 45%
+
+  Group 4: 28 marks | AO1: 8 (28.6%) | AO2: 10 (35.7%) | AO3: 10 (35.7%)
+    ✅ AO1 within 45%
+    ✅ AO2 within 45%
+    ✅ AO3 within 45%
+
+  Group 5: 48 marks | AO1: 15 (31.2%) | AO2: 18 (37.5%) | AO3: 15 (31.2%)
+    ✅ AO1 within 45%
+    ✅ AO2 within 45%
+    ✅ AO3 within 45%
+
+✅ All interaction types approved: {'numeric_with_unit', 'graph_reading', 'data_table', 'calculation', 'self_assessed', 'mcq', 'process_sequence', 'diagram_label', 'keyword_match'}
+✅ All 69 contract tags exist in master list (76 total)
+
+============================================================
+
+✅ ALL CHECKS PASSED — Brief is valid
+---
+Validation run: 2026-02-27T11:58:43Z
+Fixes applied: numeric→numeric_with_unit, phy_19 contract alignment, tolerance harmonisation
