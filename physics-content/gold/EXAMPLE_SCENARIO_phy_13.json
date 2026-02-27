@@ -1,0 +1,188 @@
+{
+  "id": "phy_13",
+  "title": "Refraction and Total Internal Reflection",
+  "icon": "🔦",
+  "subject": "physics",
+  "context": "A student investigates refraction by shining a ray of light through a semi-circular glass block. The glass has a refractive index of 1.5. The student measures the angle of incidence and angle of refraction as the ray passes from air into the glass at a flat surface, and then investigates what happens when the angle of incidence inside the glass is increased beyond the critical angle.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "rayDiagram": {
+      "imageSrc": "./src/assets/diagrams/phy_13_refraction.svg",
+      "imageAlt": "A ray diagram showing a light ray passing from air into a glass block, bending towards the normal line. The incident ray, refracted ray, and normal line are labelled A, B, and C.",
+      "title": "Refraction at an air-glass boundary",
+      "width": 550,
+      "aspectRatio": "4:3",
+      "hotspots": [
+        { "id": "label_a", "x": 30, "y": 25, "correct": "incident_ray" },
+        { "id": "label_b", "x": 65, "y": 75, "correct": "refracted_ray" }
+      ],
+      "termBank": [
+        { "id": "incident_ray", "text": "Incident ray" },
+        { "id": "refracted_ray", "text": "Refracted ray" },
+        { "id": "reflected_ray", "text": "Reflected ray" },
+        { "id": "normal", "text": "Normal" },
+        { "id": "emergent_ray", "text": "Emergent ray" }
+      ],
+      "description": "A rectangular diagram split horizontally into two regions: the upper half is labelled 'Air' (light background) and the lower half is labelled 'Glass' (slightly shaded). A dashed vertical line runs down the centre of the diagram — this is the normal, perpendicular to the boundary. A solid blue ray enters from the upper-left at approximately 45° to the normal, hitting the air-glass boundary at the centre of the diagram. At the boundary, the ray bends towards the normal and continues into the glass at a shallower angle (approximately 28° to the normal). The incident ray is labelled A, the refracted ray is labelled B. The normal is already labelled with a dashed line. Angle arcs show the angle of incidence (between A and the normal) and the angle of refraction (between B and the normal). Blue (#007AFF) leader lines point from outside the diagram to labels A and B."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_13_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following correctly states the law of reflection?",
+      "options": [
+        { "id": "opt_a", "text": "The angle of incidence equals the angle of refraction" },
+        { "id": "opt_b", "text": "The angle of incidence equals the angle of reflection" },
+        { "id": "opt_c", "text": "The angle of incidence is always greater than the angle of reflection" },
+        { "id": "opt_d", "text": "Light always reflects at 90° to the surface" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — the law of reflection states that the angle of incidence equals the angle of reflection. Both angles are measured from the normal (not the surface)." },
+        { "text": "This applies to all reflections — smooth (specular) and rough (diffuse) surfaces." },
+        { "text": "A common mistake is choosing A, which describes a special case of refraction (not reflection). Reflection and refraction are different phenomena: reflection bounces light back, refraction bends it as it enters a new medium." }
+      ],
+      "topicTags": ["phy.waves.light.reflection"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-reflection-refraction"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_13_b",
+      "partLabel": "b",
+      "type": "diagram_label",
+      "marks": 2,
+      "question": "Label rays A and B on the refraction diagram.",
+      "diagramRef": "rayDiagram",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b"],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Incident ray — the ray of light travelling towards the boundary between air and glass." },
+        { "text": "B = Refracted ray — the ray of light that has crossed the boundary and changed direction (bent towards the normal because glass is optically denser than air)." },
+        { "text": "A common mistake is confusing the refracted ray with the reflected ray. The refracted ray continues through the new medium in a different direction. A reflected ray would bounce back into the original medium." }
+      ],
+      "topicTags": ["phy.waves.light.refraction"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-reflection-refraction"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_13_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The student measures an angle of incidence of 45°. Using Snell's law (n = sin i ÷ sin r) and the refractive index of the glass (n = 1.5), calculate the angle of refraction. Give your answer to the nearest degree.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 28,
+        "tolerance": 0.5,
+        "unitOptions": ["°", "rad", "m", "m/s"],
+        "correctUnit": "°"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct rearrangement: sin r = sin i ÷ n", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: n = sin i ÷ sin r", "formula": true },
+        { "text": "Rearrange: sin r = sin i ÷ n", "formula": true },
+        { "text": "sin r = sin 45° ÷ 1.5 = 0.7071 ÷ 1.5 = 0.4714", "formula": true },
+        { "text": "r = sin⁻¹(0.4714) = 28.1° ≈ 28°", "formula": true },
+        { "text": "The refracted ray bends towards the normal because light slows down when entering a denser medium (air → glass). A common mistake is thinking light bends away from the normal when entering glass — it bends towards the normal." }
+      ],
+      "topicTags": ["phy.waves.light.refraction", "phy.waves.light.snells-law"],
+      "skillTags": ["apply-equation", "rearrange-equation"],
+      "misconceptionTags": ["thinks-light-bends-away-from-normal"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_13_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "The student then shines light from inside the glass towards the flat surface. At what angle of incidence does total internal reflection first occur?",
+      "options": [
+        { "id": "opt_a", "text": "At any angle of incidence" },
+        { "id": "opt_b", "text": "Only when the angle of incidence equals 0°" },
+        { "id": "opt_c", "text": "When the angle of incidence exceeds the critical angle" },
+        { "id": "opt_d", "text": "When the angle of incidence is less than the critical angle" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C — total internal reflection (TIR) occurs when the angle of incidence exceeds the critical angle, and the light is travelling from a denser medium to a less dense medium (glass → air)." },
+        { "text": "At the critical angle, the refracted ray travels along the boundary (angle of refraction = 90°). Beyond this angle, no refraction occurs — all light is reflected back inside the glass." },
+        { "text": "A common mistake is thinking TIR happens at any angle. Two conditions must be met: (1) light must travel from a denser to a less dense medium, and (2) the angle of incidence must exceed the critical angle." }
+      ],
+      "topicTags": ["phy.waves.light.total-internal-reflection"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-critical-angle-TIR"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_13_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 4,
+      "question": "Explain how optical fibres use total internal reflection to transmit data over long distances. In your answer, describe the conditions needed for total internal reflection to occur and explain why the critical angle is important. [4 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Optical fibres are thin strands of glass or plastic that transmit light signals over long distances. Light enters one end of the fibre and hits the inner wall at an angle greater than the critical angle. Because the fibre's core is optically denser than the surrounding cladding, total internal reflection occurs — all the light is reflected back into the core rather than escaping. This process repeats as the light bounces along the length of the fibre. The critical angle depends on the refractive indices of the core and cladding — it must be kept small enough that light hitting the walls at steep angles still undergoes TIR. Very little light energy is lost, so signals can travel many kilometres without significant weakening.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Light travels through a glass/plastic core and hits the boundary at an angle greater than the critical angle" },
+          { "id": "p2", "text": "Total internal reflection occurs because light travels from a denser (core) to less dense (cladding) medium" },
+          { "id": "p3", "text": "Light bounces repeatedly along the fibre by TIR, carrying data signals" },
+          { "id": "p4", "text": "Critical angle must be exceeded for TIR — if the angle is too small, light escapes through the cladding" },
+          { "id": "p5", "text": "Very little energy is lost, allowing long-distance signal transmission" }
+        ],
+        "maxCheckable": 4,
+        "marks": 4
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Optical fibres have a glass or plastic core surrounded by a cladding with a lower refractive index. Light enters the fibre and hits the core-cladding boundary." },
+        { "text": "If the angle of incidence at the boundary is greater than the critical angle, total internal reflection occurs — all the light is reflected back into the core." },
+        { "text": "The light then bounces along the fibre, reflecting off the walls repeatedly. Each reflection is total, so very little light escapes." },
+        { "text": "The critical angle is determined by the ratio of the refractive indices of the core and cladding: sin c = n_cladding / n_core. A smaller critical angle means TIR occurs at steeper angles, making the fibre more effective." },
+        { "text": "This allows light (carrying digital data as pulses) to travel many kilometres with minimal signal loss — used in broadband, medical endoscopes, and telecommunications." },
+        { "text": "A common mistake is saying TIR happens because the fibre is 'shiny inside'. TIR is a wave phenomenon that depends on the angle of incidence exceeding the critical angle, not on surface reflectivity." }
+      ],
+      "topicTags": ["phy.waves.light.total-internal-reflection", "phy.waves.light.optical-fibres"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-critical-angle-TIR", "confuses-real-virtual-images"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "id": "phy_01",
+  "title": "Journey to School",
+  "icon": "🏃",
+  "subject": "physics",
+  "context": "A student cycles from home to school. They use a stopwatch and distance markers along the route to record their journey. The distance-time graph below shows the three stages of their journey: cycling at a steady speed, stopping at a traffic light, and cycling faster for the final section.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+
+  "graphs": {
+    "distanceTime": {
+      "xAxis": { "label": "Time (s)", "min": 0, "max": 300, "step": 50 },
+      "yAxis": { "label": "Distance (m)", "min": 0, "max": 1200, "step": 200 },
+      "lines": [
+        {
+          "id": "journey",
+          "color": "#007AFF",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 100, "y": 400 },
+            { "x": 150, "y": 400 },
+            { "x": 250, "y": 1000 },
+            { "x": 300, "y": 1000 }
+          ]
+        }
+      ],
+      "interactiveMode": "read"
+    }
+  },
+
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_01_a",
+      "partLabel": "a",
+      "type": "mcq",
+      "marks": 1,
+      "question": "What does the gradient of a distance-time graph represent?",
+      "options": [
+        { "id": "opt_a", "text": "Acceleration" },
+        { "id": "opt_b", "text": "Speed" },
+        { "id": "opt_c", "text": "Force" },
+        { "id": "opt_d", "text": "Distance" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — the gradient (slope) of a distance-time graph gives the speed of the object." },
+        { "text": "A steeper gradient means a faster speed. A flat (horizontal) section means the object is stationary (speed = 0)." },
+        { "text": "A common mistake is choosing A (acceleration). Acceleration is the gradient of a velocity-time graph, not a distance-time graph." }
+      ],
+      "topicTags": ["phy.forces.motion-graphs.distance-time"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-d-t-gradient-with-acceleration"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_01_b",
+      "partLabel": "b",
+      "type": "graph_reading",
+      "marks": 3,
+      "question": "Using the distance-time graph: (i) What distance has the student travelled after 100 seconds? (ii) How long does the student stop at the traffic light? (iii) Calculate the speed during the first section of the journey (0–100 s) using the graph.",
+      "diagramRef": null,
+      "graphRef": "distanceTime",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "graph_reading",
+        "readings": [
+          { "id": "reading_1", "correct": 400, "tolerance": 8, "unit": "m", "prompt": "Distance at 100 s" },
+          { "id": "reading_2", "correct": 50, "tolerance": 1, "unit": "s", "prompt": "Duration of stop" },
+          { "id": "reading_3", "correct": 4, "tolerance": 0.08, "unit": "m/s", "prompt": "Speed in first section" }
+        ],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) Read up from 100 s on the x-axis to the line, then across to the y-axis: distance = 400 m." },
+        { "text": "(ii) The flat section runs from 100 s to 150 s. Duration = 150 − 100 = 50 s." },
+        { "text": "(iii) Speed = gradient = distance ÷ time", "formula": true },
+        { "text": "Speed = 400 m ÷ 100 s = 4 m/s", "formula": true },
+        { "text": "A common mistake is reading the wrong axis or confusing the gradient calculation with reading a single point. The gradient requires two points and a division." }
+      ],
+      "topicTags": ["phy.forces.motion-graphs.distance-time", "phy.forces.motion-graphs.speed-calculation"],
+      "skillTags": ["interpret-graph", "calculate"],
+      "misconceptionTags": ["confuses-d-t-gradient-with-acceleration"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_01_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The total distance from home to school is 1000 m and the total journey time (excluding the stop) is 200 s. Calculate the student's average speed for the moving parts of the journey.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 5,
+        "tolerance": 0.05,
+        "unitOptions": ["m/s", "km/h", "m", "s"],
+        "correctUnit": "m/s"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct formula: average speed = total distance ÷ total time", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet:", "formula": false },
+        { "text": "average speed = total distance ÷ total time", "formula": true },
+        { "text": "average speed = 1000 m ÷ 200 s", "formula": true },
+        { "text": "average speed = 5 m/s", "formula": true },
+        { "text": "Note: the question asks for the moving parts only, so the 50 s stop is excluded from the total time. A common mistake is dividing by 250 s (the total elapsed time), which would give 4 m/s." }
+      ],
+      "topicTags": ["phy.forces.motion-graphs.speed-calculation"],
+      "skillTags": ["apply-equation"],
+      "misconceptionTags": ["confuses-speed-velocity"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_01_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following is a vector quantity?",
+      "options": [
+        { "id": "opt_a", "text": "Speed" },
+        { "id": "opt_b", "text": "Distance" },
+        { "id": "opt_c", "text": "Velocity" },
+        { "id": "opt_d", "text": "Time" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C — velocity is a vector quantity because it has both magnitude (size) and direction." },
+        { "text": "Speed is the scalar equivalent of velocity — it has magnitude only, no direction." },
+        { "text": "A common mistake is confusing speed and velocity. If a student says 'the car is travelling at 30 m/s north', that describes velocity. If they say 'the car is travelling at 30 m/s', that describes speed." }
+      ],
+      "topicTags": ["phy.forces.motion-graphs.scalar-vector"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-speed-velocity", "confuses-distance-displacement"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_01_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Describe and explain the motion of the student during each section of the distance-time graph. [3 marks]",
+      "diagramRef": null,
+      "graphRef": "distanceTime",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "In the first section (0–100 s), the student cycles at a constant speed of 4 m/s — the graph shows a straight line with a steady gradient. In the second section (100–150 s), the student is stationary at a traffic light — the graph is a flat horizontal line, so the distance is not changing. In the third section (150–250 s), the student cycles at a faster constant speed of 6 m/s — the gradient is steeper than the first section, meaning the student covers more distance per second.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Section 1 (0–100 s): constant speed — straight line with steady gradient" },
+          { "id": "p2", "text": "Section 2 (100–150 s): stationary — flat/horizontal line, speed = 0" },
+          { "id": "p3", "text": "Section 3 (150–250 s): faster constant speed — steeper gradient than section 1" },
+          { "id": "p4", "text": "Correctly links gradient to speed for at least one section" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Section 1 (0–100 s): The graph shows a straight diagonal line rising from 0 to 400 m. A straight line on a d-t graph means constant speed. Speed = 400 ÷ 100 = 4 m/s." },
+        { "text": "Section 2 (100–150 s): The graph shows a horizontal line at 400 m. A horizontal line means the distance is not changing — the student is stationary (speed = 0). This is where they stop at the traffic light." },
+        { "text": "Section 3 (150–250 s): The graph shows another straight diagonal line from 400 m to 1000 m. The gradient is steeper than section 1, meaning a faster speed. Speed = (1000 − 400) ÷ (250 − 150) = 600 ÷ 100 = 6 m/s." },
+        { "text": "A common mistake is saying the student is 'accelerating' when the line is straight. A straight line on a d-t graph means constant speed. A curved line would mean changing speed (acceleration or deceleration)." }
+      ],
+      "topicTags": ["phy.forces.motion-graphs.distance-time"],
+      "skillTags": ["describe-trend", "explain-mechanism"],
+      "misconceptionTags": ["confuses-d-t-gradient-with-acceleration"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

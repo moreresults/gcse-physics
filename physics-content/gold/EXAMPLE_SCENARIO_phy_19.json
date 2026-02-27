@@ -1,0 +1,196 @@
+{
+  "id": "phy_19",
+  "title": "Radioactive Decay of Iodine-131",
+  "icon": "☢️",
+  "subject": "physics",
+  "context": "A hospital uses iodine-131 to treat thyroid conditions. Iodine-131 is a radioactive isotope that emits beta (β) radiation. A sample initially has an activity of 800 counts per minute. The graph below shows how the activity of the sample decreases over time. The background radiation count in the hospital is 20 counts per minute.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": null,
+
+  "graphs": {
+    "decayCurve": {
+      "xAxis": { "label": "Time (days)", "min": 0, "max": 40, "step": 8 },
+      "yAxis": { "label": "Activity (counts per minute)", "min": 0, "max": 800, "step": 100 },
+      "lines": [
+        {
+          "id": "decay",
+          "color": "#007AFF",
+          "points": [
+            { "x": 0, "y": 800 },
+            { "x": 4, "y": 566 },
+            { "x": 8, "y": 400 },
+            { "x": 12, "y": 283 },
+            { "x": 16, "y": 200 },
+            { "x": 20, "y": 141 },
+            { "x": 24, "y": 100 },
+            { "x": 28, "y": 71 },
+            { "x": 32, "y": 50 },
+            { "x": 36, "y": 35 },
+            { "x": 40, "y": 25 }
+          ]
+        }
+      ],
+      "interactiveMode": "read"
+    }
+  },
+
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_19_a",
+      "partLabel": "a",
+      "type": "graph_reading",
+      "marks": 2,
+      "question": "Using the decay curve: (i) What is the activity of the sample after 16 days? (ii) After how many days does the activity fall to 100 counts per minute?",
+      "diagramRef": null,
+      "graphRef": "decayCurve",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "graph_reading",
+        "readings": [
+          { "id": "reading_1", "correct": 200, "tolerance": 4, "unit": "counts per minute", "prompt": "Activity at 16 days" },
+          { "id": "reading_2", "correct": 24, "tolerance": 0.48, "unit": "days", "prompt": "Time to reach 100 counts per minute" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) At 16 days on the x-axis, read up to the curve and across to the y-axis: activity ≈ 200 counts per minute." },
+        { "text": "(ii) At 100 counts per minute on the y-axis, read across to the curve and down to the x-axis: time ≈ 24 days." },
+        { "text": "A common mistake is forgetting to account for background radiation when reading the graph. In this question, the graph already shows total measured counts, so no subtraction is needed for the readings — but you would need to subtract background (20 cpm) if asked for the corrected count rate." }
+      ],
+      "topicTags": ["phy.radioactivity.decay.decay-curve"],
+      "skillTags": ["interpret-graph"],
+      "misconceptionTags": ["thinks-half-life-means-half-gone"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_19_b",
+      "partLabel": "b",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "Use the graph to determine the half-life of iodine-131. Show your working.",
+      "diagramRef": null,
+      "graphRef": "decayCurve",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 8,
+        "tolerance": 0.16,
+        "unitOptions": ["days", "hours", "minutes", "seconds"],
+        "correctUnit": "days"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correctly identifies two points where activity halves (e.g. 800 → 400, or 400 → 200) and reads corresponding times from graph", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "The half-life is the time taken for the activity to fall to half its original value." },
+        { "text": "Starting activity = 800 cpm. Half of 800 = 400 cpm.", "formula": true },
+        { "text": "From the graph: activity reaches 400 cpm at t = 8 days.", "formula": false },
+        { "text": "Half-life = 8 − 0 = 8 days.", "formula": true },
+        { "text": "Check: at 16 days the activity should be ¼ of 800 = 200 cpm. The graph confirms this. ✓" },
+        { "text": "A common mistake is thinking half-life means the time for the substance to completely disappear, or that after two half-lives all the material is gone. After two half-lives, ¼ of the original activity remains." }
+      ],
+      "topicTags": ["phy.radioactivity.decay.half-life"],
+      "skillTags": ["interpret-graph", "calculate"],
+      "misconceptionTags": ["thinks-half-life-means-half-gone"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_19_c",
+      "partLabel": "c",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which of the following is the correct definition of half-life?",
+      "options": [
+        { "id": "opt_a", "text": "The time taken for all the radioactive atoms in a sample to decay" },
+        { "id": "opt_b", "text": "The time taken for the activity of a radioactive source to fall to half its initial value" },
+        { "id": "opt_c", "text": "The time taken for half the mass of a substance to disappear" },
+        { "id": "opt_d", "text": "The time taken for the radiation to travel half the distance through a material" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — half-life is the time taken for the activity (or the number of undecayed nuclei) of a radioactive source to fall to half its initial value." },
+        { "text": "Half-life is constant for a given isotope — it does not change regardless of the initial activity or the amount of material." },
+        { "text": "A common mistake is choosing C — thinking half-life means half the mass disappears. The mass of the sample barely changes (decay products remain). It is the number of radioactive (undecayed) nuclei that halves, which causes the activity to halve." }
+      ],
+      "topicTags": ["phy.radioactivity.decay.half-life"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["thinks-half-life-means-half-gone"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_19_d",
+      "partLabel": "d",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "The initial activity of the sample is 800 counts per minute. After 32 days, what is the activity? Use the formula: activity after n half-lives = initial activity ÷ 2ⁿ.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 50,
+        "tolerance": 1,
+        "unitOptions": ["counts per minute", "Bq", "days", "cpm"],
+        "correctUnit": "counts per minute"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correctly calculates number of half-lives: 32 ÷ 8 = 4", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "Number of half-lives = total time ÷ half-life", "formula": true },
+        { "text": "n = 32 days ÷ 8 days = 4 half-lives", "formula": true },
+        { "text": "Activity = 800 ÷ 2⁴ = 800 ÷ 16 = 50 counts per minute", "formula": true },
+        { "text": "Alternatively, halve repeatedly: 800 → 400 → 200 → 100 → 50 cpm." },
+        { "text": "The graph confirms this: at 32 days, the activity is approximately 50 cpm. ✓" }
+      ],
+      "topicTags": ["phy.radioactivity.decay.half-life"],
+      "skillTags": ["apply-equation", "calculate"],
+      "misconceptionTags": ["thinks-half-life-means-half-gone"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_19_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why iodine-131 is suitable for treating thyroid conditions. In your answer, consider its type of radiation, its half-life, and what happens to the iodine in the body. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Iodine-131 is suitable for thyroid treatment for several reasons. It emits beta radiation, which has a range of a few centimetres in body tissue — enough to destroy nearby thyroid cells but not enough to penetrate far and damage surrounding healthy tissue. Its half-life of 8 days means it remains active long enough to deliver a therapeutic dose to the thyroid, but decays quickly enough that it does not stay radioactive in the body for too long. The thyroid gland naturally absorbs iodine from the blood, so iodine-131 is preferentially taken up by the thyroid — targeting the treatment to exactly where it is needed.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Beta radiation has limited penetration — destroys thyroid cells without damaging distant tissue" },
+          { "id": "p2", "text": "Half-life of 8 days — long enough to treat but short enough to decay away" },
+          { "id": "p3", "text": "Thyroid naturally absorbs iodine — targeted delivery to the correct organ" },
+          { "id": "p4", "text": "After several half-lives the radioactivity falls to safe levels" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Beta radiation has a range of a few centimetres in body tissue. This means it can destroy overactive or cancerous thyroid cells nearby, but it does not penetrate far enough to cause significant damage to other organs." },
+        { "text": "The half-life of 8 days is ideal — it is long enough to deliver a sustained dose over several days, but short enough that the radioactivity decreases rapidly. After about 5 half-lives (40 days), the activity has fallen to about 3% of its original value." },
+        { "text": "The thyroid gland naturally concentrates iodine from the blood. This biological mechanism means iodine-131 is selectively taken up by the thyroid, delivering a high dose exactly where it is needed." },
+        { "text": "A common mistake is thinking that any radioactive isotope could be used. The choice depends on matching the type of radiation, the half-life, and the biological behaviour to the specific medical application." }
+      ],
+      "topicTags": ["phy.radioactivity.decay.half-life", "phy.radioactivity.decay.medical-uses"],
+      "skillTags": ["explain-mechanism", "evaluate"],
+      "misconceptionTags": ["thinks-radiation-makes-radioactive", "thinks-half-life-means-half-gone"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

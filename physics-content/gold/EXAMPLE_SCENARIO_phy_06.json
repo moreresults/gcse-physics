@@ -1,0 +1,189 @@
+{
+  "id": "phy_06",
+  "title": "Investigating Series and Parallel Circuits",
+  "icon": "🔋",
+  "subject": "physics",
+  "context": "A student builds two circuits to investigate how current and voltage behave in series and parallel arrangements. Circuit 1 has two resistors connected in series with a 12 V battery. Circuit 2 has the same two resistors connected in parallel with the same battery. The student uses an ammeter and a voltmeter to take readings.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "seriesCircuit": {
+      "imageSrc": "./src/assets/diagrams/phy_06_series_circuit.svg",
+      "imageAlt": "A series circuit diagram showing a 12 V battery connected to two resistors (R₁ = 4 Ω and R₂ = 8 Ω) in series, with an ammeter in series and a voltmeter across R₁. Components A, B, and C are labelled.",
+      "title": "Series circuit with ammeter and voltmeter",
+      "width": 600,
+      "aspectRatio": "16:9",
+      "hotspots": [
+        { "id": "label_a", "x": 50, "y": 15, "correct": "ammeter" },
+        { "id": "label_b", "x": 75, "y": 50, "correct": "voltmeter" },
+        { "id": "label_c", "x": 30, "y": 50, "correct": "resistor" }
+      ],
+      "termBank": [
+        { "id": "ammeter", "text": "Ammeter" },
+        { "id": "voltmeter", "text": "Voltmeter" },
+        { "id": "resistor", "text": "Resistor" },
+        { "id": "thermistor", "text": "Thermistor" },
+        { "id": "ldr", "text": "LDR" },
+        { "id": "diode", "text": "Diode" },
+        { "id": "variable_resistor", "text": "Variable resistor" }
+      ],
+      "description": "A rectangular series circuit. The 12 V battery (two-line cell symbol, long line positive) is at the top left. Current flows clockwise. An ammeter (circle with 'A') is in the top wire, in series. Two resistors are in series along the right side: R₁ (4 Ω, standard zigzag/rectangle symbol) at the top right and R₂ (8 Ω) at the bottom right. A voltmeter (circle with 'V') is connected in parallel across R₁ with two thin wires branching off the main loop. Wire connections are shown as filled black dots at junctions. Component A labels the ammeter, B labels the voltmeter, and C labels R₁. Blue (#007AFF) leader lines point from outside the circuit to each labelled component."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "phy_06_a",
+      "partLabel": "a",
+      "type": "diagram_label",
+      "marks": 3,
+      "question": "Label components A, B, and C on the series circuit diagram.",
+      "diagramRef": "seriesCircuit",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b", "label_c"],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Ammeter — a device that measures electric current. It is always connected in series so that all the current flows through it." },
+        { "text": "B = Voltmeter — a device that measures potential difference (voltage). It is always connected in parallel across the component being tested." },
+        { "text": "C = Resistor — a component that opposes the flow of electric current. It has a standard rectangular or zigzag symbol." },
+        { "text": "A common mistake is swapping ammeter and voltmeter placement. Remember: ammeter = in series (A for 'all current passes through it'), voltmeter = in parallel (V for 'voltage across')." }
+      ],
+      "topicTags": ["phy.electricity.circuits.components", "phy.electricity.circuits.ammeter-voltmeter"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-ammeter-voltmeter-placement"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_06_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "How should an ammeter be connected in a circuit to measure the current through a component?",
+      "options": [
+        { "id": "opt_a", "text": "In parallel with the component" },
+        { "id": "opt_b", "text": "In series with the component" },
+        { "id": "opt_c", "text": "Between the two terminals of the battery" },
+        { "id": "opt_d", "text": "It does not matter — an ammeter works in any position" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — an ammeter must be connected in series with the component so that all the current flowing through the component also flows through the ammeter." },
+        { "text": "An ammeter has very low resistance so it does not significantly affect the circuit." },
+        { "text": "A common mistake is connecting the ammeter in parallel. This would short-circuit the component (very high current through the ammeter's low resistance) and could damage the ammeter." }
+      ],
+      "topicTags": ["phy.electricity.circuits.ammeter-voltmeter"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-ammeter-voltmeter-placement"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_06_c",
+      "partLabel": "c",
+      "type": "numeric_with_unit",
+      "marks": 2,
+      "question": "In Circuit 1 (series), the total resistance is 12 Ω and the battery provides 12 V. Use Ohm's law to calculate the current flowing through the circuit.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 1,
+        "tolerance": 0.01,
+        "unitOptions": ["A", "V", "Ω", "W"],
+        "correctUnit": "A"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correctly rearranges V = IR to I = V/R", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "From the formula sheet: V = IR", "formula": true },
+        { "text": "Rearrange for current: I = V ÷ R", "formula": true },
+        { "text": "I = 12 V ÷ 12 Ω = 1 A", "formula": true },
+        { "text": "The current in the series circuit is 1 A. This current is the same at every point in the series circuit." },
+        { "text": "A common mistake is confusing voltage and current. Voltage is the 'push' (measured in volts), current is the flow of charge (measured in amps), and resistance opposes the current (measured in ohms)." }
+      ],
+      "topicTags": ["phy.electricity.circuits.ohms-law"],
+      "skillTags": ["apply-equation", "rearrange-equation"],
+      "misconceptionTags": ["confuses-voltage-current"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_06_d",
+      "partLabel": "d",
+      "type": "mcq",
+      "marks": 1,
+      "question": "In Circuit 2 (parallel), a third identical resistor is added in parallel. What happens to the total resistance of the circuit?",
+      "options": [
+        { "id": "opt_a", "text": "It increases" },
+        { "id": "opt_b", "text": "It stays the same" },
+        { "id": "opt_c", "text": "It decreases" },
+        { "id": "opt_d", "text": "It doubles" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C — adding more resistors in parallel decreases the total resistance of the circuit." },
+        { "text": "In parallel, each new branch provides an additional pathway for current to flow. More pathways means less overall resistance, so more total current flows from the battery." },
+        { "text": "A common mistake is thinking that adding any resistor always increases resistance. This is true for series circuits, but in parallel the opposite happens — total resistance decreases." }
+      ],
+      "topicTags": ["phy.electricity.circuits.series-parallel"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-series-parallel-current"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "phy_06_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain why the current is the same at all points in a series circuit, but the voltage is shared between the components. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "In a series circuit, there is only one path for the current to flow, so the same charge passes through every component each second — this means the current is identical at all points. Voltage (potential difference) represents the energy transferred per unit charge. Each component uses some of the energy provided by the battery, so the voltage is shared between them. The sum of the voltages across each component equals the total battery voltage. This is because energy is conserved — all the energy supplied by the battery must be transferred to the components.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Only one path for current — same current flows through every component" },
+          { "id": "p2", "text": "Voltage is shared — each component uses some of the energy from the battery" },
+          { "id": "p3", "text": "Sum of voltages across components equals total battery voltage (energy conservation)" },
+          { "id": "p4", "text": "Correct use of terms: current = flow of charge, voltage = energy per unit charge" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "In series, there is only one loop — one pathway. Every electron that leaves the battery must pass through every component. So the current is the same everywhere in the circuit." },
+        { "text": "Voltage represents the energy transferred per coulomb of charge. The battery provides a fixed voltage (e.g. 12 V). Each component 'uses up' some of this energy as charge flows through it." },
+        { "text": "The voltages across the individual components add up to the total battery voltage: V_total = V₁ + V₂. This follows from conservation of energy." },
+        { "text": "A common mistake is thinking current is 'used up' by each component. Current is conserved — it is the energy (voltage) that is shared, not the current." }
+      ],
+      "topicTags": ["phy.electricity.circuits.series-parallel"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["thinks-current-used-up", "confuses-series-parallel-current"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}
