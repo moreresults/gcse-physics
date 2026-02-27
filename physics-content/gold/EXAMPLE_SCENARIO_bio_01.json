@@ -1,0 +1,194 @@
+{
+  "id": "bio_01",
+  "title": "Looking at Cells Under a Microscope",
+  "icon": "🔬",
+  "subject": "biology",
+  "context": "A student uses a light microscope to observe a thin section of onion epidermis and a sample of human cheek cells. She makes labelled drawings of both cells and notes the differences between them. Her teacher asks her to compare these eukaryotic cells with a photograph of a bacterium.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "plantCell": {
+      "imageSrc": "./src/assets/diagrams/bio_01_plant_cell.svg",
+      "imageAlt": "Diagram of a plant cell showing five labelled structures (A–E) within a rectangular cell boundary",
+      "title": "Plant cell structure",
+      "width": 550,
+      "aspectRatio": "4:3",
+      "hotspots": [
+        { "id": "label_a", "x": 95, "y": 50, "correct": "cell_wall" },
+        { "id": "label_b", "x": 50, "y": 45, "correct": "nucleus" },
+        { "id": "label_c", "x": 30, "y": 25, "correct": "chloroplast" },
+        { "id": "label_d", "x": 50, "y": 70, "correct": "vacuole" },
+        { "id": "label_e", "x": 85, "y": 30, "correct": "cell_membrane" }
+      ],
+      "termBank": [
+        { "id": "cell_wall", "text": "Cell wall" },
+        { "id": "nucleus", "text": "Nucleus" },
+        { "id": "chloroplast", "text": "Chloroplast" },
+        { "id": "vacuole", "text": "Vacuole" },
+        { "id": "cell_membrane", "text": "Cell membrane" },
+        { "id": "mitochondria", "text": "Mitochondria" },
+        { "id": "ribosome", "text": "Ribosome" },
+        { "id": "cytoplasm", "text": "Cytoplasm" }
+      ],
+      "description": "A rectangular plant cell as seen under a light microscope. The cell wall is the thick, rigid outer boundary forming the rectangular shape. Just inside it, the cell membrane is a thin line pressed against the cell wall. The nucleus is a large, dark-stained oval structure positioned slightly off-centre, approximately 1/4 of the cell diameter. Several small, oval chloroplasts (darker green) are distributed around the edges of the cytoplasm, concentrated near the cell periphery. A large central vacuole occupies approximately 60% of the cell interior, shown as a pale region bounded by a visible tonoplast membrane. The cytoplasm is a thin layer between the vacuole and the cell membrane. Label markers A–E point from outside the cell to each structure with blue (#007AFF) leader lines."
+    }
+  },
+
+  "graphs": null,
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "bio_01_a",
+      "partLabel": "a",
+      "type": "diagram_label",
+      "marks": 5,
+      "question": "Label structures A–E on the plant cell diagram.",
+      "diagramRef": "plantCell",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b", "label_c", "label_d", "label_e"],
+        "marks": 5
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Cell wall — the thick, rigid outer layer made of cellulose that provides structural support. Only plant cells have a cell wall." },
+        { "text": "B = Nucleus — the large structure that contains the cell's DNA and controls cell activities." },
+        { "text": "C = Chloroplast — the organelle that contains chlorophyll and is the site of photosynthesis. Only plant cells have chloroplasts." },
+        { "text": "D = Vacuole — the large, permanent central vacuole filled with cell sap. It keeps the cell turgid and stores substances." },
+        { "text": "E = Cell membrane — the thin, partially permeable membrane that controls what enters and leaves the cell. It sits just inside the cell wall." },
+        { "text": "A common mistake is confusing the cell wall with the cell membrane. The cell wall is the thick outer boundary; the cell membrane is a thin layer just inside it." }
+      ],
+      "topicTags": ["bio.cell-biology.cell-structure.organelles"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-organelles"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_01_b",
+      "partLabel": "b",
+      "type": "mcq",
+      "marks": 1,
+      "question": "The student's teacher shows her a photograph of a bacterium. Which of the following best describes the difference between a bacterial cell and the plant cell the student observed?",
+      "options": [
+        { "id": "opt_a", "text": "Bacterial cells are prokaryotic — they have no membrane-bound nucleus" },
+        { "id": "opt_b", "text": "Bacterial cells are eukaryotic — they have a nucleus surrounded by a membrane" },
+        { "id": "opt_c", "text": "Bacterial cells are larger than plant cells" },
+        { "id": "opt_d", "text": "Bacterial cells contain chloroplasts for photosynthesis" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_a"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is A — bacterial cells are prokaryotic, meaning their DNA is free in the cytoplasm and is not enclosed in a membrane-bound nucleus." },
+        { "text": "Plant and animal cells are eukaryotic — they have a true nucleus with a nuclear membrane." },
+        { "text": "A common mistake is thinking 'prokaryotic' just means 'smaller'. The key difference is the absence of a membrane-bound nucleus and other membrane-bound organelles." }
+      ],
+      "topicTags": ["bio.cell-biology.cell-structure.organelles", "bio.cell-biology.cell-structure.prokaryotic-eukaryotic"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["confuses-prokaryotic-eukaryotic"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_01_c",
+      "partLabel": "c",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Muscle cells in the legs of a long-distance runner contain many more mitochondria than skin cells. Which of the following best explains why?",
+      "options": [
+        { "id": "opt_a", "text": "Muscle cells need to store more glucose than skin cells" },
+        { "id": "opt_b", "text": "Muscle cells need to release more energy through aerobic respiration" },
+        { "id": "opt_c", "text": "Muscle cells need to carry out more photosynthesis" },
+        { "id": "opt_d", "text": "Muscle cells need to divide more rapidly by mitosis" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — muscle cells need to release large amounts of energy through aerobic respiration to power muscle contraction." },
+        { "text": "Mitochondria are the organelles where aerobic respiration takes place, so cells with high energy demands contain more of them." },
+        { "text": "This is an application question: you need to connect the function of mitochondria (aerobic respiration → energy release) to the context of a cell with high energy requirements." },
+        { "text": "A common mistake is confusing mitochondria with chloroplasts. Chloroplasts carry out photosynthesis (found only in plant cells). Mitochondria carry out respiration (found in both plant and animal cells)." }
+      ],
+      "topicTags": ["bio.cell-biology.cell-structure.organelles"],
+      "skillTags": ["classify"],
+      "misconceptionTags": ["confuses-mitochondria-chloroplast"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_01_d",
+      "partLabel": "d",
+      "type": "calculation",
+      "marks": 2,
+      "question": "The student observes a cell that is 0.05 mm long. Under the microscope, the image of the cell is 25 mm long. Calculate the magnification of the microscope.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "numeric_with_unit",
+        "correct": 500,
+        "tolerance": 0,
+        "unitOptions": ["×", "mm", "μm"],
+        "correctUnit": "×"
+      },
+      "methodMarks": [
+        { "id": "m1", "description": "Correct formula: magnification = image size ÷ actual size", "marks": 1 }
+      ],
+      "solutionSteps": [
+        { "text": "Use the magnification formula:" },
+        { "text": "magnification = image size ÷ actual size", "formula": true },
+        { "text": "magnification = 25 mm ÷ 0.05 mm", "formula": true },
+        { "text": "magnification = ×500", "formula": true },
+        { "text": "The magnification is ×500. Note that magnification has no units — the mm cancel. A common mistake is forgetting to convert units before dividing, but here both values are already in mm." }
+      ],
+      "topicTags": ["bio.cell-biology.cell-structure.microscopy"],
+      "skillTags": ["apply-equation", "calculate"],
+      "misconceptionTags": ["forgets-unit-conversion-microscopy"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_01_e",
+      "partLabel": "e",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Which type of microscope would you need to see ribosomes inside a cell?",
+      "options": [
+        { "id": "opt_a", "text": "Light microscope" },
+        { "id": "opt_b", "text": "Magnifying glass" },
+        { "id": "opt_c", "text": "Electron microscope" },
+        { "id": "opt_d", "text": "Scanning microscope only" }
+      ],
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_c"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is C — an electron microscope." },
+        { "text": "Ribosomes are very small sub-cellular structures, approximately 20 nm in diameter." },
+        { "text": "Light microscopes have a maximum resolution of about 200 nm, so they cannot resolve structures as small as ribosomes." },
+        { "text": "Electron microscopes have much higher resolution (down to ~0.1 nm) and can clearly image ribosomes." },
+        { "text": "A common mistake is thinking higher magnification is enough. Resolution — the ability to distinguish two close points as separate — is the key factor, not magnification." }
+      ],
+      "topicTags": ["bio.cell-biology.cell-structure.microscopy"],
+      "skillTags": ["recall-fact"],
+      "misconceptionTags": ["resolution-vs-magnification"],
+      "isTeacherMarkedInExam": false
+    }
+  ]
+}

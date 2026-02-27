@@ -1,0 +1,220 @@
+{
+  "id": "bio_08",
+  "title": "Photosynthesis and Limiting Factors",
+  "icon": "🌿",
+  "subject": "biology",
+  "context": "A student investigates the effect of light intensity on the rate of photosynthesis using an aquatic plant (pondweed). They count the number of oxygen bubbles produced per minute at different light intensities and record their results in a table. They also examine a cross-section of a leaf under a microscope.",
+  "difficulty": "foundation-higher",
+
+  "diagrams": {
+    "leafCrossSection": {
+      "imageSrc": "./src/assets/diagrams/bio_08_leaf_cross_section.svg",
+      "imageAlt": "Cross-section of a leaf showing six tissue layers labelled A to C, with three structures requiring identification",
+      "title": "Leaf cross-section",
+      "width": 600,
+      "aspectRatio": "16:9",
+      "hotspots": [
+        { "id": "label_a", "x": 50, "y": 15, "correct": "upper_epidermis" },
+        { "id": "label_b", "x": 50, "y": 35, "correct": "palisade_mesophyll" },
+        { "id": "label_c", "x": 30, "y": 85, "correct": "stomata" }
+      ],
+      "termBank": [
+        { "id": "upper_epidermis", "text": "Upper epidermis" },
+        { "id": "palisade_mesophyll", "text": "Palisade mesophyll" },
+        { "id": "stomata", "text": "Stomata" },
+        { "id": "spongy_mesophyll", "text": "Spongy mesophyll" },
+        { "id": "guard_cells", "text": "Guard cells" },
+        { "id": "cuticle", "text": "Cuticle" },
+        { "id": "air_space", "text": "Air space" }
+      ],
+      "description": "A rectangular cross-section of a dicotyledonous leaf viewed under a microscope, oriented horizontally with the upper surface at the top. The topmost layer is a thin, transparent upper epidermis (one cell thick, flat rectangular cells). Below it is the palisade mesophyll layer — a row of tall, tightly packed columnar cells containing many dark-green chloroplasts, approximately 1/4 of the leaf thickness. Beneath the palisade layer is the spongy mesophyll — irregularly shaped cells with visible air spaces between them, lighter green with fewer chloroplasts. A vascular bundle (vein) is visible as a circular cross-section in the middle of the spongy mesophyll showing xylem above and phloem below. The lower epidermis forms the bottom boundary, similar to the upper epidermis but with two bean-shaped guard cells flanking an opening (stoma) near the left side. Label markers A, B, and C point to the upper epidermis, palisade mesophyll, and a stoma respectively, with blue (#007AFF) leader lines."
+    }
+  },
+
+  "graphs": {
+    "lightIntensity": {
+      "xAxis": { "label": "Light intensity (arbitrary units)", "min": 0, "max": 50, "step": 10 },
+      "yAxis": { "label": "Rate of photosynthesis (bubbles/min)", "min": 0, "max": 50, "step": 10 },
+      "lines": [
+        {
+          "id": "photosynthesis_rate",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 5, "y": 12 },
+            { "x": 10, "y": 22 },
+            { "x": 15, "y": 30 },
+            { "x": 20, "y": 36 },
+            { "x": 25, "y": 40 },
+            { "x": 30, "y": 42 },
+            { "x": 35, "y": 43 },
+            { "x": 40, "y": 43 },
+            { "x": 45, "y": 43 }
+          ]
+        }
+      ],
+      "interactiveMode": "read",
+      "lineType": "smooth"
+    }
+  },
+
+  "dataTables": null,
+
+  "parts": [
+    {
+      "id": "bio_08_a",
+      "partLabel": "a",
+      "type": "keyword_match",
+      "marks": 2,
+      "question": "Complete the word equation for photosynthesis by choosing the correct terms from the word bank.",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "keyword_match",
+        "passage": "{blank_1} + water → glucose + {blank_2}",
+        "blanks": [
+          { "id": "blank_1", "correct": "carbon_dioxide" },
+          { "id": "blank_2", "correct": "oxygen" }
+        ],
+        "wordBank": [
+          { "id": "carbon_dioxide", "text": "carbon dioxide" },
+          { "id": "oxygen", "text": "oxygen" },
+          { "id": "nitrogen", "text": "nitrogen" },
+          { "id": "lactic_acid", "text": "lactic acid" },
+          { "id": "glucose", "text": "glucose" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The word equation for photosynthesis is:", "formula": false },
+        { "text": "carbon dioxide + water → glucose + oxygen", "formula": true },
+        { "text": "Plants absorb carbon dioxide from the air and water from the soil. Using light energy trapped by chlorophyll, they convert these into glucose (food) and oxygen (released as a waste product)." },
+        { "text": "A common mistake is swapping the photosynthesis and respiration equations. Remember: photosynthesis produces oxygen and glucose; respiration uses them." }
+      ],
+      "topicTags": ["bio.bioenergetics.photosynthesis.equation"],
+      "skillTags": ["recall-equation"],
+      "misconceptionTags": ["confuses-photosynthesis-respiration-equations"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_08_b",
+      "partLabel": "b",
+      "type": "graph_reading",
+      "marks": 2,
+      "question": "Using the graph, determine: (i) the rate of photosynthesis at a light intensity of 10 arbitrary units, and (ii) the light intensity at which the rate of photosynthesis first reaches 40 bubbles per minute.",
+      "diagramRef": null,
+      "graphRef": "lightIntensity",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "graph_reading",
+        "readings": [
+          { "id": "reading_1", "correct": 22, "tolerance": 1, "unit": "bubbles/min", "prompt": "Rate at light intensity 10" },
+          { "id": "reading_2", "correct": 25, "tolerance": 1, "unit": "arbitrary units", "prompt": "Light intensity at rate 40" }
+        ],
+        "marks": 2
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "(i) At light intensity 10, draw a vertical line up to the curve and read across to the y-axis: the rate is approximately 22 bubbles/min." },
+        { "text": "(ii) At rate 40 bubbles/min, draw a horizontal line from the y-axis to the curve and read down to the x-axis: light intensity is approximately 25 arbitrary units." },
+        { "text": "A common mistake is confusing which axis to read from. For (i) you start on the x-axis and read up then across. For (ii) you start on the y-axis and read across then down." }
+      ],
+      "topicTags": ["bio.bioenergetics.photosynthesis.limiting-factors"],
+      "skillTags": ["interpret-graph"],
+      "misconceptionTags": ["confuses-limiting-factors"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_08_c",
+      "partLabel": "c",
+      "type": "mcq",
+      "marks": 1,
+      "question": "Looking at the graph, the rate of photosynthesis levels off at high light intensities. What is the most likely reason?",
+      "options": [
+        { "id": "opt_a", "text": "The plant has run out of chlorophyll" },
+        { "id": "opt_b", "text": "Another factor such as carbon dioxide concentration or temperature has become limiting" },
+        { "id": "opt_c", "text": "The plant has stopped photosynthesising and is only respiring" },
+        { "id": "opt_d", "text": "The oxygen produced is blocking further photosynthesis" }
+      ],
+      "diagramRef": null,
+      "graphRef": "lightIntensity",
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "mcq",
+        "correct": "opt_b"
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "The correct answer is B — at high light intensities, another factor has become limiting. Even though more light is available, the rate cannot increase further because something else (typically CO₂ concentration or temperature) is now restricting the reaction." },
+        { "text": "This is the concept of limiting factors: whichever factor is in shortest supply controls the rate of the reaction." },
+        { "text": "A common mistake is choosing C — thinking the plant stops photosynthesising. Plants continue to photosynthesise at high light intensities; they simply cannot increase the rate further because another factor is limiting." }
+      ],
+      "topicTags": ["bio.bioenergetics.photosynthesis.limiting-factors"],
+      "skillTags": ["interpret-graph"],
+      "misconceptionTags": ["thinks-plants-only-photosynthesise"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_08_d",
+      "partLabel": "d",
+      "type": "diagram_label",
+      "marks": 3,
+      "question": "Label structures A, B, and C on the leaf cross-section diagram.",
+      "diagramRef": "leafCrossSection",
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "diagram_label",
+        "hotspotIds": ["label_a", "label_b", "label_c"],
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "A = Upper epidermis — a thin, transparent layer on the top surface of the leaf. It is transparent to let light pass through to the photosynthesising cells below." },
+        { "text": "B = Palisade mesophyll — a layer of tall, tightly packed cells just below the upper epidermis. These contain the most chloroplasts and are the main site of photosynthesis." },
+        { "text": "C = Stomata — tiny pores (openings) on the lower surface of the leaf, flanked by guard cells. They allow carbon dioxide to diffuse in and oxygen to diffuse out." },
+        { "text": "A common mistake is confusing the palisade mesophyll with the spongy mesophyll. The palisade cells are taller, more tightly packed, and near the top of the leaf (closer to sunlight). Spongy mesophyll cells are irregular with air spaces between them." }
+      ],
+      "topicTags": ["bio.bioenergetics.photosynthesis.leaf-structure"],
+      "skillTags": ["label-diagram"],
+      "misconceptionTags": ["confuses-photosynthesis-respiration-equations"],
+      "isTeacherMarkedInExam": false
+    },
+    {
+      "id": "bio_08_e",
+      "partLabel": "e",
+      "type": "self_assessed",
+      "marks": 3,
+      "question": "Explain how the structure of a leaf is adapted for efficient photosynthesis. [3 marks]",
+      "diagramRef": null,
+      "graphRef": null,
+      "dataTableRef": null,
+      "answerSchema": {
+        "type": "self_assessed",
+        "modelAnswer": "Leaves are adapted for photosynthesis in several ways. They are broad and flat, providing a large surface area to absorb maximum sunlight. The upper epidermis is transparent, allowing light to pass through to the palisade mesophyll cells below. The palisade cells are packed with chloroplasts, which contain the chlorophyll needed to absorb light energy. Stomata on the lower surface allow carbon dioxide to diffuse into the leaf and oxygen to diffuse out. Air spaces in the spongy mesophyll allow carbon dioxide to circulate and reach every cell.",
+        "markSchemePoints": [
+          { "id": "p1", "text": "Broad and flat — large surface area to absorb sunlight" },
+          { "id": "p2", "text": "Transparent upper epidermis — allows light to reach palisade cells" },
+          { "id": "p3", "text": "Palisade cells packed with chloroplasts — main site of photosynthesis" },
+          { "id": "p4", "text": "Stomata allow CO₂ in and O₂ out for gas exchange" },
+          { "id": "p5", "text": "Air spaces in spongy mesophyll — allow CO₂ to circulate within the leaf" }
+        ],
+        "maxCheckable": 3,
+        "marks": 3
+      },
+      "methodMarks": null,
+      "solutionSteps": [
+        { "text": "Leaves are broad and flat, giving a large surface area to capture as much light as possible." },
+        { "text": "The upper epidermis is transparent, so light passes straight through to the palisade cells below." },
+        { "text": "Palisade mesophyll cells are near the top of the leaf and are packed with chloroplasts containing chlorophyll — this is where most photosynthesis occurs." },
+        { "text": "Stomata on the lower surface allow carbon dioxide to enter by diffusion and oxygen to leave." },
+        { "text": "A common mistake is describing leaf adaptations without linking each feature to how it helps photosynthesis. For full marks, each structure must be connected to its function in the process." }
+      ],
+      "topicTags": ["bio.bioenergetics.photosynthesis.leaf-structure"],
+      "skillTags": ["explain-mechanism"],
+      "misconceptionTags": ["confuses-limiting-factors"],
+      "isTeacherMarkedInExam": true
+    }
+  ]
+}

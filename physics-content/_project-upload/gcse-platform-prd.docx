@@ -1,0 +1,1028 @@
+**Product Requirements**
+
+**Document**
+
+GCSE Interactive Test Platform
+
+Multi-Subject Extension: Biology, Chemistry & Beyond
+
+Version 1.0 · February 2026 · Confidential
+
+Based on the Physics Motion & Graphs prototype
+
+1\. Executive Summary
+
+This PRD defines a reusable, multi-subject GCSE interactive test
+platform. The architecture extends the existing Physics Motion & Graphs
+prototype into a generalised system capable of serving Biology,
+Chemistry, and any future GCSE subject with subject-specific interaction
+patterns, marking rules, and content structures.
+
+The core insight is that while the question engine, state machine,
+timer, marking pipeline, and results dashboard are subject-agnostic,
+each GCSE subject requires bespoke interaction components. Physics needs
+interactive SVG graphs. Biology needs labelling diagrams, process
+sequencing, and image-based identification. Chemistry needs equation
+balancing and molecular structure interactions.
+
+This document specifies the platform architecture, the Biology subject
+module in detail (as the first extension), the abstraction layer that
+enables new subjects, and a phased delivery roadmap.
+
+2\. Problem Statement
+
+Students preparing for Edexcel GCSE exams lack high-quality, interactive
+digital mock tests that replicate the authentic exam experience.
+Existing tools are either static PDF papers, generic quiz apps that miss
+subject-specific interaction patterns, or expensive proprietary
+platforms.
+
+The Physics prototype demonstrated that a **scenario-based, multi-part
+question structure** with interactive graphs, a real marking engine, and
+worked solutions produces a significantly better learning experience
+than traditional approaches.
+
+The challenge is extending this to subjects with fundamentally different
+interaction requirements without rebuilding the platform for each one.
+
+3\. Goals & Success Metrics
+
+3.1 Goals
+
+1.  Extend the platform to support Biology as the first additional
+    subject within 4 weeks of starting development.
+
+2.  Architect the system so adding a new subject requires only: (a)
+    subject-specific interaction components, (b) scenario JSON data,
+    and (c) a marking adapter --- no changes to the core platform.
+
+3.  Maintain the same Apple HIG design quality and exam authenticity
+    established in the Physics prototype.
+
+4.  Support Edexcel specification alignment with topic tagging,
+    misconception tracking, and mark scheme fidelity.
+
+3.2 Success Metrics
+
+  ------------------------ ------------------------ ----------------------
+  **Metric**               **Target**               **Measurement**
+
+  Time to add Biology      \< 4 weeks dev time      Sprint tracking
+  module                                            
+
+  Time to add 3rd subject  \< 2 weeks dev time      Sprint tracking
+
+  Question accuracy        100% correct answers     QA review by teacher
+                           verified                 
+
+  Student completion rate  \> 80% finish full mock  Analytics
+
+  Score correlation        Within 10% of real exam  Student self-report
+                           score                    
+  ------------------------ ------------------------ ----------------------
+
+4\. Platform Architecture
+
+The platform separates into a subject-agnostic core and pluggable
+subject modules. This is the key architectural decision that enables
+scalability.
+
+4.1 Core Platform (Subject-Agnostic)
+
+These components are shared across all subjects and must not contain any
+subject-specific logic:
+
+-   App Shell --- state machine (welcome → active → review → results),
+    routing, session management
+
+-   Welcome Screen --- subject selector, mode selector (Practice/Exam),
+    timer presets, start flow
+
+-   Test Runner --- scenario navigation, part sequencing, progress
+    tracking, flagging
+
+-   Timer --- countdown, warning/critical states, auto-submit
+
+-   Review Screen --- answered/unanswered/flagged part grid,
+    jump-to-part
+
+-   Results Dashboard --- score display, percentage, grade, topic
+    breakdown, per-question review
+
+-   Marking Pipeline --- answer validation router that delegates to
+    subject-specific markers
+
+-   Feedback Panel --- correct/incorrect/partial display, worked
+    solution renderer
+
+-   Design System --- CSS variables, typography, components (buttons,
+    cards, inputs, badges)
+
+4.2 Subject Module Interface
+
+Each subject registers a module that implements the following interface:
+
+  --------------------- -------------------------------------------------
+  **Property**          **Description**
+
+  **id**                Unique subject identifier (e.g. \'physics\',
+                        \'biology\', \'chemistry\')
+
+  **name**              Display name (e.g. \'Biology\')
+
+  **icon**              Subject icon or emoji
+
+  **examBoard**         Target exam board and tier info
+
+  **scenarios**         Array of scenario JSON objects (question data)
+
+  **components**        Map of custom interaction component renderers
+                        (e.g. \'diagram_label\', \'equation_balance\')
+
+  **markingAdapters**   Map of custom answer type markers (extends core
+                        MCQ/numeric markers)
+
+  **topicTree**         Hierarchical topic structure for results
+                        breakdown
+  --------------------- -------------------------------------------------
+
+4.3 Rendering Pipeline
+
+When the Test Runner encounters a question part, it checks the part
+type. If the type is handled by the core (mcq, numeric_with_unit,
+graph_reading, calculation), it renders the standard component. If the
+type is subject-specific, it looks up the component in the subject
+module\'s components map and delegates rendering to it.
+
+This means the core never needs to know about Biology diagrams or
+Chemistry equations --- it simply asks the subject module to render the
+appropriate interaction.
+
+4.4 File Structure
+
+The project structure extends as follows for each new subject:
+
+src/subjects/physics/ --- Physics module (existing prototype)
+
+src/subjects/biology/ --- Biology module (new)
+
+scenarios/ --- Biology scenario JSON files
+
+components/ --- DiagramLabel.js, ProcessSequence.js, etc.
+
+marking/ --- Biology-specific marking adapters
+
+index.js --- Module registration (implements Subject Module Interface)
+
+5\. Biology Module --- Detailed Specification
+
+Biology is the first extension subject. It introduces interaction
+patterns not present in Physics: labelling diagrams, ordering biological
+processes, identifying structures from images, and constructing
+explanations with key terms.
+
+5.1 Edexcel Biology Specification Alignment
+
+The Biology module targets Edexcel GCSE Biology (1BI0) or Combined
+Science Biology content. The prototype will cover the following
+high-frequency exam topics:
+
+  -------- ---------------------- ---------------------- -------------------
+  **\#**   **Topic Area**         **Key Content**        **Interaction
+                                                         Types**
+
+  1        Cell Biology           Animal/plant cell      Diagram label, MCQ,
+                                  structure, organelles, calculation
+                                  microscopy             
+
+  2        Organisation           Digestive system,      Diagram label,
+                                  enzymes, heart &       process sequence,
+                                  circulation            MCQ
+
+  3        Infection & Response   Pathogens, immune      MCQ, keyword match,
+                                  response, vaccination  explain
+
+  4        Bioenergetics          Enzymes, rate of       Graph reading,
+                                  reaction graphs        calculation, MCQ
+
+  5        Photosynthesis         Word equation, leaf    Keyword match,
+                                  structure, limiting    diagram label,
+                                  factors                graph reading,
+                                                         explain
+
+  6        Respiration            Aerobic/anaerobic,     Keyword match, MCQ,
+                                  word equations, energy explain
+                                  release                
+
+  7        Gas Exchange           Lung structure,        Diagram label, MCQ,
+                                  alveoli, diffusion,    explain
+                                  surface area           
+
+  8        Nervous System         Reflex arc,            Diagram label,
+                                  sensory/relay/motor    process sequence,
+                                  neurons, reaction time MCQ, calculation
+
+  9        Ecology                Food chains, sampling, Calculation, data
+                                  biodiversity           table, MCQ
+
+  10       Genetics & Evolution   DNA, inheritance,      Punnett grid, MCQ,
+                                  Punnett squares,       explain
+                                  natural selection      
+  -------- ---------------------- ---------------------- -------------------
+
+5.2 Biology-Specific Question Types
+
+These are the interaction components unique to Biology that must be
+built as part of the subject module. They do not exist in the Physics
+prototype.
+
+5.2.1 Diagram Labelling
+
+Students are shown a biological diagram (cell, heart, leaf
+cross-section, etc.) with numbered blank labels. They select the correct
+term for each label from a dropdown or drag-and-drop pool. This is one
+of the highest-frequency question types in Biology GCSE exams.
+
+-   Diagram is an SVG or image with positioned label hotspots
+
+-   Each hotspot has a set of answer options (dropdown) or accepts
+    drag-drop from a term bank
+
+-   Marking: 1 mark per correct label, no negative marking
+
+-   Partial credit: award marks for each correct label independently
+
+**Data schema:** Each diagram question includes a diagramSpec with image
+source, hotspot coordinates (as % of image width/height for
+responsiveness), and answer options per hotspot.
+
+5.2.2 Process Sequencing
+
+Students arrange steps of a biological process into the correct order.
+Used for mitosis stages, digestive process, immune response, carbon
+cycle, etc.
+
+-   Draggable cards with step descriptions
+
+-   Student reorders into correct sequence
+
+-   Marking: full marks for fully correct order; partial credit based on
+    number of correctly positioned items or correctly ordered adjacent
+    pairs
+
+5.2.3 Keyword Matching / Key Term Builder
+
+Students match key biological terms to their definitions, or fill in
+blanks in a passage using terms from a word bank. Extremely common in
+1--3 mark questions.
+
+-   Word bank displayed as draggable chips
+
+-   Blanks in a passage or definition list as drop targets
+
+-   Marking: 1 mark per correct placement
+
+5.2.4 Punnett Square Grid
+
+Students complete a Punnett square for a genetic cross. They fill in
+alleles in the grid and then answer probability questions based on the
+results.
+
+-   Interactive 2×2 or 4×4 grid with editable cells
+
+-   Parent alleles shown on axes
+
+-   Student types offspring genotypes into cells
+
+-   Follow-up calculation: probability/ratio of phenotypes
+
+-   Marking: 1 mark per correct cell or per correct ratio
+
+5.2.5 Graph Reading (Shared with Physics)
+
+Biology also uses graph interpretation heavily (enzyme rate curves,
+photosynthesis rate vs light intensity, population growth). The existing
+SVG graph component from Physics can be reused directly, with
+biology-specific axis labels and data.
+
+-   Reuse the Physics Graph.js component with no modifications
+
+-   Biology scenarios supply different graphSpec data (rate of reaction,
+    population curves, etc.)
+
+-   May need to add curve fitting / smooth line mode (Physics prototype
+    only uses straight segments)
+
+5.2.6 Explain / Extended Response (Self-Assessed)
+
+Biology exams include 4--6 mark extended response questions. These
+cannot be auto-marked reliably. In practice mode, the student writes
+their answer, then sees a model answer and a checklist of key points.
+They self-assess how many points they covered.
+
+-   Textarea input for student\'s response
+
+-   Model answer with highlighted key points (mark scheme checklist)
+
+-   Student ticks which points they included
+
+-   Marks awarded based on self-assessment (practice mode only)
+
+-   In exam mode: stored as text, not scored, flagged as
+    \'teacher-marked\'
+
+5.3 Example Biology Scenarios
+
+Each Biology scenario follows the same structure as Physics: a
+real-world context with 3--5 multi-part questions. The Biology module
+includes ten scenarios covering all high-frequency Edexcel topics.
+
+  -------- ------------------- ---------------- ----------------- --------------
+  **\#**   **Scenario**        **Topic**        **Question        **Parts /
+                                                Types**           Marks**
+
+  1        Looking at Cells    Cell Biology     Diagram label,    5 parts / 10
+           Under a Microscope                   MCQ, calculation  marks
+                                                (magnification)   
+
+  2        The Journey of a    Organisation     Process sequence, 4 parts / 8
+           Cheese Sandwich     (Digestion)      keyword match,    marks
+                                                MCQ               
+
+  3        Investigating       Bioenergetics /  Graph reading,    5 parts / 11
+           Enzyme Activity     Enzymes          calculation,      marks
+                                                explain           
+
+  4        The Human Heart     Organisation     Diagram label,    4 parts / 9
+                               (Circulation)    MCQ, explain      marks
+
+  5        Inheritance of      Genetics         Punnett square,   4 parts / 8
+           Cystic Fibrosis                      calculation, MCQ  marks
+
+  6        Sampling a Woodland Ecology          Calculation       4 parts / 9
+           Ecosystem                            (mean, sampling), marks
+                                                data table, MCQ   
+
+  7        Lungs & Gas         Gas Exchange     Diagram label     5 parts / 11
+           Exchange                             (lungs +          marks
+                                                alveolus), MCQ,   
+                                                explain           
+
+  8        Aerobic & Anaerobic Respiration      Keyword match     5 parts / 9
+           Respiration                          (word equations), marks
+                                                MCQ, explain      
+
+  9        The Nervous System  Nervous System   Diagram label,    5 parts / 10
+           & Reflex Arc                         process sequence, marks
+                                                MCQ, calculation  
+
+  10       Photosynthesis &    Photosynthesis   Keyword match,    5 parts / 11
+           Limiting Factors                     diagram label,    marks
+                                                graph reading,    
+                                                explain           
+  -------- ------------------- ---------------- ----------------- --------------
+
+**Total:** 46 parts, approximately 96 marks across 10 scenarios. This
+provides a full mock-length Biology test.
+
+5.4 Biology Marking Adapters
+
+The core marking engine handles MCQ and numeric types. Biology adds
+these adapters:
+
+  ------------------ ------------------- ------------------ --------------------
+  **Answer Type**    **Input Format**    **Marking Rule**   **Partial Credit**
+
+  diagram_label      { \[hotspotId\]:    Exact match per    1 mark per correct
+                     termId }            hotspot            label
+
+  process_sequence   \[stepId, stepId,   Correct adjacent   1 mark per correct
+                     \...\]              pairs              pair
+
+  keyword_match      { \[blankId\]:      Exact match per    1 mark per correct
+                     termId }            blank              term
+
+  punnett_grid       { \[cellId\]:       Case-insensitive   1 mark per correct
+                     genotype }          match              cell
+
+  self_assessed      { text,             Student self-marks Based on checklist
+                     checkedPoints\[\] }                    ticks
+  ------------------ ------------------- ------------------ --------------------
+
+6\. Shared vs Subject-Specific Component Map
+
+This table clarifies what is reused from the core/Physics and what must
+be built new for each subject.
+
+  --------------------- ------------ ------------- ------------- ---------------
+  **Component**         **Core**     **Physics**   **Biology**   **Chemistry**
+
+  App shell / state     ✓            ---           ---           ---
+  machine                                                        
+
+  Welcome / mode select ✓            ---           ---           ---
+
+  Test runner /         ✓            ---           ---           ---
+  navigation                                                     
+
+  Timer                 ✓            ---           ---           ---
+
+  Results dashboard     ✓            ---           ---           ---
+
+  MCQ component         ✓            ---           ---           ---
+
+  Numeric input + unit  ✓            ---           ---           ---
+
+  Feedback + solutions  ✓            ---           ---           ---
+
+  CSS design system     ✓            ---           ---           ---
+
+  SVG graph renderer    ---          ✓             Reuse         Reuse
+
+  Diagram labelling     ---          ---           Build         Reuse
+
+  Process sequencing    ---          ---           Build         Reuse
+
+  Keyword match         ---          ---           Build         ---
+
+  Punnett square grid   ---          ---           Build         ---
+
+  Equation balancing    ---          ---           ---           Build
+
+  Self-assessed explain ---          ---           Build         Reuse
+  --------------------- ------------ ------------- ------------- ---------------
+
+**Key:** Green = exists in core. Blue = exists in Physics. Pink = must
+build. Orange = reuse from another subject.
+
+7\. Unified Scenario Data Model
+
+All subjects use the same top-level scenario schema. Subject-specific
+fields are nested inside the parts.
+
+  ------------------ ---------------- ------------------------------------
+  **Field**          **Type**         **Description**
+
+  **id**             string           Unique scenario ID (e.g. \'bio_01\')
+
+  **title**          string           Scenario display title
+
+  **icon**           string           Emoji or icon reference
+
+  **context**        string           Scenario context paragraph
+                                      (exam-style stem)
+
+  **difficulty**     string           \'foundation\', \'higher\', or
+                                      \'foundation-higher\'
+
+  **graphSpec**      object \| null   Graph config (reused from Physics).
+                                      Null if no graph in this scenario.
+
+  **diagramSpec**    object \| null   Biology-specific: image + hotspot
+                                      positions + term options
+
+  **dataTable**      object \| null   Data table shown alongside the
+                                      scenario (headers + rows)
+
+  **parts**          Part\[\]         Array of question parts (3--5 per
+                                      scenario)
+  ------------------ ---------------- ------------------------------------
+
+Each Part object contains: id, partLabel, type, marks, question,
+answerSchema, solutionSteps, topicTags, skillTags, misconceptionTags,
+and optionally methodMarks. The type field determines which component
+renders the answer input and which marking adapter scores it.
+
+8\. Biology Diagram Specification
+
+The diagramSpec object defines how interactive diagrams work. This is
+the most complex biology-specific data structure.
+
+  --------------------- ---------------- -------------------------------------
+  **Field**             **Type**         **Description**
+
+  **imageSrc**          string           Path to SVG or PNG diagram image
+
+  **imageAlt**          string           Accessible alt text describing the
+                                         diagram
+
+  **hotspots**          Hotspot\[\]      Array of label positions with answer
+                                         options
+
+  **hotspot.id**        string           Unique hotspot ID (e.g. \'label_1\')
+
+  **hotspot.x**         number (0--100)  X position as percentage of image
+                                         width
+
+  **hotspot.y**         number (0--100)  Y position as percentage of image
+                                         height
+
+  **hotspot.correct**   string           Correct term ID
+
+  **termBank**          Term\[\]         Array of { id, text } terms available
+                                         for selection
+  --------------------- ---------------- -------------------------------------
+
+9\. Future Subject Modules
+
+The architecture supports adding any GCSE subject. Below are preliminary
+notes for Chemistry and other subjects.
+
+9.1 Chemistry
+
+Chemistry introduces these unique interaction types:
+
+-   Equation Balancing --- student adjusts coefficients in a chemical
+    equation until it balances. Marking checks stoichiometric
+    correctness.
+
+-   Molecular Structure Builder --- student draws or selects
+    dot-and-cross diagrams, covalent bonds, or ionic lattice structures.
+
+-   Periodic Table Reference --- interactive periodic table for looking
+    up atomic numbers, groups, and properties.
+
+-   Electrolysis Diagrams --- label anode/cathode, ions, and products.
+
+Chemistry reuses: graph component (rate of reaction curves), diagram
+labelling (apparatus, electrolysis cells), numeric+unit calculations
+(moles, concentration, Mr).
+
+9.2 Mathematics
+
+Mathematics would require:
+
+-   Equation/expression input --- a structured math input component
+    (consider KaTeX or MathQuill for rendering).
+
+-   Coordinate geometry tools --- extend the graph component with line
+    drawing, point plotting, transformation tools.
+
+-   Working space --- a scratchpad area for showing algebraic working.
+
+-   Multiple correct forms --- marking must accept equivalent
+    expressions (e.g. 2/4 = 1/2 = 0.5).
+
+9.3 English Literature
+
+English is primarily extended writing, so the interactive test format is
+less suitable. However, it could support:
+
+-   Extract-based MCQ and short answer questions
+
+-   Quotation identification (match quote to character/theme)
+
+-   PEE paragraph builder (Point, Evidence, Explanation) with
+    self-assessment
+
+10\. Non-Functional Requirements
+
+10.1 Performance
+
+-   First meaningful paint \< 1.5 seconds on 4G connection
+
+-   Graph interactions must respond within 16ms (60fps) for smooth
+    crosshair tracking
+
+-   Diagram images should be SVG where possible; PNG with lazy loading
+    for complex illustrations
+
+-   Total bundle size \< 200KB (excluding images)
+
+10.2 Accessibility
+
+-   WCAG AA compliance minimum
+
+-   Full keyboard navigation for all interactive elements
+
+-   Screen reader support with ARIA labels on graphs, diagrams, and
+    custom components
+
+-   Minimum 44px touch targets on all interactive elements
+
+-   Reduced motion support via prefers-reduced-motion media query
+
+-   Dyslexia-friendly option: increase line height, letter spacing;
+    offer OpenDyslexic font toggle
+
+-   Font size adjustment (small / medium / large)
+
+10.3 Browser Support
+
+-   Chrome 90+, Safari 15+, Firefox 90+, Edge 90+
+
+-   iOS Safari 15+ (iPad is a common student device)
+
+-   No IE11 support required
+
+10.4 Data & Privacy
+
+-   All data stored client-side only (localStorage or sessionStorage)
+
+-   No user accounts, no server-side storage in v1
+
+-   Optional: export results as JSON or PDF for teacher review
+
+-   Future: optional cloud sync with user consent
+
+11\. Delivery Roadmap
+
+  ----------- ------------------------------ --------------- ------------------
+  **Phase**   **Deliverables**               **Duration**    **Dependencies**
+
+  **0**       Complete Physics prototype (4  2 weeks         Claude Code build
+              scenarios, all features                        
+              working)                                       
+
+  **1**       Refactor Physics prototype     1 week          Phase 0 complete
+              into core + Physics module.                    
+              Extract subject-agnostic code.                 
+              Define Subject Module                          
+              Interface.                                     
+
+  **2**       Build Biology interaction      2 weeks         Phase 1 complete
+              components: DiagramLabel,                      
+              ProcessSequence, KeywordMatch,                 
+              PunnettGrid, SelfAssessed.                     
+
+  **3**       Create Biology scenario data   1 week          Phase 2 complete
+              (10 scenarios, 46 parts).                      
+              Build marking adapters. QA                     
+              with teacher review.                           
+
+  **4**       Subject selector on welcome    1 week          Phase 3 complete
+              screen. Polish, accessibility                  
+              audit, mobile testing. Expand                  
+              Physics to all 10 scenarios.                   
+
+  **5**       Chemistry module (if desired). Ongoing         Phase 4 complete
+              Additional subjects. Cloud                     
+              sync. PDF export.                              
+  ----------- ------------------------------ --------------- ------------------
+
+Total estimated time from Physics prototype to working Biology module:
+**4 weeks.**
+
+12\. Risks & Mitigations
+
+  ------------------- ------------ ------------------- -------------------
+  **Risk**            **Impact**   **Mitigation**      **Owner**
+
+  Diagram images are  High         Start with simple   Content team
+  complex to create                cell diagrams. Use  
+  as SVG                           labelled PNG        
+                                   fallback with       
+                                   positioned          
+                                   hotspots.           
+                                   Commission SVGs     
+                                   later.              
+
+  Drag-and-drop is    Medium       Always offer        Dev team
+  unreliable on                    dropdown as         
+  mobile/touch                     fallback alongside  
+                                   drag-drop. Test     
+                                   extensively on      
+                                   iPad.               
+
+  Self-assessed       Medium       Provide detailed    Content + Dev
+  explain questions                checklists. Mark as 
+  may be inaccurate                \'indicative\' in   
+                                   results. Offer      
+                                   teacher override    
+                                   option.             
+
+  Biology content     High         All scenarios and   QA / Teacher
+  accuracy                         mark schemes        
+  (misconceptions in               reviewed by         
+  mark schemes)                    qualified Biology   
+                                   teacher before      
+                                   release.            
+
+  Scope creep across  Medium       Strict module       Product lead
+  subjects                         interface. Each     
+                                   subject is          
+                                   self-contained. No  
+                                   core changes for    
+                                   new subjects.       
+  ------------------- ------------ ------------------- -------------------
+
+13\. Open Questions
+
+1.  Should Biology diagrams be SVG (scalable, interactive) or PNG with
+    overlay hotspots? SVG is better long-term but requires more upfront
+    effort.
+
+2.  Do we want a shared \'term bank\' component that works for both
+    keyword matching and diagram labelling, or are they different enough
+    to warrant separate implementations?
+
+3.  Should the platform support mixed-subject tests (e.g. Combined
+    Science with Physics + Biology + Chemistry scenarios in one
+    sitting)?
+
+4.  Is client-side storage (localStorage) sufficient for v1, or do
+    students need cross-device access from day one?
+
+5.  Should the explain/extended response questions use AI-assisted
+    marking (via API call) in a future version, or remain self-assessed?
+
+14\. Appendix A: Scenario Details --- New Topics
+
+Below are fully worked specifications for the four newly added
+scenarios: Lungs & Gas Exchange, Respiration, Nervous System, and
+Photosynthesis.
+
+14.1 Scenario 7: Lungs & Gas Exchange 🫁
+
+**Context:** A student is studying the structure of the lungs and how
+they are adapted for gas exchange. They examine a diagram of the
+respiratory system and a close-up of an alveolus.
+
+Diagrams: (1) Lung overview with trachea, bronchi, bronchioles,
+diaphragm. (2) Alveolus close-up with capillary, red blood cells, O₂/CO₂
+diffusion arrows.
+
+**Part (a) --- Diagram Label \[3 marks\]**
+
+Label structures A, B, and C on the lung diagram. (A = trachea, B =
+bronchi, C = alveoli)
+
+**Part (b) --- Diagram Label \[2 marks\]**
+
+On the alveolus diagram, label the direction of oxygen diffusion (into
+blood) and carbon dioxide diffusion (into alveolus).
+
+**Part (c) --- MCQ \[1 mark\]**
+
+Which process moves oxygen from the alveoli into the blood? (A: Osmosis,
+B: Active transport, C: Diffusion, D: Respiration). Correct: C.
+
+**Part (d) --- Explain / Self-Assessed \[4 marks\]**
+
+Explain how the alveoli are adapted for efficient gas exchange. Mark
+scheme points: large surface area; thin walls (one cell thick); good
+blood supply / rich capillary network; moist lining to dissolve gases;
+steep concentration gradient maintained.
+
+**Part (e) --- MCQ \[1 mark\]**
+
+Which of the following would NOT increase the rate of gas exchange? (A:
+Increasing surface area, B: Increasing wall thickness, C: Increasing
+blood flow, D: Maintaining a concentration gradient). Correct: B.
+
+**Key misconceptions targeted:** Students confuse respiration with
+breathing/gas exchange; students think oxygen is 'actively pumped'
+rather than diffusing; students forget that CO₂ moves in the opposite
+direction.
+
+14.2 Scenario 8: Aerobic & Anaerobic Respiration 🔥
+
+**Context:** A PE teacher is explaining to students why they breathe
+faster during exercise and what happens in their muscles when they can't
+get enough oxygen.
+
+**Part (a) --- Keyword Match \[2 marks\]**
+
+Complete the word equation for aerobic respiration: glucose + oxygen →
+carbon dioxide + water. Word bank includes distractors: lactic acid,
+ethanol.
+
+**Part (b) --- MCQ \[1 mark\]**
+
+In which organelle does aerobic respiration take place? (A: Nucleus, B:
+Ribosome, C: Mitochondria, D: Cell membrane). Correct: C.
+
+**Part (c) --- Keyword Match \[1 mark\]**
+
+Complete the word equation for anaerobic respiration in humans: glucose
+→ lactic acid. Distractors: carbon dioxide, ethanol.
+
+**Part (d) --- MCQ \[1 mark\]**
+
+What is produced during anaerobic respiration in yeast cells? (A: Lactic
+acid, B: Ethanol and carbon dioxide, C: Oxygen, D: Glucose). Correct: B.
+
+**Part (e) --- Explain / Self-Assessed \[4 marks\]**
+
+Explain why a sprinter may experience muscle fatigue after a 100m race.
+Mark scheme: muscles need energy/ATP; demand exceeds O₂ supply;
+anaerobic respiration occurs; produces lactic acid; lactic acid builds
+up causing fatigue/pain; oxygen debt must be repaid.
+
+**Key misconceptions targeted:** Students confuse respiration with
+breathing; students think anaerobic means 'no respiration'; students
+confuse yeast and human anaerobic products.
+
+14.3 Scenario 9: The Nervous System & Reflex Arc ⚡
+
+**Context:** A student accidentally touches a hot pan and pulls their
+hand away before they consciously feel the pain. Their teacher asks them
+to explain what happened using a diagram of the reflex arc.
+
+Diagram: Reflex arc showing receptor in skin, sensory neuron, relay
+neuron in spinal cord, motor neuron, effector (muscle).
+
+**Part (a) --- Diagram Label \[3 marks\]**
+
+Label structures A--E on the reflex arc diagram. (A = receptor, B =
+sensory neuron, C = relay neuron, D = motor neuron, E = effector/muscle)
+
+**Part (b) --- Process Sequence \[2 marks\]**
+
+Put the following steps of the reflex response in the correct order:
+Impulse passes through relay neuron / Receptor detects stimulus / Motor
+neuron carries impulse to effector / Sensory neuron carries impulse to
+spinal cord / Muscle contracts to move hand / Heat stimulates pain
+receptors.
+
+**Part (c) --- MCQ \[1 mark\]**
+
+Why are reflex actions faster than voluntary actions? (A: They use
+thicker neurons, B: They bypass the brain, C: They only use one neuron,
+D: They don't need a stimulus). Correct: B.
+
+**Part (d) --- Calculation \[2 marks\]**
+
+A student tests their reaction time by catching a dropped ruler.
+Results: 12 cm, 15 cm, 11 cm, 13 cm, 14 cm. Calculate the mean distance.
+Correct: 13 cm.
+
+**Part (e) --- Explain / Self-Assessed \[2 marks\]**
+
+Suggest why the student should repeat the test multiple times and
+calculate a mean. Mark scheme: reduces effect of anomalies/random
+errors; makes result more reliable; single measurement may not be
+representative.
+
+14.4 Scenario 10: Photosynthesis & Limiting Factors 🌿
+
+**Context:** A student investigates the effect of light intensity on the
+rate of photosynthesis using an aquatic plant (pondweed). They count the
+number of oxygen bubbles produced per minute at different light
+intensities.
+
+Graph: Rate of photosynthesis (bubbles/min) vs light intensity
+(arbitrary units). Curve rises steeply then plateaus. Data table
+provided for 7 readings.
+
+**Part (a) --- Keyword Match \[2 marks\]**
+
+Complete the word equation for photosynthesis: carbon dioxide + water →
+glucose + oxygen. Word bank includes distractors: nitrogen, lactic acid.
+
+**Part (b) --- Diagram Label \[3 marks\]**
+
+Label structures A--C on the leaf cross-section diagram. (A = upper
+epidermis, B = palisade mesophyll cells, C = stomata/guard cells).
+
+**Part (c) --- Graph Reading \[2 marks\]**
+
+Using the graph, describe how the rate of photosynthesis changes as
+light intensity increases from 1 to 7. (Rate increases rapidly at first,
+then levels off / plateaus.)
+
+**Part (d) --- Explain / Self-Assessed \[2 marks\]**
+
+The graph levels off at high light intensities. Explain what is meant by
+a 'limiting factor' and suggest what factor is limiting the rate. Mark
+scheme: limiting factor = a factor that directly controls the rate of a
+process if changed; at the plateau light is no longer limiting; CO₂
+concentration or temperature is now the limiting factor.
+
+**Part (e) --- Calculation \[2 marks\]**
+
+Calculate the rate of increase in bubbles per minute between light
+intensity 1 and light intensity 3. Correct: (18 − 5) ÷ (3 − 1) = 6.5
+bubbles/min per unit.
+
+15\. Appendix B: Claude Code Build Instructions
+
+A separate, detailed implementation brief has been created for Claude
+Code: BIOLOGY_CLAUDE_CODE_BRIEF.md. This appendix summarises the key
+instructions for the development team.
+
+15.1 Prerequisites
+
+The Biology module assumes the Physics prototype and core platform
+refactor are complete. Specifically:
+
+-   Core app shell with state machine (welcome → active → review →
+    results) is functional
+
+-   Subject Module Interface is defined and Physics is registered as the
+    first module
+
+-   Shared components (MCQ, numeric input, feedback panel, results
+    dashboard) are extracted into core
+
+-   SVG graph renderer is available for reuse (Biology enzyme and
+    photosynthesis scenarios use graphs)
+
+-   CSS design system (Apple HIG) is in place with light/dark mode
+    support
+
+15.2 New Components to Build
+
+  ------------------------ --------------------------------- -----------------
+  **Component**            **Description**                   **Used In**
+
+  **DiagramLabel.js**      SVG/PNG diagram with positioned   Scenarios 1, 4,
+                           hotspot dropdowns. Uses           7, 9, 10
+                           percentage-based coordinates for  
+                           responsive positioning.           
+
+  **ProcessSequence.js**   Draggable step cards with         Scenarios 2, 9
+                           arrow-button fallback. Randomised 
+                           initial order. Partial credit via 
+                           adjacent-pair scoring.            
+
+  **KeywordMatch.js**      Passage text with inline dropdown Scenarios 2, 8,
+                           blanks. Word bank provides        10
+                           options. 1 mark per correct       
+                           blank.                            
+
+  **PunnettGrid.js**       Interactive 2×2 genetics grid.    Scenario 5
+                           Case-insensitive,                 
+                           allele-order-insensitive marking. 
+
+  **SelfAssessed.js**      Textarea → model answer +         Scenarios 3, 4,
+                           mark-scheme checklist. Student    7, 8, 9, 10
+                           self-marks in practice mode.      
+                           Flagged as teacher-marked in exam 
+                           mode.                             
+  ------------------------ --------------------------------- -----------------
+
+15.3 Build Order
+
+1.  Biology module index (index.js) --- register module with core, wire
+    component and adapter maps
+
+2.  KeywordMatch.js --- simplest new component, quick to validate
+
+3.  DiagramLabel.js --- most impactful visually, core Biology
+    interaction
+
+4.  ProcessSequence.js --- drag reorder with arrow-button fallback for
+    accessibility
+
+5.  PunnettGrid.js --- small, self-contained grid input component
+
+6.  SelfAssessed.js --- textarea + model answer + checklist flow
+
+7.  Marking adapters (adapters.js) --- all 5 biology-specific adapters
+
+8.  Scenario JSON files --- start with scenarios 1, 7, 8 (cells, lungs,
+    respiration), then expand to all 10
+
+9.  Diagram SVG assets --- create or source: plant cell, lungs,
+    alveolus, heart, reflex arc, leaf cross-section
+
+10. CSS additions --- Biology component styles appended to main.css
+
+11. Integration testing --- all 10 scenarios through both Practice and
+    Exam modes
+
+12. Polish --- animations, mobile responsive, accessibility audit
+
+15.4 File Structure
+
+**src/subjects/biology/**
+
+index.js --- Module registration
+
+scenarios/ --- 10 scenario JSON files (bio_01 through bio_10)
+
+components/ --- DiagramLabel, ProcessSequence, KeywordMatch,
+PunnettGrid, SelfAssessed
+
+marking/adapters.js --- All 5 Biology marking adapters
+
+assets/ --- SVG/PNG diagrams for labelling interactions
+
+15.5 Key Implementation Notes
+
+-   The full Claude Code brief (BIOLOGY_CLAUDE_CODE_BRIEF.md) contains:
+    complete component specs with data schemas, CSS class additions,
+    marking adapter source code, answer format definitions, and a
+    detailed testing checklist.
+
+-   Diagram hotspots use percentage-based coordinates (0--100) so they
+    remain correctly positioned when images scale responsively.
+
+-   ProcessSequence must include Up/Down arrow buttons alongside
+    drag-and-drop as a mobile and keyboard fallback.
+
+-   KeywordMatch uses inline \<select\> dropdowns (not drag-and-drop)
+    for v1 --- more reliable on mobile and accessible.
+
+-   PunnettGrid marking normalises allele order: 'Bb' and 'bB' are
+    treated as equivalent. Comparison is case-insensitive.
+
+-   SelfAssessed explain questions are flagged as 'teacher-marked' in
+    exam mode results and are not auto-scored.
+
+-   All Biology components should use existing CSS classes from the
+    Apple HIG design system. New Biology-specific styles are provided in
+    the Claude Code brief.
+
+End of Document
